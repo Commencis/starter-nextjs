@@ -1,0 +1,40 @@
+@use '@/styles/mixins/font-style' as *;
+@use '@/styles/abstracts/colors' as colors;
+
+.typography {
+  letter-spacing: 0.5px;
+
+  &.bodyMedium {
+    @include font-style(body, normal);
+  }
+
+  &.bodyBold {
+    @include font-style(body, bold);
+  }
+
+  &.captionMedium {
+    @include font-style(caption, normal);
+  }
+
+  &.captionBold {
+    @include font-style(caption, bold);
+  }
+
+  &.footnoteMedium {
+    @include font-style(footnote, normal);
+  }
+
+  &.footnoteBold {
+    @include font-style(footnote, bold);
+  }
+
+  @each $color-group, $tones in colors.$palette {
+    @each $tone, $hex in $tones {
+
+      $class-name: #{$color-group}-#{$tone};
+      &.#{$class-name} {
+        color: color($color-group, $tone);
+      }
+    }
+  }
+}
