@@ -9,13 +9,9 @@ concurrency:
 
 jobs:
   ci:
-    name: ${{ matrix.job }}
+    name: Lint & Build
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
-    strategy:
-      matrix:
-        job: [lint, build]
 
     steps:
       - name: Checkout
@@ -24,5 +20,8 @@ jobs:
       - name: Setup
         uses: commencis/js-toolkit/.github/actions/setup@main
 
-      - name: Run ${{ matrix.job }}
-        run: pnpm run ${{ matrix.job }}
+      - name: Review
+        run: pnpm run ci:review
+
+      - name: Build
+        run: pnpm run build
