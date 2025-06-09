@@ -1,17 +1,35 @@
+import { getCurrentEnvironment } from '@/config/getCurrentEnvironment';
 import { getPackageInfo } from '@/config/getPackageInfo';
+import { ENVIRONMENT } from '@/constants';
+import { Environment } from '@/types';
 
 export type Config = {
   version?: string;
   buildNumber?: string;
+  baseApiUrl?: string;
+  environment: Environment;
+  isDevelopment: boolean;
+  isTest: boolean;
+  isUat: boolean;
+  isStaging: boolean;
+  isProduction: boolean;
 };
 
 export const getConfig = (): Config => {
   try {
     const { version, buildNumber } = getPackageInfo();
+    const environment = getCurrentEnvironment();
 
     const config: Config = {
       version,
       buildNumber,
+      baseApiUrl: process.env.NEXT_PUBLIC_BASE_API_URL,
+      environment,
+      isDevelopment: environment === ENVIRONMENT.DEVELOPMENT,
+      isTest: environment === ENVIRONMENT.TEST,
+      isUat: environment === ENVIRONMENT.UAT,
+      isStaging: environment === ENVIRONMENT.STAGING,
+      isProduction: environment === ENVIRONMENT.PRODUCTION,
     };
 
     Object.entries(config).forEach(([key, value]) => {

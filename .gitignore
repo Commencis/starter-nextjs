@@ -29,7 +29,6 @@ lerna-debug.log*
 *.tsbuildinfo
 
 # env files
-.env*
 !.env.example
 
 # misc
