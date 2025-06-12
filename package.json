@@ -6,7 +6,7 @@
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=22.15"
+    "node": ">=22.16"
   },
   "packageManager": "pnpm@10.5.2",
   "scripts": {
@@ -42,7 +42,7 @@
     "@commencis/ts-config": "0.0.2",
     "@commitlint/cli": "19.8.1",
     "@svgr/webpack": "8.1.0",
-    "@types/node": "22.15.21",
+    "@types/node": "22.15.31",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "9.28.0",
