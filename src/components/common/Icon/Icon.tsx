@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactElement, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -14,7 +16,7 @@ export const Icon = ({
 }: IconProps): ReactElement => {
   const IconComponent = useMemo(
     (): DynamicIconReturnType =>
-      dynamic(() => import(`@/assets/icons/${name}.svg`)),
+      dynamic(() => import(`@/assets/icons/${name}.svg`), { ssr: false }),
     [name]
   );
 
