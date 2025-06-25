@@ -26,13 +26,13 @@ importers:
         version: 1.1.4
       '@commencis/eslint-config':
         specifier: 1.7.2
-        version: 1.7.2(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.3)(vue-eslint-parser@9.4.3(eslint@9.29.0(jiti@2.4.2)))
+        version: 1.7.2(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.1)(typescript@5.8.3)(vue-eslint-parser@9.4.3(eslint@9.29.0(jiti@2.4.2)))
       '@commencis/lint-staged-config':
         specifier: 1.0.0
         version: 1.0.0
       '@commencis/prettier-config':
         specifier: 2.0.0
-        version: 2.0.0(prettier@3.5.3)
+        version: 2.0.0(prettier@3.6.1)
       '@commencis/stylelint-config':
         specifier: 2.1.1
         version: 2.1.1(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.21.0(typescript@5.8.3))
@@ -64,8 +64,8 @@ importers:
         specifier: 16.1.2
         version: 16.1.2
       prettier:
-        specifier: 3.5.3
-        version: 3.5.3
+        specifier: 3.6.1
+        version: 3.6.1
       sass:
         specifier: 1.89.2
         version: 1.89.2
@@ -2642,8 +2642,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.1:
+    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3899,7 +3899,7 @@ snapshots:
     dependencies:
       '@commitlint/config-conventional': 19.8.1
 
-  '@commencis/eslint-config@1.7.2(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)(typescript@5.8.3)(vue-eslint-parser@9.4.3(eslint@9.29.0(jiti@2.4.2)))':
+  '@commencis/eslint-config@1.7.2(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.1)(typescript@5.8.3)(vue-eslint-parser@9.4.3(eslint@9.29.0(jiti@2.4.2)))':
     dependencies:
       '@eslint/js': 9.27.0
       '@next/eslint-plugin-next': 15.3.3
@@ -3907,7 +3907,7 @@ snapshots:
       eslint: 9.29.0(jiti@2.4.2)
       eslint-config-prettier: 10.1.5(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.29.0(jiti@2.4.2))
-      eslint-plugin-prettier: 5.4.1(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3)
+      eslint-plugin-prettier: 5.4.1(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.1)
       eslint-plugin-react: 7.37.5(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.29.0(jiti@2.4.2))
       eslint-plugin-simple-import-sort: 12.1.1(eslint@9.29.0(jiti@2.4.2))
@@ -3923,9 +3923,9 @@ snapshots:
 
   '@commencis/lint-staged-config@1.0.0': {}
 
-  '@commencis/prettier-config@2.0.0(prettier@3.5.3)':
+  '@commencis/prettier-config@2.0.0(prettier@3.6.1)':
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.1
 
   '@commencis/stylelint-config@2.1.1(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.21.0(typescript@5.8.3))':
     dependencies:
@@ -5159,10 +5159,10 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.4.1(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.5.3):
+  eslint-plugin-prettier@5.4.1(eslint-config-prettier@10.1.5(eslint@9.29.0(jiti@2.4.2)))(eslint@9.29.0(jiti@2.4.2))(prettier@3.6.1):
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
-      prettier: 3.5.3
+      prettier: 3.6.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
@@ -6048,7 +6048,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.5.3: {}
+  prettier@3.6.1: {}
 
   prop-types@15.8.1:
     dependencies:
