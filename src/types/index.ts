@@ -1,3 +1,4 @@
-export * from './env';
-export * from './generic';
-export * from './theme';
+export * from '@/types/env';
+export * from '@/types/generic';
+export * from '@/types/localization';
+export * from '@/types/theme';

@@ -1,2 +1,3 @@
-export * from './env.constants';
-export * from './font.constants';
+export * from '@/constants/env.constants';
+export * from '@/constants/font.constants';
+export * from '@/constants/localization.constants';
