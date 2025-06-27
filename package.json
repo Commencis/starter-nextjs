@@ -8,7 +8,7 @@
   "engines": {
     "node": ">=22.16"
   },
-  "packageManager": "pnpm@10.12.2",
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
@@ -43,13 +43,13 @@
     "@commencis/ts-config": "0.0.2",
     "@commitlint/cli": "19.8.1",
     "@svgr/webpack": "8.1.0",
-    "@types/node": "22.15.32",
+    "@types/node": "22.15.33",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "9.29.0",
     "husky": "9.1.7",
     "lint-staged": "16.1.2",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "sass": "1.89.2",
     "stylelint": "16.21.0",
     "typescript": "5.8.3"
