@@ -43,7 +43,7 @@
     "@commencis/ts-config": "0.0.2",
     "@commitlint/cli": "19.8.1",
     "@svgr/webpack": "8.1.0",
-    "@types/node": "22.15.34",
+    "@types/node": "22.16.0",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "eslint": "9.30.1",
