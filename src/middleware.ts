@@ -1,8 +1,15 @@
-import createMiddleware from 'next-intl/middleware';
+import { NextRequest, NextResponse } from 'next/server';
+import createIntlMiddleware from 'next-intl/middleware';
 
 import { routing } from '@/lib/i18n/i18n';
 
-export default createMiddleware(routing);
+const handleI18nRouting = createIntlMiddleware(routing);
+
+const middleware = (request: NextRequest): NextResponse => {
+  const response: NextResponse = handleI18nRouting(request);
+
+  return response;
+};
 
 export const config = {
   /**
@@ -14,3 +21,5 @@ export const config = {
    */
   matcher: ['/((?!api|_next/static|_next/image)(?!.*\\.[^/]+$).*)'],
 };
+
+export default middleware;

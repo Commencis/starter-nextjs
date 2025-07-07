@@ -27,7 +27,6 @@ const loadLocaleNamespaces = async (
 export const routing = defineRouting({
   locales: SUPPORTED_LOCALES,
   defaultLocale: DEFAULT_LOCALE,
-  localeDetection: false,
 });
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
