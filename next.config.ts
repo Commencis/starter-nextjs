@@ -1,6 +1,13 @@
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './src/lib/i18n/i18n.ts',
+});
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -9,9 +16,10 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+
   sassOptions: {
     additionalData: '@use "@/styles/globals" as *;',
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
