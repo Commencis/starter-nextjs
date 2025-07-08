@@ -12,14 +12,15 @@ const middleware = (request: NextRequest): NextResponse => {
 };
 
 export const config = {
-  /**
-   * Run on every path *except* the ones that…
-   *   • start with `api`                   → API routes
-   *   • start with `/_next/static`         → build-time JS/CSS/etc.
-   *   • start with `/_next/image`          → Image Optimization
-   *   • contain “.” in the last segment    → any file served from /public
-   */
-  matcher: ['/((?!api|_next/static|_next/image)(?!.*\\.[^/]+$).*)'],
+  matcher: [
+    /*
+     * This matcher runs the middleware on page routes by excluding specific paths:
+     * Skips all API routes that start with /api/.
+     * Skips all Next.js internal assets under /_next/.
+     * Skips all files by ignoring paths that end with a file extension (e.g. .ico, .svg).
+     */
+    '/((?!api|_next|.*\\.[^/]+$).*)',
+  ],
 };
 
 export default middleware;
