@@ -29,6 +29,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "axios": "1.11.0",
     "clsx": "2.1.1",
     "next": "15.4.5",
     "next-intl": "4.3.4",
