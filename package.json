@@ -26,9 +26,11 @@
     "version": "changeset version && pnpm install --no-frozen-lockfile",
     "ci:review": "pnpm run lint",
     "prepare": "husky",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "analyze": "ANALYZE=true pnpm build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "15.4.6",
     "clsx": "2.1.1",
     "next": "15.4.5",
     "next-intl": "4.3.4",
