@@ -14,6 +14,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "analyze": "ANALYZE=true pnpm build",
     "lint:check:types": "tsc --noEmit",
     "lint:check:js": "eslint .",
     "lint:fix:js": "eslint . --fix",
@@ -26,8 +27,7 @@
     "version": "changeset version && pnpm install --no-frozen-lockfile",
     "ci:review": "pnpm run lint",
     "prepare": "husky",
-    "precommit": "lint-staged",
-    "analyze": "ANALYZE=true pnpm build"
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "@next/bundle-analyzer": "15.4.6",
