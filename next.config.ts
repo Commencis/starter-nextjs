@@ -10,7 +10,7 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 })
 
-let nextConfig: NextConfig = {
+const baseConfig: NextConfig = {
   poweredByHeader: false,
 
   webpack(config) {
@@ -27,7 +27,7 @@ let nextConfig: NextConfig = {
   },
 };
 
-nextConfig = withNextIntl(nextConfig);
-nextConfig = withBundleAnalyzer(nextConfig);
+const intlConfig = withNextIntl(baseConfig);
+const analyzerConfig = withBundleAnalyzer(intlConfig);
 
-export default nextConfig;
+export default analyzerConfig;
