@@ -14,7 +14,6 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "vue",
     "html",
     "markdown",
     "json",
@@ -24,7 +23,7 @@
   ],
 
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "less", "postcss", "scss", "vue"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
 
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
