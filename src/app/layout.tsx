@@ -1,10 +1,10 @@
-import { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 
 type Props = {
-  children: ReactElement;
+  children: ReactNode;
 };
 
-const RootLayout = (props: Props): ReactElement => {
+const RootLayout = (props: Props): ReactNode => {
   const { children } = props;
 
   return children;
