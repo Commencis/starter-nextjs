@@ -1,9 +1,9 @@
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { useTranslations } from 'next-intl';
 
-import { useConfig } from '@/hooks';
-
 import { Button, Icon, Text } from '@/components/common';
+
+import { useConfig } from '@/hooks';
 
 const HomePage = (): ReactElement => {
   const t = useTranslations();

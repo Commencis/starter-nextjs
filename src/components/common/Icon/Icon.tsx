@@ -1,6 +1,7 @@
 'use client';
 
-import { ReactElement, useMemo } from 'react';
+import type { ReactElement } from 'react';
+import { useMemo } from 'react';
 import dynamic from 'next/dynamic';
 
 import type {
