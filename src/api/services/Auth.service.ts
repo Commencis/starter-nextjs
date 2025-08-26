@@ -1,7 +1,7 @@
 import { makeRequest } from '@/lib';
 
-import { AuthLoginRequest } from '@/api/models/AuthLoginRequest';
-import { AuthLoginResponse } from '@/api/models/AuthLoginResponse';
+import type { AuthLoginRequest } from '@/api/models/AuthLoginRequest';
+import type { AuthLoginResponse } from '@/api/models/AuthLoginResponse';
 
 const ACCESS_TOKEN_KEY = 'accessToken';
 

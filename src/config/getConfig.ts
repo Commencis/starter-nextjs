@@ -1,7 +1,7 @@
 import { getCurrentEnvironment } from '@/config/getCurrentEnvironment';
 import { getPackageInfo } from '@/config/getPackageInfo';
+import type { Environment } from '@/types';
 import { ENVIRONMENT } from '@/constants';
-import { Environment } from '@/types';
 
 export type Config = {
   version?: string;

@@ -1,15 +1,14 @@
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import {
+import type {
   ButtonProps,
   ButtonSize,
 } from '@/components/common/Button/Button.types';
-import { Text } from '@/components/common/Text/Text';
-import { TextVariant } from '@/components/common/Text/Text.types';
-
+import type { TextVariant } from '@/components/common/Text/Text.types';
 import styles from '@/components/common/Button/Button.module.scss';
+import { Text } from '@/components/common/Text/Text';
 
 const buttonSizeTextVariantMap = {
   small: 'footnoteMedium',
