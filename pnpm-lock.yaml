@@ -40,8 +40,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(prettier@3.6.2)
       '@commencis/stylelint-config':
-        specifier: 2.2.0
-        version: 2.2.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))
+        specifier: 2.3.0
+        version: 2.3.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))
       '@commencis/ts-config':
         specifier: 0.0.2
         version: 0.0.2
@@ -658,8 +658,8 @@ packages:
     peerDependencies:
       prettier: '>= 3.5'
 
-  '@commencis/stylelint-config@2.2.0':
-    resolution: {integrity: sha512-OM2Cwq3wjTdLmJnxZOGikEY9B5jdQIQrnP6zeHwB4hX1DCAohyIBrffxMnld49k/3lEK63y4ajXHG4aXYiMBcw==}
+  '@commencis/stylelint-config@2.3.0':
+    resolution: {integrity: sha512-KbF9/9mEj6mSNNp+tk0oLaH6/TFOxzXDv+Vm02ZJgOmdhytw5UbewHo3rVj+mScu3a5aVr9yj9had8mczlZIPw==}
     peerDependencies:
       stylelint: '>=16.23'
 
@@ -4095,7 +4095,7 @@ snapshots:
     dependencies:
       prettier: 3.6.2
 
-  '@commencis/stylelint-config@2.2.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))':
+  '@commencis/stylelint-config@2.3.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.23.1(typescript@5.9.2))':
     dependencies:
       '@stylistic/stylelint-config': 3.0.1(stylelint@16.23.1(typescript@5.9.2))
       postcss-styled-syntax: 0.7.1(postcss@8.5.6)
