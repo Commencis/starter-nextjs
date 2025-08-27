@@ -32,7 +32,7 @@
   "dependencies": {
     "axios": "1.11.0",
     "clsx": "2.1.1",
-    "next": "15.5.0",
+    "next": "15.5.2",
     "next-intl": "4.3.5",
     "react": "19.1.1",
     "react-dom": "19.1.1"
@@ -45,7 +45,7 @@
     "@commencis/stylelint-config": "2.3.0",
     "@commencis/ts-config": "0.0.2",
     "@commitlint/cli": "19.8.1",
-    "@next/bundle-analyzer": "15.5.0",
+    "@next/bundle-analyzer": "15.5.2",
     "@svgr/webpack": "8.1.0",
     "@types/node": "22.18.0",
     "@types/react": "19.1.11",
