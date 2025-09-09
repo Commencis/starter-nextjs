@@ -55,7 +55,7 @@
     "lint-staged": "16.1.6",
     "prettier": "3.6.2",
     "sass": "1.92.1",
-    "stylelint": "16.23.1",
+    "stylelint": "16.24.0",
     "typescript": "5.9.2"
   },
   "pnpm": {
