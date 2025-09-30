@@ -40,8 +40,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(prettier@3.6.2)
       '@commencis/stylelint-config':
-        specifier: 2.3.0
-        version: 2.3.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
+        specifier: 2.4.0
+        version: 2.4.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
       '@commencis/ts-config':
         specifier: 0.0.2
         version: 0.0.2
@@ -654,10 +654,10 @@ packages:
     peerDependencies:
       prettier: '>= 3.5'
 
-  '@commencis/stylelint-config@2.3.0':
-    resolution: {integrity: sha512-KbF9/9mEj6mSNNp+tk0oLaH6/TFOxzXDv+Vm02ZJgOmdhytw5UbewHo3rVj+mScu3a5aVr9yj9had8mczlZIPw==}
+  '@commencis/stylelint-config@2.4.0':
+    resolution: {integrity: sha512-aReaKoyPV6cfHTjs3L+olAeoDUOlTgOPQTiso7GwNId0M3e1Ja7xhkOW9DJd+UKGlPpG6Je8d3u/ChffGN9Y+g==}
     peerDependencies:
-      stylelint: '>=16.23'
+      stylelint: '>=16.23.1'
 
   '@commencis/ts-config@0.0.2':
     resolution: {integrity: sha512-qCCHOjPrxP7Hs2wh3cVtqfkZx8o+EFSZo0y5nFlE+Fk3nzIm7qES8C2giH+kWKL5NYIUppRl17yRgyqz4eBDnw==}
@@ -3025,21 +3025,15 @@ packages:
     peerDependencies:
       stylelint: '>=15.0.0'
 
-  stylelint-config-recommended-scss@15.0.1:
-    resolution: {integrity: sha512-V24bxkNkFGggqPVJlP9iXaBabwSGEG7QTz+PyxrRtjPkcF+/NsWtB3tKYvFYEmczRkWiIEfuFMhGpJFj9Fxe6Q==}
+  stylelint-config-recommended-scss@16.0.2:
+    resolution: {integrity: sha512-aUTHhPPWCvFyWaxtckJlCPaXTDFsp4pKO8evXNCsW9OwsaUWyMd6jvcUhSmfGWPrTddvzNqK4rS/UuSLcbVGdQ==}
     engines: {node: '>=20'}
     peerDependencies:
       postcss: ^8.3.3
-      stylelint: ^16.16.0
+      stylelint: ^16.24.0
     peerDependenciesMeta:
       postcss:
         optional: true
-
-  stylelint-config-recommended@16.0.0:
-    resolution: {integrity: sha512-4RSmPjQegF34wNcK1e1O3Uz91HN8P1aFdFzio90wNK9mjgAI19u5vsU868cVZboKzCaa5XbpvtTzAAGQAxpcXA==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.16.0
 
   stylelint-config-recommended@17.0.0:
     resolution: {integrity: sha512-WaMSdEiPfZTSFVoYmJbxorJfA610O0tlYuU2aEwY33UQhSPgFbClrVJYWvy3jGJx+XW37O+LyNLiZOEXhKhJmA==}
@@ -3047,21 +3041,15 @@ packages:
     peerDependencies:
       stylelint: ^16.23.0
 
-  stylelint-config-standard-scss@15.0.1:
-    resolution: {integrity: sha512-8pmmfutrMlPHukLp+Th9asmk21tBXMVGxskZCzkRVWt1d8Z0SrXjUUQ3vn9KcBj1bJRd5msk6yfEFM0UYHBRdg==}
+  stylelint-config-standard-scss@16.0.0:
+    resolution: {integrity: sha512-/FHECLUu+med/e6OaPFpprG86ShC4SYT7Tzb2PTVdDjJsehhFBOioSlWqYFqJxmGPIwO3AMBxNo+kY3dxrbczA==}
     engines: {node: '>=20'}
     peerDependencies:
       postcss: ^8.3.3
-      stylelint: ^16.18.0
+      stylelint: ^16.23.1
     peerDependenciesMeta:
       postcss:
         optional: true
-
-  stylelint-config-standard@38.0.0:
-    resolution: {integrity: sha512-uj3JIX+dpFseqd/DJx8Gy3PcRAJhlEZ2IrlFOc4LUxBX/PNMEQ198x7LCOE2Q5oT9Vw8nyc4CIL78xSqPr6iag==}
-    engines: {node: '>=18.12.0'}
-    peerDependencies:
-      stylelint: ^16.18.0
 
   stylelint-config-standard@39.0.0:
     resolution: {integrity: sha512-JabShWORb8Bmc1A47ZyJstran60P3yUdI1zWMpGYPeFiC6xzHXJMkpKAd8EjIhq3HPUplIWWMDJ/xu0AiPd+kA==}
@@ -4081,7 +4069,7 @@ snapshots:
     dependencies:
       prettier: 3.6.2
 
-  '@commencis/stylelint-config@2.3.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))':
+  '@commencis/stylelint-config@2.4.0(postcss-html@1.8.0)(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))':
     dependencies:
       '@stylistic/stylelint-config': 3.0.1(stylelint@16.24.0(typescript@5.9.2))
       postcss-styled-syntax: 0.7.1(postcss@8.5.6)
@@ -4089,7 +4077,7 @@ snapshots:
       stylelint-config-html: 1.1.0(postcss-html@1.8.0)(stylelint@16.24.0(typescript@5.9.2))
       stylelint-config-prettier-scss: 1.0.0(stylelint@16.24.0(typescript@5.9.2))
       stylelint-config-standard: 39.0.0(stylelint@16.24.0(typescript@5.9.2))
-      stylelint-config-standard-scss: 15.0.1(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
+      stylelint-config-standard-scss: 16.0.0(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
       stylelint-order: 7.0.0(stylelint@16.24.0(typescript@5.9.2))
     transitivePeerDependencies:
       - postcss
@@ -6641,35 +6629,26 @@ snapshots:
     dependencies:
       stylelint: 16.24.0(typescript@5.9.2)
 
-  stylelint-config-recommended-scss@15.0.1(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2)):
+  stylelint-config-recommended-scss@16.0.2(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2)):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.5.6)
       stylelint: 16.24.0(typescript@5.9.2)
-      stylelint-config-recommended: 16.0.0(stylelint@16.24.0(typescript@5.9.2))
+      stylelint-config-recommended: 17.0.0(stylelint@16.24.0(typescript@5.9.2))
       stylelint-scss: 6.12.1(stylelint@16.24.0(typescript@5.9.2))
     optionalDependencies:
       postcss: 8.5.6
-
-  stylelint-config-recommended@16.0.0(stylelint@16.24.0(typescript@5.9.2)):
-    dependencies:
-      stylelint: 16.24.0(typescript@5.9.2)
 
   stylelint-config-recommended@17.0.0(stylelint@16.24.0(typescript@5.9.2)):
     dependencies:
       stylelint: 16.24.0(typescript@5.9.2)
 
-  stylelint-config-standard-scss@15.0.1(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2)):
+  stylelint-config-standard-scss@16.0.0(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2)):
     dependencies:
       stylelint: 16.24.0(typescript@5.9.2)
-      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
-      stylelint-config-standard: 38.0.0(stylelint@16.24.0(typescript@5.9.2))
+      stylelint-config-recommended-scss: 16.0.2(postcss@8.5.6)(stylelint@16.24.0(typescript@5.9.2))
+      stylelint-config-standard: 39.0.0(stylelint@16.24.0(typescript@5.9.2))
     optionalDependencies:
       postcss: 8.5.6
-
-  stylelint-config-standard@38.0.0(stylelint@16.24.0(typescript@5.9.2)):
-    dependencies:
-      stylelint: 16.24.0(typescript@5.9.2)
-      stylelint-config-recommended: 16.0.0(stylelint@16.24.0(typescript@5.9.2))
 
   stylelint-config-standard@39.0.0(stylelint@16.24.0(typescript@5.9.2)):
     dependencies:
