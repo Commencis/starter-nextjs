@@ -28,8 +28,8 @@ importers:
         version: 19.1.1(react@19.1.1)
     devDependencies:
       '@commencis/commitlint-config':
-        specifier: 1.1.4
-        version: 1.1.4
+        specifier: 2.1.0
+        version: 2.1.0
       '@commencis/eslint-config':
         specifier: 2.1.1
         version: 2.1.1(@typescript-eslint/parser@8.41.0(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1))(prettier@3.6.2)(typescript@5.9.2)(vue-eslint-parser@10.2.0(eslint@9.36.0(jiti@2.5.1)))
@@ -638,8 +638,8 @@ packages:
     resolution: {integrity: sha512-bkFqkLhh3pMBUQQkpVgWDWq/lqzc2678eUyDlTBhRqhCHFguYYGM0Efga7tYk4TogG/3x0EEl66/OQ+WGbWB/Q==}
     engines: {node: '>=6.9.0'}
 
-  '@commencis/commitlint-config@1.1.4':
-    resolution: {integrity: sha512-9TcBArqHAaKOYDESG0JMaUHZEhNJzxdFN4fOGsLOiWdsbpeQ5/dLHuWa2MVtMChcpRRcZ9JPiTSaNdZxftt0cA==}
+  '@commencis/commitlint-config@2.1.0':
+    resolution: {integrity: sha512-EKa5HzYPORONASSIu0lZsPCEij1YwX2D1efikVfQvXg2v7ww7DGTrdOz57joMPGEyg5msELPel2Ink15YHFr9w==}
 
   '@commencis/eslint-config@2.1.1':
     resolution: {integrity: sha512-BLVgh3JIUgQyU4Tntf6tZXiU2C3WvoqMAFyApc5NC0I1FS3LpuHWI5brvIuWFJtdEMaNN43AnPEdSrIDwyvVJw==}
@@ -667,8 +667,8 @@ packages:
     engines: {node: '>=v18'}
     hasBin: true
 
-  '@commitlint/config-conventional@19.8.1':
-    resolution: {integrity: sha512-/AZHJL6F6B/G959CsMAzrPKKZjeEiAVifRyEwXxcT6qtqbPwGw+iQxmNS+Bu+i09OCtdNRW6pNpBvgPrtMr9EQ==}
+  '@commitlint/config-conventional@20.2.0':
+    resolution: {integrity: sha512-MsRac+yNIbTB4Q/psstKK4/ciVzACHicSwz+04Sxve+4DW+PiJeTjU0JnS4m/oOnulrXYN+yBPlKaBSGemRfgQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/config-validator@19.8.1':
@@ -729,6 +729,10 @@ packages:
 
   '@commitlint/types@19.8.1':
     resolution: {integrity: sha512-/yCrWGCoA1SVKOks25EGadP9Pnj0oAIHGpl2wH2M2Y46dPM2ueb8wyCVOD7O3WCTkaJ0IkKvzhl1JY7+uCT2Dw==}
+    engines: {node: '>=v18'}
+
+  '@commitlint/types@20.2.0':
+    resolution: {integrity: sha512-KTy0OqRDLR5y/zZMnizyx09z/rPlPC/zKhYgH8o/q6PuAjoQAKlRfY4zzv0M64yybQ//6//4H1n14pxaLZfUnA==}
     engines: {node: '>=v18'}
 
   '@csstools/css-parser-algorithms@3.0.5':
@@ -2535,6 +2539,7 @@ packages:
   next@15.5.4:
     resolution: {integrity: sha512-xH4Yjhb82sFYQfY3vbkJfgSDgXvBB6a8xPs9i35k6oZJRoQRihZH+4s9Yo2qsWpzBmZ3lPXaJ2KPXLfkvW4LnA==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -4048,9 +4053,9 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@commencis/commitlint-config@1.1.4':
+  '@commencis/commitlint-config@2.1.0':
     dependencies:
-      '@commitlint/config-conventional': 19.8.1
+      '@commitlint/config-conventional': 20.2.0
 
   '@commencis/eslint-config@2.1.1(@typescript-eslint/parser@8.41.0(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1))(prettier@3.6.2)(typescript@5.9.2)(vue-eslint-parser@10.2.0(eslint@9.36.0(jiti@2.5.1)))':
     dependencies:
@@ -4110,9 +4115,9 @@ snapshots:
       - '@types/node'
       - typescript
 
-  '@commitlint/config-conventional@19.8.1':
+  '@commitlint/config-conventional@20.2.0':
     dependencies:
-      '@commitlint/types': 19.8.1
+      '@commitlint/types': 20.2.0
       conventional-changelog-conventionalcommits: 7.0.2
 
   '@commitlint/config-validator@19.8.1':
@@ -4203,6 +4208,11 @@ snapshots:
       find-up: 7.0.0
 
   '@commitlint/types@19.8.1':
+    dependencies:
+      '@types/conventional-commits-parser': 5.0.1
+      chalk: 5.6.0
+
+  '@commitlint/types@20.2.0':
     dependencies:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.6.0
