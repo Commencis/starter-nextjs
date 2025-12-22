@@ -34,8 +34,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1(@typescript-eslint/parser@8.41.0(eslint@9.36.0(jiti@2.5.1))(typescript@5.9.2))(eslint@9.36.0(jiti@2.5.1))(prettier@3.6.2)(typescript@5.9.2)(vue-eslint-parser@10.2.0(eslint@9.36.0(jiti@2.5.1)))
       '@commencis/lint-staged-config':
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.1.0
+        version: 2.1.0
       '@commencis/prettier-config':
         specifier: 2.0.0
         version: 2.0.0(prettier@3.6.2)
@@ -646,8 +646,8 @@ packages:
     peerDependencies:
       eslint: '>= 9.7'
 
-  '@commencis/lint-staged-config@1.1.0':
-    resolution: {integrity: sha512-RF+fzct2nnA8+fkupQXe7iCF3rkBbHAHReoeagMEAHxVuPVfIlJKTpI3eJGp8y56LLQs59mKYADedw2ZHmmXAg==}
+  '@commencis/lint-staged-config@2.1.0':
+    resolution: {integrity: sha512-sj3tslYnTInAP1s2lmgu3bXWjb8DqFoHArmBeci7F9hFmiICKfCzCFwiquRdEFdvBLRMTnrP2ge+A13HJGDv0w==}
 
   '@commencis/prettier-config@2.0.0':
     resolution: {integrity: sha512-j7T4njevT3PNaD1ZV8y8g/bvIlyPF0i5hY2wwUonnttbcmbIXie9eEhkw1F2kk3mx5TsgjFYubYV1hM3zd7yHw==}
@@ -2535,6 +2535,7 @@ packages:
   next@15.5.4:
     resolution: {integrity: sha512-xH4Yjhb82sFYQfY3vbkJfgSDgXvBB6a8xPs9i35k6oZJRoQRihZH+4s9Yo2qsWpzBmZ3lPXaJ2KPXLfkvW4LnA==}
     engines: {node: ^18.18.0 || ^19.8.0 || >= 20.0.0}
+    deprecated: This version has a security vulnerability. Please upgrade to a patched version. See https://nextjs.org/blog/CVE-2025-66478 for more details.
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -4075,7 +4076,7 @@ snapshots:
       - typescript
       - vue-eslint-parser
 
-  '@commencis/lint-staged-config@1.1.0': {}
+  '@commencis/lint-staged-config@2.1.0': {}
 
   '@commencis/prettier-config@2.0.0(prettier@3.6.2)':
     dependencies:
