@@ -6,9 +6,9 @@
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=22.18"
+    "node": ">=24.12"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.26.1",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
@@ -30,33 +30,33 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "axios": "1.12.2",
+    "axios": "1.13.2",
     "clsx": "2.1.1",
-    "next": "15.5.4",
-    "next-intl": "4.3.9",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "next": "16.1.1",
+    "next-intl": "4.6.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@commencis/commitlint-config": "1.1.4",
-    "@commencis/eslint-config": "2.1.1",
-    "@commencis/lint-staged-config": "1.1.0",
-    "@commencis/prettier-config": "2.0.0",
-    "@commencis/stylelint-config": "2.3.0",
-    "@commencis/ts-config": "0.0.2",
-    "@commitlint/cli": "19.8.1",
-    "@next/bundle-analyzer": "15.5.4",
+    "@commencis/commitlint-config": "2.1.0",
+    "@commencis/eslint-config": "2.5.0",
+    "@commencis/lint-staged-config": "2.1.0",
+    "@commencis/prettier-config": "2.2.0",
+    "@commencis/stylelint-config": "2.6.0",
+    "@commencis/ts-config": "1.0.0",
+    "@commitlint/cli": "20.2.0",
+    "@next/bundle-analyzer": "16.1.1",
     "@svgr/webpack": "8.1.0",
-    "@types/node": "22.18.6",
-    "@types/react": "19.1.13",
-    "@types/react-dom": "19.1.9",
-    "eslint": "9.36.0",
+    "@types/node": "24.10.4",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.2",
     "husky": "9.1.7",
-    "lint-staged": "16.2.1",
-    "prettier": "3.6.2",
-    "sass": "1.93.2",
-    "stylelint": "16.24.0",
-    "typescript": "5.9.2"
+    "lint-staged": "16.2.7",
+    "prettier": "3.7.4",
+    "sass": "1.97.1",
+    "stylelint": "16.26.1",
+    "typescript": "5.9.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

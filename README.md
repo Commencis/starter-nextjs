@@ -16,7 +16,7 @@ Commencis Starter – Next.js provides a streamlined foundation for building mod
 
 #### Node.js
 
-Before you begin, ensure you have `node: >= 22.18` installed on your system.
+Before you begin, ensure you have `node: >= 24.12` installed on your system.
 
 #### pnpm
 
