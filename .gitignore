@@ -15,6 +15,7 @@ storybook-static
 
 # next.js
 .next
+next-env.d.ts
 
 # debug
 logs
