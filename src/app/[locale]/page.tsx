@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 import { useTranslations } from 'next-intl';
 
-import { Button, Icon, Text } from '@/components/common';
+import { Button, Text } from '@/components/common';
 
 import { useConfig } from '@/hooks';
 
@@ -15,7 +15,6 @@ const HomePage = (): ReactElement => {
       <h1>{t('starterName')}</h1>
 
       <Button label="Click Me" />
-      <Icon name="chevron-right" size={20} />
 
       <Text variant="bodyMedium" color="neutral-700">
         {`${t('title')} - ${t('version')}: ${version}`}
