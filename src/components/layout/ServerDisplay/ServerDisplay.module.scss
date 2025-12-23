@@ -1,0 +1,28 @@
+@use '@/styles/mixins/media-queries' as media-queries;
+@mixin display-options {
+  &Visible {
+    display: contents;
+  }
+
+  &Hidden {
+    display: none;
+  }
+}
+
+.sm {
+  @include display-options;
+}
+
+.md {
+  display: none;
+  @include media-queries.up(md) {
+    @include display-options;
+  }
+}
+
+.lg {
+  display: none;
+  @include media-queries.up(lg) {
+    @include display-options;
+  }
+}
