@@ -2,6 +2,7 @@ import type { ReactElement } from 'react';
 
 type BaseProps = {
   children: ReactElement;
+  condition?: boolean;
 };
 
 type DisplayProps =

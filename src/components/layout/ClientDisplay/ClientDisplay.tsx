@@ -12,6 +12,7 @@ export const ClientDisplay = ({
   showOnSm,
   showOnMd,
   showOnLg,
+  condition,
 }: ClientDisplayProps): ReactElement => {
   const isSm = useMediaQuery({ down: Breakpoint.Md });
   const isMd = useMediaQuery({
@@ -20,9 +21,11 @@ export const ClientDisplay = ({
   const isLg = useMediaQuery({ up: Breakpoint.Lg });
   const hasMediaQueryValues = isSm !== null || isMd !== null || isLg !== null;
 
-  const isVisible = hasMediaQueryValues
+  const mediaQueryVisible = hasMediaQueryValues
     ? (showOnSm && isSm) || (showOnMd && isMd) || (showOnLg && isLg)
     : showOnSm;
+
+  const isVisible = (condition ?? true) && mediaQueryVisible;
 
   return (
     <Activity mode={isVisible ? 'visible' : 'hidden'}>{children}</Activity>
