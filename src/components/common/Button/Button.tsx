@@ -7,7 +7,7 @@ import type {
   ButtonSize,
 } from '@/components/common/Button/Button.types';
 import type { TextVariant } from '@/components/common/Text/Text.types';
-import styles from '@/components/common/Button/Button.module.scss';
+import css from '@/components/common/Button/Button.module.scss';
 import { Text } from '@/components/common/Text/Text';
 
 const buttonSizeTextVariantMap = {
@@ -25,7 +25,7 @@ export const Button = ({
 }: ButtonProps): ReactElement => {
   return (
     <button
-      className={clsx(styles.button, styles[variant], styles[size], className)}
+      className={clsx(css.button, css[variant], css[size], className)}
       {...rest}
     >
       <Text as="span" variant={buttonSizeTextVariantMap[size]}>
