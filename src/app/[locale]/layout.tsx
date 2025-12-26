@@ -5,7 +5,9 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { FONT_ROBOTO } from '@/constants/font.constants';
 import { routing } from '@/lib/i18n/i18n';
 
-import '@/styles/main.scss';
+import { MainLayoutContainer } from '@/layouts';
+
+import '@/styles/globals.scss';
 
 type MainLayoutProps = Readonly<{
   params: Promise<{ locale: string }>;
@@ -24,7 +26,9 @@ const MainLayout = async (props: MainLayoutProps): Promise<ReactElement> => {
   return (
     <html lang={locale} className={FONT_ROBOTO.variable}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <MainLayoutContainer>{children}</MainLayoutContainer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
