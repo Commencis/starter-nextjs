@@ -1,0 +1,50 @@
+@use 'sass:map';
+@use '@/styles/functions/color.funcs' as colorFuncs;
+
+$text-black: colorFuncs.get-primitive('neutral', '950');
+$text-primary: colorFuncs.get-primitive('slate', '900');
+$text-secondary: colorFuncs.get-primitive('slate', '500');
+$text-brand: colorFuncs.get-primitive('brand', '800');
+$text-brand-hover: colorFuncs.get-primitive('brand', '700');
+$text-white: colorFuncs.get-primitive('neutral', 'white');
+$text-blue: colorFuncs.get-primitive('brand', '500');
+$text-green: colorFuncs.get-primitive('green', '900');
+$text-purple: colorFuncs.get-primitive('purple', '900');
+$text-red: colorFuncs.get-primitive('red', '900');
+
+// TODO: Finalize icon colors
+$icon-primary: colorFuncs.get-primitive('slate', '900');
+$icon-brand: colorFuncs.get-primitive('brand', '800');
+$icon-blue: colorFuncs.get-primitive('brand', '500');
+$icon-green: colorFuncs.get-primitive('green', '900');
+$icon-red: colorFuncs.get-primitive('red', '900');
+
+$background-primary: colorFuncs.get-primitive('neutral', 'white');
+$background-secondary: colorFuncs.get-primitive('slate', '200');
+$background-blue: colorFuncs.get-primitive('blue', '200');
+$background-light: colorFuncs.get-primitive('slate', '100');
+$background-green: colorFuncs.get-primitive('green', '100');
+$background-purple: colorFuncs.get-primitive('purple', '100');
+$background-red: colorFuncs.get-primitive('red', '100');
+$background-gray: colorFuncs.get-primitive('neutral', '50');
+$background-light-transparent: colorFuncs.get-primitive('alpha-light', '0');
+$background-dark-transparent: colorFuncs.get-primitive('alpha-dark', '0');
+$background-header: colorFuncs.get-primitive('alpha-light', '700');
+$background-hover-transparent: rgb(colorFuncs.get-primitive('slate', '200'), 0.3);
+
+$border-brand: colorFuncs.get-primitive('brand', '600');
+$border-primary: colorFuncs.get-primitive('slate', '300');
+$border-secondary: colorFuncs.get-primitive('slate', '800');
+
+/* stylelint-disable function-name-case */
+$button-primary-background: linear-gradient(
+  135deg,
+  colorFuncs.get-primitive('brand', '600'),
+  colorFuncs.get-primitive('brand', '700')
+);
+$button-secondary-background: linear-gradient(
+  135deg,
+  colorFuncs.get-primitive('neutral', 'white'),
+  colorFuncs.get-primitive('slate', '50')
+);
+/* stylelint-enable function-name-case */

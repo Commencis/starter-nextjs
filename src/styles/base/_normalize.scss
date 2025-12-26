@@ -1,35 +1,12 @@
-* {
-  margin: 0;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html {
-  display: flex;
-
-  height: 100%;
-
-  flex-direction: column;
-
-  scroll-behavior: smooth;
-
-  text-size-adjust: none;
-}
-
-body {
-  display: flex;
-
-  height: 100%;
-  overflow-x: hidden;
-
-  flex-direction: column;
-  line-height: 1.5;
-
-  -webkit-font-smoothing: antialiased;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 p,
@@ -40,6 +17,11 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 ol,
@@ -66,8 +48,8 @@ select {
   text-transform: none;
 }
 
-input[type='button'],
-button {
+button,
+input[type='button'], {
   cursor: pointer;
   box-shadow: none;
   background-color: transparent;
@@ -76,4 +58,17 @@ button {
 
 textarea {
   resize: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0 !important;
+
+    animation-duration: 0 !important;
+    animation-iteration-count: 1 !important;
+  }
 }

@@ -1,0 +1,48 @@
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+
+  scroll-behavior: smooth;
+
+  text-size-adjust: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: underline;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+#__next,
+#root {
+  isolation: isolate;
+}

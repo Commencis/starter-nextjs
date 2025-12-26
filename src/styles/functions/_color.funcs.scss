@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../variables/colors/primitives' as primitives;
+
+@function get-primitive($group, $shade) {
+  @return map.get(primitives.$primitives, $group, $shade);
+}

@@ -1,0 +1,43 @@
+@use 'sass:meta';
+@use 'sass:map';
+@use '../variables/breakpoints' as breakpoints;
+@use './media.mixins' as mediaMixins;
+
+$breakpoints-with-base: map.merge((base: 0), breakpoints.$breakpoint-map);
+
+@mixin create-utilities($prefix, $prop, $value-map, $bp: base ) {
+
+  $selector-prefix: if(sass($bp != base): '.#{$prefix}-#{$bp}-'; else: '.#{$prefix}-');
+
+  @if meta.type-of($prop) != 'list' {
+
+    $prop: ($prop);
+  }
+
+  @if $bp != base {
+    @include mediaMixins.media-query-up($bp) {
+      @each $key, $value in $value-map {
+        #{$selector-prefix}#{$key} {
+          @each $p in $prop {
+            #{$p}: $value;
+          }
+        }
+      }
+    }
+  }
+  @else {
+    @each $key, $value in $value-map {
+      #{$selector-prefix}#{$key} {
+        @each $p in $prop {
+          #{$p}: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin create-responsive-utilities($prefix, $prop, $value-map, $bp-map: $breakpoints-with-base) {
+  @each $bp, $bp-value in $bp-map {
+    @include create-utilities($prefix, $prop, $value-map, $bp);
+  }
+}

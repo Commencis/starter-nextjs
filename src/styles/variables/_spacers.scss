@@ -1,0 +1,67 @@
+$spacer-base: 0.25rem;
+
+$spacer-0: 0;
+$spacer-1: 0.0625rem;
+$spacer-2: 0.125rem;
+$spacer-4: 0.25rem;
+$spacer-6: 0.375rem;
+$spacer-8: 0.5rem;
+$spacer-10: 0.625rem;
+$spacer-12: 0.75rem;
+$spacer-14: 0.875rem;
+$spacer-16: 1rem;
+$spacer-18: 1.125rem;
+$spacer-20: 1.25rem;
+$spacer-24: 1.5rem;
+$spacer-28: 1.75rem;
+$spacer-32: 2rem;
+$spacer-48: 3rem;
+$spacer-64: 4rem;
+
+$root-padding-xs: 16px;
+$root-padding-md: 32px;
+$root-padding-lg: 64px;
+
+// Should be in sync with @type Padding in src/types/spacer.types.ts
+$padding-values: (
+  0: $spacer-0,
+  2: $spacer-2,
+  4: $spacer-4,
+  6: $spacer-6,
+  8: $spacer-8,
+  10: $spacer-10,
+  12: $spacer-12,
+  14: $spacer-14,
+  16: $spacer-16,
+  32: $spacer-32,
+  64: $spacer-64,
+);
+
+// Should be in sync with @type Margin in src/types/spacer.types.ts
+$margin-values: (
+  auto: auto,
+  0: $spacer-0,
+  2: $spacer-2,
+  4: $spacer-4,
+  6: $spacer-6,
+  8: $spacer-8,
+  10: $spacer-10,
+  12: $spacer-12,
+  14: $spacer-14,
+  16: $spacer-16,
+  32: $spacer-32,
+  64: $spacer-64,
+);
+
+// Should be in sync with @type Gap in src/types/spacer.types.ts
+$gap-values: (
+  0: $spacer-0,
+  2: $spacer-2,
+  4: $spacer-4,
+  6: $spacer-6,
+  8: $spacer-8,
+  10: $spacer-10,
+  12: $spacer-12,
+  14: $spacer-14,
+  16: $spacer-16
+);

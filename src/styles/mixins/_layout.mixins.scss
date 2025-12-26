@@ -1,0 +1,22 @@
+@use '../variables/layout' as layoutVars;
+@use './utility.mixins' as utilityMixins;
+
+@mixin create-display-classes() {
+  @include utilityMixins.create-utilities('d', 'display', layoutVars.$display-values);
+}
+
+@mixin create-position-classes() {
+  @include utilityMixins.create-utilities('pos', 'position', layoutVars.$position-values);
+}
+
+@mixin create-overflow-classes() {
+  @include utilityMixins.create-utilities('of', 'overflow', layoutVars.$overflow-values);
+}
+
+@mixin create-responsive-width-classes() {
+  @include utilityMixins.create-responsive-utilities('w', 'width', layoutVars.$width-values);
+}
+
+@mixin create-responsive-height-classes() {
+  @include utilityMixins.create-responsive-utilities('h', 'height', layoutVars.$height-values);
+}

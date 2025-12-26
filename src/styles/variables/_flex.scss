@@ -1,0 +1,34 @@
+$flex-direction-values: (
+  row: row,
+  row-reverse: row-reverse,
+  column: column,
+  column-reverse: column-reverse
+);
+
+$flex-wrap-values: (
+  nowrap: nowrap,
+  wrap: wrap
+);
+
+$flex-justify-content-values: (
+  flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  space-between: space-between
+);
+
+$flex-align-items-values: (
+  flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  stretch: stretch
+);
+
+$flex-align-self-values: (
+  auto: auto,
+  baseline: baseline,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  center: center,
+  stretch: stretch
+);

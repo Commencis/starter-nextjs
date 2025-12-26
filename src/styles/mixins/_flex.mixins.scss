@@ -1,0 +1,22 @@
+@use '../variables/flex' as flexVars;
+@use './utility.mixins' as utilityMixins;
+
+@mixin create-flex-direction-classes() {
+  @include utilityMixins.create-utilities('flex-di', 'flex-direction', flexVars.$flex-direction-values);
+}
+
+@mixin create-flex-wrap-classes() {
+  @include utilityMixins.create-utilities('flex-wr', 'flex-wrap', flexVars.$flex-wrap-values);
+}
+
+@mixin create-flex-justify-content-classes() {
+  @include utilityMixins.create-utilities('flex-jc', 'justify-content', flexVars.$flex-justify-content-values);
+}
+
+@mixin create-flex-align-items-classes() {
+  @include utilityMixins.create-utilities('flex-ai', 'align-items', flexVars.$flex-align-items-values);
+}
+
+@mixin create-flex-align-self-classes() {
+  @include utilityMixins.create-utilities('flex-as', 'align-self', flexVars.$flex-align-self-values);
+}

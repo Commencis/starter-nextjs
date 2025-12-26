@@ -1,0 +1,70 @@
+@use 'weights' as weights;
+
+$text-variants: (
+  'heading-2xl': (
+    'font-size': 4rem,
+    'line-height': 4.375rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.05rem,
+  ),
+  'heading-xl': (
+    'font-size': 2.5rem,
+    'line-height': 3rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.04rem,
+  ),
+  'heading-lg': (
+    'font-size': 2rem,
+    'line-height': 2.25rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.0375rem,
+  ),
+  'heading-md': (
+    'font-size': 1.75rem,
+    'line-height': 2rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.035rem,
+  ),
+  'heading-sm': (
+    'font-size': 1.5rem,
+    'line-height': 1.75rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.015rem,
+  ),
+  'heading-xs': (
+    'font-size': 1.25rem,
+    'line-height': 1.5rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.0125rem,
+  ),
+  'body-lg': (
+    'font-size': 1.125rem,
+    'line-height': 1.25rem,
+    'font-weight': weights.$font-weight-bold,
+    'letter-spacing': -0.0112rem,
+  ),
+  'body-md': (
+    'font-size': 1rem,
+    'line-height': 1.125rem,
+    'font-weight': weights.$font-weight-regular,
+    'letter-spacing': -0.01rem,
+  ),
+  'body-sm': (
+    'font-size': 0.875rem,
+    'line-height': 1rem,
+    'font-weight': weights.$font-weight-regular,
+    'letter-spacing': -0.008rem,
+  ),
+  'body-xs': (
+    'font-size': 0.75rem,
+    'line-height': 0.875rem,
+    'font-weight': weights.$font-weight-regular,
+    'letter-spacing': -0.0075rem,
+  ),
+  'caption': (
+    'font-size': 0.625rem,
+    'line-height': 0.75rem,
+    'font-weight': weights.$font-weight-regular,
+    'letter-spacing': 0,
+  ),
+);

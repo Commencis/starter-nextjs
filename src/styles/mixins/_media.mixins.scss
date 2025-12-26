@@ -1,0 +1,45 @@
+@use 'sass:map';
+@use '../variables/breakpoints' as breakpoints;
+
+@mixin media-query-up($breakpoint) {
+
+  $width: map.get(breakpoints.$breakpoint-map, $breakpoint);
+  @if not $width and $width != 0 {
+    @error 'Breakpoint `#{$breakpoint}` not found in $breakpoints map.';
+  }
+
+  @if $width != 0 {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+@mixin media-query-down($breakpoint) {
+
+  $width: map.get(breakpoints.$breakpoint-map, $breakpoint);
+  @if not $width {
+    @error 'Breakpoint `#{$breakpoint}` not found in $breakpoints map.';
+  }
+
+  @media (max-width: $width - 1px) {
+    @content;
+  }
+}
+
+@mixin media-query-between($min, $max) {
+
+  $min-width: map.get(breakpoints.$breakpoint-map, $min);
+  $max-width: map.get(breakpoints.$breakpoint-map, $max);
+
+  @if not $min-width or not $max-width {
+    @error 'One of the breakpoints `#{$min}` or `#{$max}` not found.';
+  }
+
+  @media (min-width: $min-width) and (max-width: $max-width - 1px) {
+    @content;
+  }
+}

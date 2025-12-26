@@ -1,0 +1,7 @@
+@use '../mixins/flex.mixins' as flexMixins;
+
+@include flexMixins.create-flex-direction-classes();
+@include flexMixins.create-flex-wrap-classes();
+@include flexMixins.create-flex-justify-content-classes();
+@include flexMixins.create-flex-align-items-classes();
+@include flexMixins.create-flex-align-self-classes();
