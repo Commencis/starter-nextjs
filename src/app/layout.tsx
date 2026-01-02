@@ -4,10 +4,8 @@ type Props = {
   children: ReactNode;
 };
 
-const RootLayout = (props: Props): ReactNode => {
+export default function RootLayout(props: Props): ReactNode {
   const { children } = props;
 
   return children;
-};
-
-export default RootLayout;
+}

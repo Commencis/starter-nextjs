@@ -6,7 +6,7 @@ import { DEFAULT_LOCALE } from '@/constants';
 
 import { Error500 } from '@/components/error';
 
-const GlobalErrorPage = (): ReactElement => {
+export default function GlobalErrorPage(): ReactElement {
   return (
     <html lang={DEFAULT_LOCALE}>
       <body>
@@ -14,6 +14,4 @@ const GlobalErrorPage = (): ReactElement => {
       </body>
     </html>
   );
-};
-
-export default GlobalErrorPage;
+}

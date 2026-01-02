@@ -14,7 +14,9 @@ type MainLayoutProps = Readonly<{
   children: ReactNode;
 }>;
 
-const MainLayout = async (props: MainLayoutProps): Promise<ReactElement> => {
+export default async function MainLayout(
+  props: MainLayoutProps
+): Promise<ReactElement> {
   const { children, params } = props;
 
   const { locale } = await params;
@@ -32,6 +34,4 @@ const MainLayout = async (props: MainLayoutProps): Promise<ReactElement> => {
       </body>
     </html>
   );
-};
-
-export default MainLayout;
+}

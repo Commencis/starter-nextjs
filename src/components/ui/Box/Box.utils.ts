@@ -29,17 +29,21 @@ import type { BoxStyleProps } from './Box.types';
 
 function getFlexClasses(styleProps: BoxStyleProps): string {
   const { display } = styleProps;
+
   const isFlex = display === 'flex' || display === 'inline-flex';
-  return isFlex
-    ? clsx(
-        getGapClasses(styleProps),
-        getFlexDirectionClasses(styleProps),
-        getFlexWrapClasses(styleProps),
-        getFlexJustifyContentClasses(styleProps),
-        getFlexAlignItemsClasses(styleProps),
-        getFlexAlignSelfClasses(styleProps)
-      )
-    : clsx(getFlexAlignSelfClasses(styleProps));
+
+  return clsx(
+    getFlexAlignSelfClasses(styleProps),
+    ...(isFlex
+      ? [
+          getGapClasses(styleProps),
+          getFlexDirectionClasses(styleProps),
+          getFlexWrapClasses(styleProps),
+          getFlexJustifyContentClasses(styleProps),
+          getFlexAlignItemsClasses(styleProps),
+        ]
+      : [])
+  );
 }
 
 export function getBoxClasses(styleProps: BoxStyleProps): string {

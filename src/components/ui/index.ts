@@ -1,3 +1,3 @@
-export * from './Box/Box';
-export * from './Button/Button';
-export * from './Text/Text';
+export { Box } from './Box/Box';
+export { Button } from './Button/Button';
+export { Text } from './Text/Text';
