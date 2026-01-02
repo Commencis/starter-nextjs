@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../variables/typography/variants' as variants;
+
+@mixin create-text-variant($variant) {
+
+  $styles: map.get(variants.$text-variants, $variant);
+
+  @if not $styles {
+    @error 'Variant `#{$variant}` not found in $text-variants map.';
+  }
+
+  @else {
+    @each $prop, $value in $styles {
+      #{$prop}: #{$value};
+    }
+  }
+}

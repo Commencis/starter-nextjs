@@ -6,7 +6,7 @@ import { DEFAULT_LOCALE } from '@/constants';
 
 import { Error404 } from '@/components/error';
 
-const NotFoundPage = (): ReactElement => {
+export default function NotFoundPage(): ReactElement {
   return (
     <html lang={DEFAULT_LOCALE}>
       <body>
@@ -14,6 +14,4 @@ const NotFoundPage = (): ReactElement => {
       </body>
     </html>
   );
-};
-
-export default NotFoundPage;
+}

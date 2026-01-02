@@ -2,13 +2,8 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 import bundleAnalyzer from '@next/bundle-analyzer';
 
-const withNextIntl = createNextIntlPlugin({
-  requestConfig: './src/lib/i18n/i18n.ts',
-});
-
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-})
+const i18nConfigPath = './src/lib/i18n/i18n.ts';
+const isAnalyzeEnabled = process.env.ANALYZE === 'true';
 
 const baseConfig: NextConfig = {
   poweredByHeader: false,
@@ -21,13 +16,15 @@ const baseConfig: NextConfig = {
 
     return config;
   },
-
-  sassOptions: {
-    additionalData: '@use "@/styles/globals" as *;',
-  },
 };
 
-const intlConfig = withNextIntl(baseConfig);
-const analyzerConfig = withBundleAnalyzer(intlConfig);
+const withNextIntl = createNextIntlPlugin({ requestConfig: i18nConfigPath });
+const withBundleAnalyzer = bundleAnalyzer({ enabled: isAnalyzeEnabled });
 
-export default analyzerConfig;
+const intlConfig = withNextIntl(baseConfig);
+
+const nextConfig: NextConfig = isAnalyzeEnabled
+  ? withBundleAnalyzer(intlConfig)
+  : intlConfig;
+
+export default nextConfig;

@@ -1,0 +1,28 @@
+$display-values: (
+  block: block,
+  inline-block: inline-block,
+  flex: flex,
+  inline-flex: inline-flex,
+);
+
+$position-values: (
+  static: static,
+  relative: relative,
+);
+
+$overflow-values: (
+  auto: auto,
+  visible: visible,
+  hidden: hidden,
+  scroll: scroll,
+);
+
+$width-values:(
+  auto: auto,
+  full: 100%,
+);
+
+$height-values:(
+  auto: auto,
+  full: 100%,
+);

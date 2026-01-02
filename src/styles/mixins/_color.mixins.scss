@@ -1,0 +1,7 @@
+@mixin create-color-classes($prefix, $color-map) {
+  @each $name, $color in $color-map {
+    .#{$prefix}-#{$name} {
+      color: $color;
+    }
+  }
+}
