@@ -8,6 +8,7 @@ const isAnalyzeEnabled = process.env.ANALYZE === 'true';
 
 const baseConfig: NextConfig = {
   poweredByHeader: false,
+  reactCompiler: true,
 
   webpack(config) {
     config.module.rules.push({

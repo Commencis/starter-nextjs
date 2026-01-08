@@ -1,9 +1,12 @@
 import { configFactory } from '@commencis/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-export default configFactory({
-  react: true,
-  next: true,
-  jsxA11y: true,
-  typescript: true,
-  reactCompiler: false,
-});
+export default defineConfig(
+  configFactory({
+    typescript: true,
+    react: true,
+    reactCompiler: true,
+    jsxA11y: true,
+    next: true,
+  })
+);
