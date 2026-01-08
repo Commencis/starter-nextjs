@@ -8,7 +8,7 @@
   "engines": {
     "node": ">=24.12"
   },
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
@@ -33,34 +33,36 @@
     "axios": "1.13.2",
     "clsx": "2.1.1",
     "next": "16.1.1",
-    "next-intl": "4.6.1",
+    "next-intl": "4.7.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@commencis/commitlint-config": "2.1.0",
-    "@commencis/eslint-config": "2.5.0",
-    "@commencis/lint-staged-config": "2.1.0",
-    "@commencis/prettier-config": "2.2.0",
-    "@commencis/stylelint-config": "2.6.0",
+    "@commencis/commitlint-config": "3.0.1",
+    "@commencis/eslint-config": "3.0.1",
+    "@commencis/lint-staged-config": "3.0.1",
+    "@commencis/prettier-config": "3.0.1",
+    "@commencis/stylelint-config": "3.0.1",
     "@commencis/ts-config": "1.0.0",
-    "@commitlint/cli": "20.2.0",
+    "@commitlint/cli": "20.3.0",
     "@next/bundle-analyzer": "16.1.1",
     "@svgr/webpack": "8.1.0",
     "@types/node": "24.10.4",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
+    "babel-plugin-react-compiler": "1.0.0",
     "eslint": "9.39.2",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.7.4",
-    "sass": "1.97.1",
+    "sass": "1.97.2",
     "stylelint": "16.26.1",
     "typescript": "5.9.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
+      "@swc/core",
       "sharp"
     ]
   }

@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const i18nConfigPath = './src/lib/i18n/i18n.ts';
@@ -7,6 +8,7 @@ const isAnalyzeEnabled = process.env.ANALYZE === 'true';
 
 const baseConfig: NextConfig = {
   poweredByHeader: false,
+  reactCompiler: true,
 
   webpack(config) {
     config.module.rules.push({
