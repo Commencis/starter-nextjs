@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
+
 import bundleAnalyzer from '@next/bundle-analyzer';
 
 const i18nConfigPath = './src/lib/i18n/i18n.ts';
