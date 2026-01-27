@@ -44,7 +44,7 @@
     "@commencis/ts-config": "1.0.0",
     "@commitlint/cli": "20.3.1",
     "@next/bundle-analyzer": "16.1.5",
-    "@types/node": "24.10.4",
+    "@types/node": "24.10.9",
     "@types/react": "19.2.9",
     "@types/react-dom": "19.2.3",
     "babel-plugin-react-compiler": "1.0.0",
