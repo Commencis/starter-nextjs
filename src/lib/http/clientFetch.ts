@@ -7,7 +7,7 @@
  * Any reproduction of this material must contain this notice.
  */
 
-import type { InternalApiPath } from '@/types/api.types';
+import type { InternalApiPath } from '@/types';
 import type { FetchOptions } from '@/types/http.types';
 import { makeRequest } from '@/lib/http/core/makeRequest';
 
