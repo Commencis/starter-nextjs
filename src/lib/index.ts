@@ -1,2 +1,2 @@
-export * from '@/lib/http/http-client';
-export * from '@/lib/i18n/i18n';
+export * from './http/clientFetch';
+export * from './http/serverFetch';

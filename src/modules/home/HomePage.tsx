@@ -8,27 +8,24 @@
  */
 
 import type { ReactElement } from 'react';
-import { useTranslations } from 'next-intl';
 
 import { Box, Button, Text } from '@/components/ui';
 
 import { useConfig } from '@/hooks';
 
 export function HomePage(): ReactElement {
-  const t = useTranslations();
-
   const { version } = useConfig();
 
   return (
     <Box>
-      <Text as="h1">{t('starterName')}</Text>
+      <Text as="h1">Next.js Starter</Text>
 
       <Button variant="primary" size="md">
         Click Me
       </Button>
 
       <Text variant="heading-xl" color="primary">
-        {`${t('title')} - ${t('version')}: ${version}`}
+        {version}
       </Text>
     </Box>
   );

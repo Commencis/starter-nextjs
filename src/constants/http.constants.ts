@@ -1,12 +1,15 @@
 import type { HttpHeader } from '@/types';
 
 export const HEADER_KEY = {
-  ACCEPT: 'Accept',
   CONTENT_TYPE: 'Content-Type',
-  AUTHORIZATION: 'Authorization',
 } as const;
 
-export const HEADERS = {
-  CONTENT_TYPE_JSON: { [HEADER_KEY.CONTENT_TYPE]: 'application/json' },
-  ACCEPT_JSON: { [HEADER_KEY.ACCEPT]: 'application/json' },
-} as const satisfies Record<string, HttpHeader>;
+export const HEADER_VALUE = {
+  APPLICATION_JSON: 'application/json',
+} as const;
+
+export const DEFAULT_HEADERS: HttpHeader = {
+  [HEADER_KEY.CONTENT_TYPE]: HEADER_VALUE.APPLICATION_JSON,
+};
+
+export const SERVER_MIN_CACHE_DURATION_SEC = 60;
