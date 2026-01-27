@@ -1,10 +1,17 @@
-import type { AxiosHeaderValue } from 'axios';
-
-import type { ObjectValues } from '@/types';
-import type { HEADER_KEY } from '@/constants';
-
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
-export type HeaderKey = ObjectValues<typeof HEADER_KEY>;
+export type HttpHeader = Record<string, string>;
 
-export type HttpHeader = Partial<Record<HeaderKey, AxiosHeaderValue>>;
+export type RequestBody =
+  | string
+  | Record<string, unknown>
+  | FormData
+  | URLSearchParams;
+
+export type FetchOptions = {
+  url: string;
+  method?: HttpMethod;
+  headers?: HttpHeader;
+  body?: RequestBody;
+  revalidate?: globalThis.NextFetchRequestConfig['revalidate'];
+};
