@@ -6,7 +6,7 @@
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=24.12"
+    "node": ">=24.13"
   },
   "packageManager": "pnpm@10.27.0",
   "scripts": {
