@@ -8,8 +8,8 @@
  */
 
 export const enum HttpStatusCode {
-  OK = 200,
-  NO_CONTENT = 204,
+  Ok = 200,
+  NoContent = 204,
 }
 
 export const enum InternalApiPath {

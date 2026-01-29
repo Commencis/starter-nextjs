@@ -71,7 +71,7 @@ export async function makeRequest<T = unknown>({
       throw new Error(response.status.toString());
     }
 
-    if (response.status === HttpStatusCode.NO_CONTENT) {
+    if (response.status === HttpStatusCode.NoContent) {
       return undefined as T;
     }
 
