@@ -1,5 +1,10 @@
+import { getConfig } from '@/config/getConfig';
+import { HttpStatusCode } from '@/types';
 import type { FetchOptions, HttpMethod, RequestBody } from '@/types/http.types';
-import { DEFAULT_HEADERS } from '@/constants/http.constants';
+import {
+  API_DEFAULT_REQUEST_TIMEOUT_MS,
+  DEFAULT_HEADERS,
+} from '@/constants/http.constants';
 
 type RequestInit = globalThis.RequestInit;
 type BodyInit = globalThis.BodyInit;
@@ -19,12 +24,24 @@ function prepareRequestBody(
   return body;
 }
 
+function buildUrl(path: string): URL {
+  const config = getConfig();
+
+  const baseUrl =
+    typeof window === 'undefined' ? config.baseApiUrl : window.location.origin;
+  const serviceURL = new URL(path, baseUrl);
+
+  return serviceURL;
+}
+
 export async function makeRequest<T = unknown>({
-  url,
+  path,
   method = 'GET',
   headers = {},
   body,
+  timeoutMs,
   revalidate,
+  cache,
 }: FetchOptions): Promise<T> {
   try {
     const shouldIncludeRevalidate =
@@ -38,23 +55,30 @@ export async function makeRequest<T = unknown>({
       },
       body: prepareRequestBody(body, method),
 
+      cache,
       ...(shouldIncludeRevalidate && {
         next: {
           revalidate,
         },
       }),
+
+      signal: AbortSignal.timeout(timeoutMs ?? API_DEFAULT_REQUEST_TIMEOUT_MS),
     };
 
-    const response = await fetch(url, config);
+    const response = await fetch(buildUrl(path), config);
 
     if (!response.ok) {
       throw new Error(response.status.toString());
+    }
+
+    if (response.status === HttpStatusCode.NO_CONTENT) {
+      return undefined as T;
     }
 
     const data = await response.json();
 
     return data as T;
   } catch (error) {
-    throw new Error(`Fetch Error: ${url}: ${error}`);
+    throw new Error(`Fetch Error: ${path}: ${error}`);
   }
 }

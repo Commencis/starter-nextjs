@@ -13,7 +13,7 @@ import { makeRequest } from '@/lib/http/core/makeRequest';
 
 type ClientFetchOptions = {
   path: InternalApiPath;
-} & Omit<FetchOptions, 'url' | 'revalidate'>;
+} & Omit<FetchOptions, 'path' | 'revalidate'>;
 
 export async function clientFetch<T = unknown>({
   path,
@@ -22,7 +22,7 @@ export async function clientFetch<T = unknown>({
   body,
 }: ClientFetchOptions): Promise<T> {
   const response = await makeRequest<T>({
-    url: path,
+    path,
     method,
     headers,
     body,

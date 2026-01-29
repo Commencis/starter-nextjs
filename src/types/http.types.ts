@@ -1,3 +1,5 @@
+import type { ApiPath, InternalApiPath } from '@/types/api.types';
+
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export type HttpHeader = Record<string, string>;
@@ -9,9 +11,11 @@ export type RequestBody =
   | URLSearchParams;
 
 export type FetchOptions = {
-  url: string;
+  path: ApiPath | InternalApiPath;
   method?: HttpMethod;
   headers?: HttpHeader;
   body?: RequestBody;
+  timeoutMs?: number;
   revalidate?: globalThis.NextFetchRequestConfig['revalidate'];
+  cache?: globalThis.RequestCache;
 };
