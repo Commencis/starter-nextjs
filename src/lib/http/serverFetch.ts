@@ -7,18 +7,23 @@
  * Any reproduction of this material must contain this notice.
  */
 
+import type { ApiPath } from '@/types';
 import type { FetchOptions } from '@/types/http.types';
-import { SERVER_MIN_CACHE_DURATION_SEC } from '@/constants/http.constants';
+import { API_DEFAULT_CACHE_DURATION_SEC } from '@/constants/http.constants';
 import { makeRequest } from '@/lib/http/core/makeRequest';
 
+type ServerFetchOptions = {
+  path: ApiPath;
+} & Omit<FetchOptions, 'path'>;
+
 export async function serverFetch<T = unknown>({
-  url,
+  path,
   method = 'GET',
   headers = {},
-  revalidate = SERVER_MIN_CACHE_DURATION_SEC,
-}: FetchOptions): Promise<T> {
+  revalidate = API_DEFAULT_CACHE_DURATION_SEC,
+}: ServerFetchOptions): Promise<T> {
   const response = await makeRequest<T>({
-    url,
+    path,
     method,
     headers,
     revalidate,
