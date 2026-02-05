@@ -11,11 +11,7 @@ import type { ReactElement } from 'react';
 
 import { Box, Button, Text } from '@/components/ui';
 
-import { useConfig } from '@/hooks';
-
 export function HomePage(): ReactElement {
-  const { version } = useConfig();
-
   return (
     <Box>
       <Text as="h1">Next.js Starter</Text>
@@ -23,10 +19,6 @@ export function HomePage(): ReactElement {
       <Button variant="primary" size="md">
         Click Me
       </Button>
-
-      <Text variant="heading-xl" color="primary">
-        {version}
-      </Text>
     </Box>
   );
 }

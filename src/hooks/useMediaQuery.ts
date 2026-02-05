@@ -32,11 +32,11 @@ const getMediaQuery = ({ up, down, between }: UseMediaQueryOptions): string => {
   }
 
   if (down) {
-    return `(max-width: ${BREAKPOINTS[down]}px)`;
+    return `(max-width: ${BREAKPOINTS[down] - 1}px)`;
   }
 
   if (between) {
-    return `(min-width: ${BREAKPOINTS[between.min]}px) and (max-width: ${BREAKPOINTS[between.max]}px)`;
+    return `(min-width: ${BREAKPOINTS[between.min]}px) and (max-width: ${BREAKPOINTS[between.max] - 1}px)`;
   }
 
   throw new Error(
@@ -44,6 +44,7 @@ const getMediaQuery = ({ up, down, between }: UseMediaQueryOptions): string => {
   );
 };
 
+// TODO: Check return type of null | boolean
 export const useMediaQuery = (
   options: UseMediaQueryOptions
 ): null | boolean => {

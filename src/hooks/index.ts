@@ -1,2 +1,2 @@
-export * from './useConfig';
-export * from './useMediaQuery';
+export { useBreakpointRanges } from './useBreakpointRanges';
+export { useMediaQuery } from './useMediaQuery';

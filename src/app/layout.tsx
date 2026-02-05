@@ -1,24 +1,18 @@
-import type { ReactElement, ReactNode } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
 
-import { FONT_ROBOTO } from '@/constants/font.constants';
+import { FontRoboto } from '@/lib/fonts';
 
-import { MainLayoutContainer } from '@/layouts';
+import { MainLayout } from '@/layouts';
 
 import '@/styles/globals.scss';
 
-type MainLayoutProps = Readonly<{
-  children: ReactNode;
-}>;
-
-export default async function MainLayout(
-  props: MainLayoutProps
-): Promise<ReactElement> {
-  const { children } = props;
-
+export default function RootLayout({
+  children,
+}: PropsWithChildren): ReactElement {
   return (
-    <html lang="en" className={FONT_ROBOTO.variable}>
+    <html lang="en" className={FontRoboto.variable}>
       <body>
-        <MainLayoutContainer>{children}</MainLayoutContainer>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

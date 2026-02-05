@@ -1,8 +1,9 @@
 import localFont from 'next/font/local';
 
-export const FONT_ROBOTO = localFont({
-  display: 'swap',
+export const FontRoboto = localFont({
   variable: '--font-roboto',
+  display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
   src: [
     {
       path: '../assets/fonts/Roboto.ttf',

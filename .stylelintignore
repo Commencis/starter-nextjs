@@ -1,6 +1,11 @@
 # lock file
 pnpm-lock.yaml
 
-# production
-dist
+# next.js
 .next
+
+# testing
+coverage
+
+# storybook
+storybook-static

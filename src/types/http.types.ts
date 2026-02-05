@@ -11,11 +11,12 @@ export type RequestBody =
   | URLSearchParams;
 
 export type FetchOptions = {
+  baseUrl: string;
   path: ApiPath | InternalApiPath;
   method?: HttpMethod;
   headers?: HttpHeader;
   body?: RequestBody;
   timeoutMs?: number;
-  revalidate?: globalThis.NextFetchRequestConfig['revalidate'];
-  cache?: globalThis.RequestCache;
+  revalidate?: NextFetchRequestConfig['revalidate'];
+  cache?: RequestCache;
 };
