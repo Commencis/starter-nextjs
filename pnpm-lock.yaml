@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@commencis/commitlint-config':
         specifier: 3.2.0
-        version: 3.2.0(@commitlint/cli@20.4.1(@types/node@24.10.10)(typescript@5.9.3))
+        version: 3.2.0(@commitlint/cli@20.4.1(@types/node@24.10.11)(typescript@5.9.3))
       '@commencis/eslint-config':
         specifier: 3.4.0
         version: 3.4.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3)
@@ -41,19 +41,19 @@ importers:
         version: 1.0.0
       '@commitlint/cli':
         specifier: 20.4.1
-        version: 20.4.1(@types/node@24.10.10)(typescript@5.9.3)
+        version: 20.4.1(@types/node@24.10.11)(typescript@5.9.3)
       '@next/bundle-analyzer':
         specifier: 16.1.6
         version: 16.1.6
       '@types/node':
-        specifier: 24.10.10
-        version: 24.10.10
+        specifier: 24.10.11
+        version: 24.10.11
       '@types/react':
-        specifier: 19.2.11
-        version: 19.2.11
+        specifier: 19.2.13
+        version: 19.2.13
       '@types/react-dom':
         specifier: 19.2.3
-        version: 19.2.3(@types/react@19.2.11)
+        version: 19.2.3(@types/react@19.2.13)
       babel-plugin-react-compiler:
         specifier: 1.0.0
         version: 1.0.0
@@ -721,16 +721,16 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@24.10.10':
-    resolution: {integrity: sha512-+0/4J266CBGPUq/ELg7QUHhN25WYjE0wYTPSQJn1xeu8DOlIOPxXxrNGiLmfAWl7HMMgWFWXpt9IDjMWrF5Iow==}
+  '@types/node@24.10.11':
+    resolution: {integrity: sha512-/Af7O8r1frCVgOz0I62jWUtMohJ0/ZQU/ZoketltOJPZpnb17yoNc9BSoVuV9qlaIXJiPNOpsfq4ByFajSArNQ==}
 
   '@types/react-dom@19.2.3':
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.11':
-    resolution: {integrity: sha512-tORuanb01iEzWvMGVGv2ZDhYZVeRMrw453DCSAIn/5yvcSVnMoUMTyf33nQJLahYEnv9xqrTNbgz4qY5EfSh0g==}
+  '@types/react@19.2.13':
+    resolution: {integrity: sha512-KkiJeU6VbYbUOp5ITMIc7kBfqlYkKA5KhEHVrGMmUUMt7NeaZg65ojdPk+FtNrBAOXNVM5QM72jnADjM+XVRAQ==}
 
   '@typescript-eslint/eslint-plugin@8.54.0':
     resolution: {integrity: sha512-hAAP5io/7csFStuOmR782YmTthKBJ9ND3WVL60hcOjvtGFb+HJxH4O5huAcmcZ9v9G8P+JETiZ/G1B8MALnWZQ==}
@@ -2654,11 +2654,11 @@ snapshots:
       hashery: 1.4.0
       keyv: 5.6.0
 
-  '@commencis/commitlint-config@3.2.0(@commitlint/cli@20.4.1(@types/node@24.10.10)(typescript@5.9.3))':
+  '@commencis/commitlint-config@3.2.0(@commitlint/cli@20.4.1(@types/node@24.10.11)(typescript@5.9.3))':
     dependencies:
       '@commitlint/config-conventional': 20.4.1
     optionalDependencies:
-      '@commitlint/cli': 20.4.1(@types/node@24.10.10)(typescript@5.9.3)
+      '@commitlint/cli': 20.4.1(@types/node@24.10.11)(typescript@5.9.3)
 
   '@commencis/eslint-config@3.4.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3)':
     dependencies:
@@ -2703,11 +2703,11 @@ snapshots:
 
   '@commencis/ts-config@1.0.0': {}
 
-  '@commitlint/cli@20.4.1(@types/node@24.10.10)(typescript@5.9.3)':
+  '@commitlint/cli@20.4.1(@types/node@24.10.11)(typescript@5.9.3)':
     dependencies:
       '@commitlint/format': 20.4.0
       '@commitlint/lint': 20.4.1
-      '@commitlint/load': 20.4.0(@types/node@24.10.10)(typescript@5.9.3)
+      '@commitlint/load': 20.4.0(@types/node@24.10.11)(typescript@5.9.3)
       '@commitlint/read': 20.4.0
       '@commitlint/types': 20.4.0
       tinyexec: 1.0.2
@@ -2754,14 +2754,14 @@ snapshots:
       '@commitlint/rules': 20.4.1
       '@commitlint/types': 20.4.0
 
-  '@commitlint/load@20.4.0(@types/node@24.10.10)(typescript@5.9.3)':
+  '@commitlint/load@20.4.0(@types/node@24.10.11)(typescript@5.9.3)':
     dependencies:
       '@commitlint/config-validator': 20.4.0
       '@commitlint/execute-rule': 20.0.0
       '@commitlint/resolve-extends': 20.4.0
       '@commitlint/types': 20.4.0
       cosmiconfig: 9.0.0(typescript@5.9.3)
-      cosmiconfig-typescript-loader: 6.2.0(@types/node@24.10.10)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3)
+      cosmiconfig-typescript-loader: 6.2.0(@types/node@24.10.11)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3)
       is-plain-obj: 4.1.0
       lodash.mergewith: 4.6.2
       picocolors: 1.1.1
@@ -3161,15 +3161,15 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@24.10.10':
+  '@types/node@24.10.11':
     dependencies:
       undici-types: 7.16.0
 
-  '@types/react-dom@19.2.3(@types/react@19.2.11)':
+  '@types/react-dom@19.2.3(@types/react@19.2.13)':
     dependencies:
-      '@types/react': 19.2.11
+      '@types/react': 19.2.13
 
-  '@types/react@19.2.11':
+  '@types/react@19.2.13':
     dependencies:
       csstype: 3.2.3
 
@@ -3502,9 +3502,9 @@ snapshots:
 
   convert-source-map@2.0.0: {}
 
-  cosmiconfig-typescript-loader@6.2.0(@types/node@24.10.10)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3):
+  cosmiconfig-typescript-loader@6.2.0(@types/node@24.10.11)(cosmiconfig@9.0.0(typescript@5.9.3))(typescript@5.9.3):
     dependencies:
-      '@types/node': 24.10.10
+      '@types/node': 24.10.11
       cosmiconfig: 9.0.0(typescript@5.9.3)
       jiti: 2.6.1
       typescript: 5.9.3
