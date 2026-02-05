@@ -2,7 +2,7 @@
 
 import type { ReactElement } from 'react';
 
-import { Error500 } from '@/components/error';
+import { Error500 } from '@/components/shared';
 
 export default function GlobalErrorPage(): ReactElement {
   return (
