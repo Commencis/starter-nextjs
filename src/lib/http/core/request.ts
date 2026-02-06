@@ -1,5 +1,5 @@
-import { HttpStatusCode } from '@/types';
 import type { FetchOptions, HttpMethod, RequestBody } from '@/types/http.types';
+import { HttpStatusCode } from '@/types/api.types';
 import {
   API_DEFAULT_REQUEST_TIMEOUT_MS,
   DEFAULT_HEADERS,
@@ -20,13 +20,13 @@ function prepareRequestBody(
   return body;
 }
 
-function buildUrl(baseUrl: string, path: string): URL {
+function buildUrl(path: string, baseUrl?: string): URL {
   const serviceURL = new URL(path, baseUrl);
 
   return serviceURL;
 }
 
-export async function makeRequest<T = unknown>({
+export async function request<T = unknown>({
   baseUrl,
   path,
   method = 'GET',
@@ -57,8 +57,8 @@ export async function makeRequest<T = unknown>({
 
       signal: AbortSignal.timeout(timeoutMs ?? API_DEFAULT_REQUEST_TIMEOUT_MS),
     };
-
-    const response = await fetch(buildUrl(baseUrl, path), config);
+    const url = buildUrl(path, baseUrl);
+    const response = await fetch(url, config);
 
     if (!response.ok) {
       throw new Error(response.status.toString());

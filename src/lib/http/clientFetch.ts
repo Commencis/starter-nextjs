@@ -1,10 +1,11 @@
-import type { InternalApiPath } from '@/types';
+import type { InternalApiPath } from '@/types/api.types';
 import type { FetchOptions } from '@/types/http.types';
-import { makeRequest } from '@/lib/http/makeRequest';
 
-type ClientFetchOptions = {
+import { request } from './core/request';
+
+type ClientFetchOptions = Omit<FetchOptions, 'path' | 'revalidate'> & {
   path: InternalApiPath;
-} & Omit<FetchOptions, 'path' | 'revalidate'>;
+};
 
 export async function clientFetch<T = unknown>({
   baseUrl,
@@ -13,7 +14,7 @@ export async function clientFetch<T = unknown>({
   headers = {},
   body,
 }: ClientFetchOptions): Promise<T> {
-  const response = await makeRequest<T>({
+  const response = await request<T>({
     baseUrl,
     path,
     method,

@@ -1,0 +1,16 @@
+@use '@/styles/variables/colors/semantics' as semantics;
+@use '@/styles/mixins/color.mixins' as colorMixins;
+
+$icon-color-map:(
+  'primary': semantics.$icon-primary,
+  'brand': semantics.$icon-brand,
+  'blue': semantics.$icon-blue,
+  'green': semantics.$icon-green,
+  'red': semantics.$icon-red,
+);
+
+.container {
+  display: contents;
+}
+
+@include colorMixins.create-color-classes('ic-color', $icon-color-map);
