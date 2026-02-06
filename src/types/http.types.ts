@@ -2,6 +2,14 @@ import type { ApiPath, InternalApiPath } from '@/types/api.types';
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
+export const enum HttpHeaderKey {
+  ContentType = 'Content-Type',
+}
+
+export const enum HttpHeaderValue {
+  ApplicationJson = 'application/json',
+}
+
 export type HttpHeader = Record<string, string>;
 
 export type RequestBody =

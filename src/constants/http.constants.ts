@@ -1,7 +1,8 @@
 import type { HttpHeader } from '@/types/http.types';
+import { HttpHeaderKey, HttpHeaderValue } from '@/types/http.types';
 
 export const DEFAULT_HEADERS: HttpHeader = {
-  'Content-Type': 'application/json',
+  [HttpHeaderKey.ContentType]: HttpHeaderValue.ApplicationJson,
 };
 
 export const API_DEFAULT_CACHE_DURATION_SEC = 60;
