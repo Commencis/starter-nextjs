@@ -11,6 +11,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 COPY package.json pnpm-lock.yaml ./
 
 RUN corepack enable
+RUN corepack install
 RUN pnpm install --frozen-lockfile
 
 COPY . .
