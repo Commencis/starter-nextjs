@@ -1,0 +1,34 @@
+# Version control and Hooks
+.git
+.gitignore
+
+# Dependencies and Build Artifacts
+.next
+node_modules
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Environment Variables
+.env
+.env*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and System Files
+.DS_Store
+*.pem
+*.local
+.idea
+
+# Documentation
+*.md
+LICENSE
+
+# Typescript
+*.tsbuildinfo
