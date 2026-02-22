@@ -1,6 +1,6 @@
 {
   "name": "@commencis/starter-nextjs",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Commencis Starter - NextJS",
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
@@ -29,6 +29,8 @@
     "svgr:icons": "svgr --config-file ./scripts/svg/icon.svgr.config.cjs src/assets/icons",
     "svgr:vectors": "svgr --config-file ./scripts/svg/vector.svgr.config.cjs src/assets/vectors",
     "ci:review": "pnpm run lint",
+    "changeset": "changeset",
+    "changeset:version": "changeset version && pnpm install --no-frozen-lockfile",
     "prepare": "husky",
     "precommit": "lint-staged"
   },
@@ -39,6 +41,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@changesets/cli": "2.29.8",
     "@commencis/commitlint-config": "3.2.0",
     "@commencis/eslint-config": "3.4.0",
     "@commencis/lint-staged-config": "3.1.0",
@@ -48,6 +51,7 @@
     "@commitlint/cli": "20.4.1",
     "@next/bundle-analyzer": "16.1.6",
     "@svgr/cli": "8.1.0",
+    "@svitejs/changesets-changelog-github-compact": "1.2.0",
     "@types/node": "24.10.12",
     "@types/react": "19.2.13",
     "@types/react-dom": "19.2.3",

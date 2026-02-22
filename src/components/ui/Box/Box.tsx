@@ -9,13 +9,12 @@ import type {
 } from './Box.types';
 import { getBoxClasses } from './Box.utils';
 
-type BoxProps = PropsWithChildren<
+export type BoxProps = PropsWithChildren &
   WithOptionalId &
-    BoxStyleProps & {
-      as?: BoxElement;
-      renderRoot?: BoxRenderRootCallback;
-    }
->;
+  BoxStyleProps & {
+    as?: BoxElement;
+    renderRoot?: BoxRenderRootCallback;
+  };
 
 export function Box({
   as: Component = 'div',

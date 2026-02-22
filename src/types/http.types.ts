@@ -10,7 +10,9 @@ export const enum HttpHeaderValue {
   ApplicationJson = 'application/json',
 }
 
-export type HttpHeader = Record<string, string>;
+export type HttpHeader = Partial<
+  Record<HttpHeaderKey, HttpHeaderValue | string>
+>;
 
 export type RequestBody =
   | string
