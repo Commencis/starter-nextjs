@@ -13,10 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
-    env:
-      NEXT_PUBLIC_APP_ENV: ${{ vars.NEXT_PUBLIC_APP_ENV }}
-      NEXT_PUBLIC_BASE_API_URL: ${{ vars.NEXT_PUBLIC_BASE_API_URL }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v6
