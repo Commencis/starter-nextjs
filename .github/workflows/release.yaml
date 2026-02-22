@@ -1,0 +1,41 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup
+        uses: commencis/js-toolkit/.github/actions/setup@main
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Test
+        run: pnpm run test
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        with:
+          title: 'ci(release): create new release'
+          commit: 'ci(release): create new release'
+          version: pnpm run changeset:version
+          publish: npx @changesets/cli tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

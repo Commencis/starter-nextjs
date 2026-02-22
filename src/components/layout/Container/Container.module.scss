@@ -1,0 +1,6 @@
+@use '@/styles/variables/breakpoints' as breakpoints;
+@use '@/styles/variables/spacers' as spacers;
+
+.container {
+  max-width: breakpoints.$max-content-width + 2 * spacers.$root-padding-lg;
+}
