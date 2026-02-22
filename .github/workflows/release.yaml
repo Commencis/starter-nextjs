@@ -21,11 +21,11 @@ jobs:
       - name: Setup
         uses: commencis/js-toolkit/.github/actions/setup@main
 
+      - name: Typegen
+        run: pnpm run typegen
+
       - name: Lint
         run: pnpm run lint
-
-      - name: Test
-        run: pnpm run test
 
       - name: Build
         run: pnpm run build
