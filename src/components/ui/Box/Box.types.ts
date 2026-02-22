@@ -20,7 +20,14 @@ import type {
   ResponsivePaddingProps,
 } from '@/types/style/spacer.types';
 
-export type BoxElement = 'div' | 'section' | 'span';
+export type BoxElement =
+  | 'div'
+  | 'section'
+  | 'span'
+  | 'main'
+  | 'ul'
+  | 'ol'
+  | 'li';
 
 export type BoxStyleProps = DisplayProps &
   PositionProps &
