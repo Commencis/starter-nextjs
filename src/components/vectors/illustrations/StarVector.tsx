@@ -21,6 +21,7 @@ export function StarVector({
       width={17}
       height={16}
       fill="#FB923C"
+      viewBox="0 0 17 16"
       role="img"
       aria-labelledby={titleId}
       {...props}

@@ -14,6 +14,19 @@ const svgrVectorConfig = {
   svgProps: {
     role: 'img',
   },
+  svgoConfig: {
+    plugins: [
+      {
+        name: 'preset-default',
+        params: {
+          overrides: {
+            removeViewBox: false,
+          },
+        },
+      },
+      'prefixIds',
+    ],
+  },
 };
 
 module.exports = svgrVectorConfig;
