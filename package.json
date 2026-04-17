@@ -63,7 +63,7 @@
     "prettier": "3.8.1",
     "sass": "1.97.3",
     "stylelint": "17.4.0",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
