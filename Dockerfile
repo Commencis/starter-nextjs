@@ -1,4 +1,4 @@
-FROM node:24.14-alpine3.23 AS base
+FROM node:24.15-alpine3.23 AS base
 
 # Stage 1: Install Dependencies and Build the Next.js app
 FROM base AS builder
