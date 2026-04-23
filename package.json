@@ -5,9 +5,9 @@
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=24.14"
+    "node": ">=24.15.0"
   },
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
@@ -64,12 +64,5 @@
     "sass": "1.97.3",
     "stylelint": "17.4.0",
     "typescript": "5.9.3"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@swc/core",
-      "sharp"
-    ]
   }
 }
