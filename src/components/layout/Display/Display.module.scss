@@ -1,4 +1,4 @@
-@use '@/styles/mixins/media-queries' as media-queries;
+@use '@/styles/mixins/media.mixins' as mediaMixins;
 
 @mixin display-options {
   &Visible {
@@ -10,20 +10,20 @@
   }
 }
 
-.sm {
-  @include display-options;
+.xs {
+  @include mediaMixins.media-query-down(md) {
+    @include display-options;
+  }
 }
 
 .md {
-  display: none;
-  @include media-queries.up(md) {
+  @include mediaMixins.media-query-between(md, lg) {
     @include display-options;
   }
 }
 
 .lg {
-  display: none;
-  @include media-queries.up(lg) {
+  @include mediaMixins.media-query-up(lg) {
     @include display-options;
   }
 }

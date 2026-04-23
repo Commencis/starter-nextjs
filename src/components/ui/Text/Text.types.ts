@@ -1,15 +1,4 @@
-export type TextVariant =
-  | 'heading-2xl'
-  | 'heading-xl'
-  | 'heading-lg'
-  | 'heading-md'
-  | 'heading-sm'
-  | 'heading-xs'
-  | 'body-lg'
-  | 'body-md'
-  | 'body-sm'
-  | 'body-xs'
-  | 'caption';
+import type { ResponsiveAttribute } from '@/types/style/breakpoint.types';
 
 export type TextElement =
   | 'span'
@@ -22,9 +11,27 @@ export type TextElement =
   | 'h6';
 
 /**
- * Keep @type TextColor in sync with semantic colors
- * @see @/styles/variables/colors/semantics
+ * Semantic tokens: keep in sync with @/styles/variables/colors/semantics.
+ * `inherit` uses `color: inherit` (parent / cascade).
  */
-export type TextColor = 'brand' | 'primary' | 'secondary' | 'black' | 'white';
+export type TextColor =
+  | 'brand'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'black'
+  | 'white'
+  | 'inherit';
 
 export type TextAlign = 'left' | 'center' | 'right';
+
+export type TextAlignProp = ResponsiveAttribute<TextAlign>;
+
+export type TextMaxLine = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type TextMaxLineProp = ResponsiveAttribute<TextMaxLine>;
+
+/**
+ * Keep in sync with @/styles/variables/typography/_weights.scss $font-weight-map keys
+ */
+export type FontWeight = 'regular' | 'semi-bold' | 'bold';
