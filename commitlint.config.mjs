@@ -1,3 +1,1 @@
-export default {
-  extends: ['@commencis/commitlint-config'],
-};
+export default { extends: ['@commencis/commitlint-config'] };
