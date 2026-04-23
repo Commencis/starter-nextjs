@@ -6,12 +6,12 @@
   $values: spacers.$padding-values;
 
   @include utilityMixins.create-responsive-utilities('p', 'padding', $values);
+  @include utilityMixins.create-responsive-utilities('py', ('padding-top', 'padding-bottom'), $values);
+  @include utilityMixins.create-responsive-utilities('px', ('padding-left', 'padding-right'), $values);
   @include utilityMixins.create-responsive-utilities('pt', 'padding-top', $values);
-  @include utilityMixins.create-responsive-utilities('pr', 'padding-right', $values);
   @include utilityMixins.create-responsive-utilities('pb', 'padding-bottom', $values);
   @include utilityMixins.create-responsive-utilities('pl', 'padding-left', $values);
-  @include utilityMixins.create-responsive-utilities('px', ('padding-left', 'padding-right'), $values);
-  @include utilityMixins.create-responsive-utilities('py', ('padding-top', 'padding-bottom'), $values);
+  @include utilityMixins.create-responsive-utilities('pr', 'padding-right', $values);
 }
 
 @mixin create-responsive-margin-classes() {
@@ -19,12 +19,12 @@
   $values: spacers.$margin-values;
 
   @include utilityMixins.create-responsive-utilities('m', 'margin', $values);
+  @include utilityMixins.create-responsive-utilities('my', ('margin-top', 'margin-bottom'), $values);
+  @include utilityMixins.create-responsive-utilities('mx', ('margin-left', 'margin-right'), $values);
   @include utilityMixins.create-responsive-utilities('mt', 'margin-top', $values);
-  @include utilityMixins.create-responsive-utilities('mr', 'margin-right', $values);
   @include utilityMixins.create-responsive-utilities('mb', 'margin-bottom', $values);
   @include utilityMixins.create-responsive-utilities('ml', 'margin-left', $values);
-  @include utilityMixins.create-responsive-utilities('mx', ('margin-left', 'margin-right'), $values);
-  @include utilityMixins.create-responsive-utilities('my', ('margin-top', 'margin-bottom'), $values);
+  @include utilityMixins.create-responsive-utilities('mr', 'margin-right', $values);
 }
 
 @mixin create-responsive-gap-classes() {

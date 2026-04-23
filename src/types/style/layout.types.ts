@@ -3,7 +3,12 @@ import type { ResponsiveAttribute } from './breakpoint.types';
 /**
  * Display:
  */
-export type Display = 'block' | 'inline-block' | 'flex' | 'inline-flex';
+export type Display =
+  | 'block'
+  | 'inline-block'
+  | 'flex'
+  | 'inline-flex'
+  | 'grid';
 
 export const DisplayPropKeys = ['display'] as const;
 
@@ -58,4 +63,18 @@ export type HeightOption = (typeof HeightPropKeys)[number];
 
 export type ResponsiveHeightProps = Partial<
   Record<HeightOption, ResponsiveAttribute<Height>>
+>;
+
+/**
+ * Grid Template Columns:
+ */
+export type GridTemplateColumns = 1 | 2 | 3 | 4 | 6;
+
+export const GridTemplateColumnsPropKeys = ['gridTemplateColumns'] as const;
+
+export type GridTemplateColumnsOption =
+  (typeof GridTemplateColumnsPropKeys)[number];
+
+export type ResponsiveGridTemplateColumnsProps = Partial<
+  Record<GridTemplateColumnsOption, ResponsiveAttribute<GridTemplateColumns>>
 >;

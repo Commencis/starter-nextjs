@@ -6,7 +6,7 @@ import type { ResponsiveAttribute } from './breakpoint.types';
  * Keep it sync with @scss variables/_spacers.scss
  */
 const _SpacerValues = [
-  0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 48, 64,
+  0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 64,
 ] as const;
 
 type Spacer = (typeof _SpacerValues)[number];
@@ -17,7 +17,7 @@ type Spacer = (typeof _SpacerValues)[number];
  * Keep it sync with @scss $paddding-values in variables/_spacers.scss
  */
 const _PaddingValues = [
-  0, 2, 4, 6, 8, 10, 12, 14, 16, 32, 64,
+  0, 2, 4, 6, 8, 10, 12, 14, 16, 24, 32, 40, 48, 64,
 ] satisfies Spacer[];
 
 export type Padding = (typeof _PaddingValues)[number];
@@ -44,7 +44,7 @@ export type ResponsivePaddingProps = Partial<
  * Keep it sync with @scss $margin-values in variables/_spacers.scss
  */
 const _MarginValues = [
-  0, 2, 4, 6, 8, 10, 12, 14, 16, 32, 64,
+  0, 2, 4, 6, 8, 10, 12, 14, 16, 32, 40, 64,
 ] satisfies Spacer[];
 
 export type Margin = (typeof _MarginValues)[number] | 'auto';
@@ -70,7 +70,9 @@ export type ResponsiveMarginProps = Partial<
  * List of allowed gap values for various style properties.
  * Keep it sync with @scss $gap-values in variables/_spacers.scss
  */
-const _GapValues = [0, 2, 4, 6, 8, 10, 12, 14, 16] satisfies Spacer[];
+const _GapValues = [
+  0, 2, 4, 6, 8, 10, 12, 14, 16, 24, 32, 40, 48, 64,
+] satisfies Spacer[];
 
 export type Gap = (typeof _GapValues)[number];
 

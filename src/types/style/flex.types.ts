@@ -84,3 +84,45 @@ export type FlexAlignSelfOption = (typeof FlexAlignSelfPropKeys)[number];
 export type ResponsiveFlexAlignSelfProps = Partial<
   Record<FlexAlignSelfOption, ResponsiveAttribute<FlexAlignSelf>>
 >;
+
+/**
+ * Flex Basis:
+ * Keep it sync with @scss $flex-basis-values in variables/_flex.scss
+ */
+export type FlexBasis = 'auto' | 0;
+
+export const FlexBasisPropKeys = ['flexBasis'] as const;
+
+export type FlexBasisOption = (typeof FlexBasisPropKeys)[number];
+
+export type ResponsiveFlexBasisProps = Partial<
+  Record<FlexBasisOption, ResponsiveAttribute<FlexBasis>>
+>;
+
+/**
+ * Flex Grow:
+ * Keep it sync with @scss $flex-grow-values in variables/_flex.scss
+ */
+export type FlexGrow = 0 | 1;
+
+export const FlexGrowPropKeys = ['flexGrow'] as const;
+
+export type FlexGrowOption = (typeof FlexGrowPropKeys)[number];
+
+export type ResponsiveFlexGrowProps = Partial<
+  Record<FlexGrowOption, ResponsiveAttribute<FlexGrow>>
+>;
+
+/**
+ * Flex Shrink:
+ * Keep it sync with @scss $flex-shrink-values in variables/_flex.scss
+ */
+export type FlexShrink = 0 | 1;
+
+export const FlexShrinkPropKeys = ['flexShrink'] as const;
+
+export type FlexShrinkOption = (typeof FlexShrinkPropKeys)[number];
+
+export type ResponsiveFlexShrinkProps = Partial<
+  Record<FlexShrinkOption, ResponsiveAttribute<FlexShrink>>
+>;

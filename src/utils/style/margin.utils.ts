@@ -1,11 +1,6 @@
-import type { UnknownComponentProps } from '@/types/common.types';
-import {
-  type MarginOption,
-  MarginPropKeys,
-  type ResponsiveMarginProps,
-} from '@/types/style/spacer.types';
+import { type MarginOption, MarginPropKeys } from '@/types/style/spacer.types';
 
-import { getResponsiveClasses } from './responsive.utils';
+import { responsiveStyleResolver } from './responsive.utils';
 
 import css from '@/styles/modules/margin.module.scss';
 
@@ -19,23 +14,8 @@ const prefixMap: Record<MarginOption, string> = {
   marginRight: 'mr',
 };
 
-function filterMarginProps(
-  props: UnknownComponentProps
-): ResponsiveMarginProps {
-  return Object.fromEntries(
-    Object.entries(props).filter(([key]) =>
-      MarginPropKeys.includes(key as MarginOption)
-    )
-  );
-}
-
-export function getMarginClasses(
-  componentProps: UnknownComponentProps
-): string {
-  const props = filterMarginProps(componentProps);
-  return getResponsiveClasses({
-    props,
-    prefixMap,
-    css,
-  });
-}
+export const getMarginClasses = responsiveStyleResolver({
+  keys: MarginPropKeys,
+  prefixMap,
+  css,
+});

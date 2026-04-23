@@ -1,13 +1,17 @@
 export {
   getFlexAlignItemsClasses,
   getFlexAlignSelfClasses,
+  getFlexBasisClasses,
   getFlexDirectionClasses,
+  getFlexGrowClasses,
   getFlexJustifyContentClasses,
+  getFlexShrinkClasses,
   getFlexWrapClasses,
 } from './flex.utils';
 export { getGapClasses } from './gap.utils';
 export {
   getDisplayClasses,
+  getGridTemplateColumnsClasses,
   getHeightClasses,
   getOverflowClasses,
   getPositionClasses,

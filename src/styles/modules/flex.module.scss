@@ -5,3 +5,6 @@
 @include flexMixins.create-flex-justify-content-classes();
 @include flexMixins.create-flex-align-items-classes();
 @include flexMixins.create-flex-align-self-classes();
+@include flexMixins.create-flex-basis-classes();
+@include flexMixins.create-flex-grow-classes();
+@include flexMixins.create-flex-shrink-classes();

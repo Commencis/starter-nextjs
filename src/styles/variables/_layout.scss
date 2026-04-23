@@ -3,6 +3,7 @@ $display-values: (
   inline-block: inline-block,
   flex: flex,
   inline-flex: inline-flex,
+  grid: grid,
 );
 
 $position-values: (
@@ -25,4 +26,13 @@ $width-values:(
 $height-values:(
   auto: auto,
   full: 100%,
+);
+
+// Should be in sync with GridTemplateColumns in src/types/style/layout.types.ts
+$grid-template-columns-values: (
+  1: 1fr,
+  2: repeat(2, 1fr),
+  3: repeat(3, 1fr),
+  4: repeat(4, 1fr),
+  6: repeat(6, 1fr),
 );

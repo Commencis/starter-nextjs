@@ -1,17 +1,52 @@
+@use 'sass:list';
 @use 'sass:map';
 @use '../variables/typography/variants' as variants;
+@use './media.mixins' as mediaMixins;
 
-@mixin create-text-variant($variant) {
+@mixin create-typography-variant($variant) {
 
-  $styles: map.get(variants.$text-variants, $variant);
+  $values: map.get(variants.$typography-variant-map, $variant);
 
-  @if not $styles {
-    @error 'Variant `#{$variant}` not found in $text-variants map.';
+  @if not $values {
+    @error 'Variant `#{$variant}` not found in $typography-variant-map.';
   }
 
   @else {
-    @each $prop, $value in $styles {
-      #{$prop}: #{$value};
+    font-size: list.nth($values, 1);
+    font-weight: list.nth($values, 4);
+    line-height: list.nth($values, 2);
+    letter-spacing: list.nth($values, 3);
+  }
+}
+
+@mixin create-responsive-typography-classes() {
+
+  @each $name, $viewports in variants.$typography-viewport-map {
+
+    $length: list.length($viewports);
+
+    .#{$name} {
+      @if $length == 1 {
+        @include create-typography-variant(list.nth($viewports, 1));
+      }
+
+      @else if $length == 3 {
+        @include create-typography-variant(list.nth($viewports, 1));
+
+        @include mediaMixins.media-query-up(md) {
+          @include create-typography-variant(list.nth($viewports, 2));
+        }
+
+        @if list.nth($viewports, 3) != list.nth($viewports, 2) {
+          @include mediaMixins.media-query-up(lg) {
+            @include create-typography-variant(list.nth($viewports, 3));
+          }
+        }
+      }
+
+      @else {
+        @error 'Viewport list for `#{$name}` must have 1 or 3 items, got #{$length}.';
+      }
     }
   }
 }
