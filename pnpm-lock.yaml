@@ -40,9 +40,6 @@ importers:
       '@commencis/stylelint-config':
         specifier: 3.4.0
         version: 3.4.0(postcss-html@1.8.1)(postcss@8.5.10)(stylelint@17.9.0)
-      '@commencis/ts-config':
-        specifier: 1.0.0
-        version: 1.0.0
       '@commitlint/cli':
         specifier: 20.5.0
         version: 20.5.0(@types/node@24.12.2)(typescript@6.0.3)
@@ -253,9 +250,6 @@ packages:
     resolution: {integrity: sha512-MY6Pri1mhPCYbKRWjQbkVbWCzpmmReOnCcutDhsRuRSm59cOrNvXA8K4ouzX35BXVWgrYKhizeGwh9ln6tl/4A==}
     peerDependencies:
       stylelint: '>=17'
-
-  '@commencis/ts-config@1.0.0':
-    resolution: {integrity: sha512-EVaBYCcmGBCpHZJ2bFxVk+d00QHrt7DTNnkbaOFFAuJNCjywYpphSXM5CSWE4iCXLsxs6X+sDlptn3atwNWq0g==}
 
   '@commitlint/cli@20.5.0':
     resolution: {integrity: sha512-yNkyN/tuKTJS3wdVfsZ2tXDM4G4Gi7z+jW54Cki8N8tZqwKBltbIvUUrSbT4hz1bhW/h0CdR+5sCSpXD+wMKaQ==}
@@ -3303,8 +3297,6 @@ snapshots:
     transitivePeerDependencies:
       - postcss
       - postcss-html
-
-  '@commencis/ts-config@1.0.0': {}
 
   '@commitlint/cli@20.5.0(@types/node@24.12.2)(typescript@6.0.3)':
     dependencies:
