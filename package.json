@@ -1,6 +1,7 @@
 {
   "name": "@commencis/starter-nextjs",
   "version": "1.1.0",
+  "buildNumber": 1,
   "description": "Commencis Starter - NextJS",
   "author": "Commencis WEB Team",
   "license": "Apache-2.0",
@@ -32,6 +33,8 @@
     "ci:review": "pnpm run lint",
     "changeset": "changeset",
     "changeset:version": "changeset version && pnpm install --no-frozen-lockfile",
+    "bump:version": "./scripts/bump/version.sh",
+    "bump:build": "./scripts/bump/build.sh",
     "prepare": "husky",
     "precommit": "lint-staged"
   },

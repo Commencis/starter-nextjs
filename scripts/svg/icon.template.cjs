@@ -12,7 +12,10 @@ const {
 const { generatedMessage } = require('./svg.utils.cjs');
 
 const template = ({ componentName, jsx }, { tpl }) => {
-  // SVGR prefixes component names with "Svg", we postfixed it with Icon. We can safely remove it. It is done to avoid collisions
+  /**
+   * SVGR prefixes component names with "Svg", our convention is to postfix with "Icon".
+   * We can safely remove it to avoid collisions.
+   */
   componentName = componentName.replace('Svg', '');
 
   const wrappedJsx = jsxElement(
