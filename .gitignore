@@ -3,17 +3,20 @@
 # dependencies
 node_modules
 .pnpm-store
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# production
+build
+dist
+storybook-static
 
 # next.js
 .next
 next-env.d.ts
-
-# env files
-.env*
-!.env.example
-
-# testing
-coverage
 
 # debug
 logs
@@ -22,19 +25,21 @@ npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
 # typescript
 *.tsbuildinfo
 
-# storybook
-storybook-static
-*storybook.log
+# env files
+.env*
+!.env.example
 
 # misc
 .DS_Store
 *.pem
 *.local
 .idea
+*storybook.log
 
 # prevent npm & yarn output while using pnpm
 package-lock.json
