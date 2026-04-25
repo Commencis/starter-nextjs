@@ -23,8 +23,8 @@ import type {
 
 import css from './Container.module.scss';
 
-type ContainerProps = ContainerAllowedBoxProps &
-  WithStrictChildren & {
+type ContainerProps = WithStrictChildren &
+  ContainerAllowedBoxProps & {
     as?: BoxElement;
     size?: ContainerSize;
   };

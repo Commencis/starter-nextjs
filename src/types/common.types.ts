@@ -8,6 +8,8 @@ export type WithOptionalId = { id?: string };
 
 export type WithRequiredId = { id: string };
 
+type AllowedElements = ReactElement | null | false;
+
 export type WithStrictChildren = {
-  children: ReactElement | ReactElement[];
+  children: AllowedElements | AllowedElements[];
 };
