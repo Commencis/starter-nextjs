@@ -1,6 +1,6 @@
-import type { ReactElement } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
 
-import type { WithOptionalId, WithStrictChildren } from '@/types/common.types';
+import type { WithOptionalId } from '@/types/common.types';
 
 import type {
   BoxElement,
@@ -9,7 +9,7 @@ import type {
 } from './Box.types';
 import { getBoxClasses } from './Box.utils';
 
-type BoxProps = WithStrictChildren &
+type BoxProps = PropsWithChildren &
   WithOptionalId &
   BoxStyleProps & {
     as?: BoxElement;
