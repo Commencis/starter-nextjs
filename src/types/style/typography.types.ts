@@ -1,14 +1,7 @@
-/*
- * Copyright 2017-2026 Commencis. All Rights Reserved.
- *
- * Save to the extent permitted by law, you may not use, copy, modify,
- * distribute or create derivative works of this material or any part
- * of it without the prior written consent of Commencis.
- * Any reproduction of this material must contain this notice.
- */
+import type { ResponsiveAttribute } from './breakpoint.types';
 
 /**
- * Keep in sync with $typography-viewport-map keys in
+ * Keep in sync with $typography-variant-map keys in
  * @scss styles/variables/typography/_variants.scss
  */
 export type TypographyVariant =
@@ -26,3 +19,14 @@ export type TypographyVariant =
   | 'body-2'
   | 'body-3'
   | 'body-4';
+
+/**
+ * Typography variant prop shape for components such as Text.
+ *
+ * - Scalar value: default viewport scaling applies via `typographyViewportMap`
+ *   in typography.utils.ts (e.g. `display-1` scales down on small viewports).
+ * - Object value: per-breakpoint override; each breakpoint applies the given
+ *   variant's physical styles. `xs` is optional and falls back to the util's
+ *   internal default when omitted.
+ */
+export type TypographyVariantProps = ResponsiveAttribute<TypographyVariant>;

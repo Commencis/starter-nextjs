@@ -17,21 +17,3 @@ $typography-variant-map: (
   'body-3': (0.75rem, 1rem, 0rem, weights.$font-weight-regular),
   'body-4': (0.5rem, 0.666rem, 0rem, weights.$font-weight-regular),
 );
-
-// (mobile, tablet, desktop)
-$typography-viewport-map: (
-  'display-1': ('display-2', 'display-1', 'display-1'),
-  'display-2': ('display-3', 'display-2', 'display-2'),
-  'display-3': ('heading-1', 'display-3', 'display-3'),
-  'heading-1': ('heading-1'),
-  'heading-2': ('heading-2'),
-  'heading-3': ('heading-3'),
-  'heading-4': ('heading-4'),
-  'label-1': ('label-1'),
-  'label-2': ('label-2'),
-  'label-3': ('label-3'),
-  'body-1': ('body-1'),
-  'body-2': ('body-2'),
-  'body-3': ( 'body-3'),
-  'body-4': ('body-4', 'body-3', 'body-3'),
-);

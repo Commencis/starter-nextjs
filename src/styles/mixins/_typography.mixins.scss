@@ -19,33 +19,27 @@
   }
 }
 
+/**
+ * Emits per-breakpoint classes for every physical typography variant:
+ *   .typ-xs-<variant>, .typ-md-<variant>, .typ-lg-<variant>
+ *
+ * Each class contains ONLY the physical variant values for its breakpoint
+ * (no internal viewport scaling). Viewport scaling is composed on the
+ * consumer side (see `getTypographyClasses` in typography.utils.ts), which
+ * maps a scalar variant through `typographyViewportMap` and emits the
+ * matching per-breakpoint classes.
+ */
 @mixin create-responsive-typography-classes() {
 
-  @each $name, $viewports in variants.$typography-viewport-map {
+  @each $bp in (xs, md, lg) {
 
-    $length: list.length($viewports);
+    @include mediaMixins.media-query-up($bp) {
 
-    .#{$name} {
-      @if $length == 1 {
-        @include create-typography-variant(list.nth($viewports, 1));
-      }
+      @each $name, $_ in variants.$typography-variant-map {
 
-      @else if $length == 3 {
-        @include create-typography-variant(list.nth($viewports, 1));
-
-        @include mediaMixins.media-query-up(md) {
-          @include create-typography-variant(list.nth($viewports, 2));
+        .typ-#{$bp}-#{$name} {
+          @include create-typography-variant($name);
         }
-
-        @if list.nth($viewports, 3) != list.nth($viewports, 2) {
-          @include mediaMixins.media-query-up(lg) {
-            @include create-typography-variant(list.nth($viewports, 3));
-          }
-        }
-      }
-
-      @else {
-        @error 'Viewport list for `#{$name}` must have 1 or 3 items, got #{$length}.';
       }
     }
   }

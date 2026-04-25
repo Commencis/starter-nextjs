@@ -2,7 +2,7 @@ import type { PropsWithChildren, ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { TypographyVariant } from '@/types/style/typography.types';
+import type { TypographyVariantProps } from '@/types/style/typography.types';
 import { getTypographyClasses } from '@/utils/style/typography.utils';
 
 import type {
@@ -23,7 +23,7 @@ import css from './Text.module.scss';
 type TextProps = PropsWithChildren<{
   as?: TextElement;
   color?: TextColor;
-  variant?: TypographyVariant;
+  variant?: TypographyVariantProps;
   fontWeight?: FontWeight;
   align?: TextAlignProp;
   maxLine?: TextMaxLineProp;
@@ -33,7 +33,7 @@ export function Text({
   as: Component = 'span',
   children,
   color = 'primary',
-  variant = 'body-1',
+  variant,
   fontWeight,
   align,
   maxLine,
