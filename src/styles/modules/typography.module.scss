@@ -1,3 +1,3 @@
 @use '../mixins/typography.mixins' as typographyMixins;
 
-@include typographyMixins.create-responsive-typography-classes();
+@include typographyMixins.create-responsive-typography-variant-classes();

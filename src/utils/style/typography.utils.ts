@@ -8,7 +8,7 @@ import type {
 
 import css from '@/styles/modules/typography.module.scss';
 
-const defaultVariant: TypographyVariant = 'body-1';
+const DEFAULT_TYPOGRAPHY_VARIANT: TypographyVariant = 'body-1';
 
 /**
  * Per-variant viewport scaling. Keys are the scalar variant users request;
@@ -44,16 +44,16 @@ const typographyViewportMap: Record<
  *
  * Scalar variant -> looked up in `typographyViewportMap` to get the
  *                   per-breakpoint physical variants.
- * Object variant -> used as-is; when `xs` is omitted, `defaultVariant` is
+ * Object variant -> used as-is; when `xs` is omitted, `DEFAULT_TYPOGRAPHY_VARIANT` is
  *                   injected so text always has a baseline style.
  */
-export function getTypographyClasses(
-  variant: TypographyVariantProps = defaultVariant
+export function getTypographyVariantClasses(
+  variant: TypographyVariantProps = DEFAULT_TYPOGRAPHY_VARIANT
 ): string {
   const breakpointMap: PerBreakpoint<TypographyVariant> =
     typeof variant === 'string'
       ? typographyViewportMap[variant]
-      : { xs: defaultVariant, ...variant };
+      : { xs: DEFAULT_TYPOGRAPHY_VARIANT, ...variant };
 
   return clsx(
     Object.entries(breakpointMap).map(

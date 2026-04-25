@@ -1,4 +1,4 @@
-import { getResponsiveClasses } from '@/utils/style/responsive.utils';
+import { getResponsiveClasses } from '@/utils/style';
 
 import type { FontWeight, TextAlignProp, TextMaxLineProp } from './Text.types';
 

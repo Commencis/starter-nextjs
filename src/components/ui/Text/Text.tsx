@@ -3,7 +3,7 @@ import type { PropsWithChildren, ReactElement } from 'react';
 import clsx from 'clsx';
 
 import type { TypographyVariantProps } from '@/types/style/typography.types';
-import { getTypographyClasses } from '@/utils/style/typography.utils';
+import { getTypographyVariantClasses } from '@/utils/style/typography.utils';
 
 import type {
   FontWeight,
@@ -39,7 +39,7 @@ export function Text({
   maxLine,
 }: TextProps): ReactElement {
   const textClasses = clsx(
-    getTypographyClasses(variant),
+    getTypographyVariantClasses(variant),
     css[`text-color-${color}`],
     getFontWeightClasses({ fontWeight }),
     getTextAlignClasses({ align }),

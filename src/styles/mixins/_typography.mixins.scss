@@ -25,11 +25,11 @@
  *
  * Each class contains ONLY the physical variant values for its breakpoint
  * (no internal viewport scaling). Viewport scaling is composed on the
- * consumer side (see `getTypographyClasses` in typography.utils.ts), which
+ * consumer side (see `getTypographyVariantClasses` in typography.utils.ts), which
  * maps a scalar variant through `typographyViewportMap` and emits the
  * matching per-breakpoint classes.
  */
-@mixin create-responsive-typography-classes() {
+@mixin create-responsive-typography-variant-classes() {
 
   @each $bp in (xs, md, lg) {
 
