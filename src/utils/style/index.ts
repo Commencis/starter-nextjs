@@ -20,4 +20,9 @@ export {
 export { getMarginClasses } from './margin.utils';
 export { getPaddingClasses } from './padding.utils';
 export { getResponsiveClasses } from './responsive.utils';
-export { getTypographyVariantClasses } from './typography.utils';
+export {
+  DEFAULT_TYPOGRAPHY_VARIANT,
+  getFontWeightClasses,
+  getTextAlignClasses,
+  getTypographyVariantClasses,
+} from './typography.utils';

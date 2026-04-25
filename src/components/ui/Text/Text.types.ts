@@ -1,4 +1,9 @@
 import type { ResponsiveAttribute } from '@/types/style/breakpoint.types';
+import type {
+  ResponsiveFontWeightProps,
+  ResponsiveTextAlignProps,
+  ResponsiveTypographyVariantProps,
+} from '@/types/style/typography.types';
 
 export type TextElement =
   | 'span'
@@ -9,6 +14,11 @@ export type TextElement =
   | 'h4'
   | 'h5'
   | 'h6';
+
+export type TextStyleProps = ResponsiveTypographyVariantProps &
+  ResponsiveFontWeightProps &
+  ResponsiveTextAlignProps &
+  ResponsiveTextMaxLineProps;
 
 /**
  * Semantic tokens: keep in sync with @/styles/variables/colors/semantics.
@@ -23,15 +33,12 @@ export type TextColor =
   | 'white'
   | 'inherit';
 
-export type TextAlign = 'left' | 'center' | 'right';
-
-export type TextAlignProp = ResponsiveAttribute<TextAlign>;
-
 export type TextMaxLine = 1 | 2 | 3 | 4 | 5 | 6;
 
-export type TextMaxLineProp = ResponsiveAttribute<TextMaxLine>;
+export const TextMaxLinePropKeys = ['maxLine'] as const;
 
-/**
- * Keep in sync with @/styles/variables/typography/_weights.scss $font-weight-map keys
- */
-export type FontWeight = 'regular' | 'semi-bold' | 'bold';
+export type TextMaxLineOption = (typeof TextMaxLinePropKeys)[number];
+
+export type ResponsiveTextMaxLineProps = Partial<
+  Record<TextMaxLineOption, ResponsiveAttribute<TextMaxLine>>
+>;

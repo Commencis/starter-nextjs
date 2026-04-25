@@ -1,14 +1,24 @@
 import clsx from 'clsx';
 
 import type { PerBreakpoint } from '@/types/style/breakpoint.types';
-import type {
-  TypographyVariant,
-  TypographyVariantProps,
+import {
+  type FontWeightOption,
+  FontWeightPropKeys,
+  type ResponsiveTypographyVariant,
+  type TextAlignOption,
+  TextAlignPropKeys,
+  type TypographyVariant,
 } from '@/types/style/typography.types';
+
+import { responsiveStyleResolver } from './responsive.utils';
 
 import css from '@/styles/modules/typography.module.scss';
 
-const DEFAULT_TYPOGRAPHY_VARIANT: TypographyVariant = 'body-1';
+// -----------------------------------------------------------------------------
+// Typography variant (`variant` → `typ-<bp>-<variant>` classes)
+// -----------------------------------------------------------------------------
+
+export const DEFAULT_TYPOGRAPHY_VARIANT: TypographyVariant = 'body-1';
 
 /**
  * Per-variant viewport scaling. Keys are the scalar variant users request;
@@ -48,7 +58,7 @@ const typographyViewportMap: Record<
  *                   injected so text always has a baseline style.
  */
 export function getTypographyVariantClasses(
-  variant: TypographyVariantProps = DEFAULT_TYPOGRAPHY_VARIANT
+  variant: ResponsiveTypographyVariant = DEFAULT_TYPOGRAPHY_VARIANT
 ): string {
   const breakpointMap: PerBreakpoint<TypographyVariant> =
     typeof variant === 'string'
@@ -61,3 +71,31 @@ export function getTypographyVariantClasses(
     )
   );
 }
+
+// -----------------------------------------------------------------------------
+// Font weight (`fontWeight` → `wgt[-<bp>]-<weight>` classes)
+// -----------------------------------------------------------------------------
+
+const fontWeightPrefixMap: Record<FontWeightOption, string> = {
+  fontWeight: 'wgt',
+};
+
+export const getFontWeightClasses = responsiveStyleResolver({
+  keys: FontWeightPropKeys,
+  prefixMap: fontWeightPrefixMap,
+  css,
+});
+
+// -----------------------------------------------------------------------------
+// Text align (`align` → `ta[-<bp>]-<align>` classes)
+// -----------------------------------------------------------------------------
+
+const textAlignPrefixMap: Record<TextAlignOption, string> = {
+  align: 'ta',
+};
+
+export const getTextAlignClasses = responsiveStyleResolver({
+  keys: TextAlignPropKeys,
+  prefixMap: textAlignPrefixMap,
+  css,
+});

@@ -1,5 +1,4 @@
 @use '@/styles/variables/colors/semantics' as semantics;
-@use '@/styles/variables/typography/weights' as weights;
 @use '@/styles/mixins/media.mixins' as mediaMixins;
 @use '@/styles/mixins/utility.mixins' as utilityMixins;
 
@@ -15,18 +14,6 @@ $text-color-map:(
 
 /* Text Color Classes */
 @include utilityMixins.create-utilities('text-color', 'color', $text-color-map);
-
-/* Font weight overrides */
-@include utilityMixins.create-utilities('text-fw', 'font-weight', weights.$font-weight-map);
-
-/* Responsive text align utilities */
-$text-align-utilities: (
-  left: left,
-  center: center,
-  right: right,
-);
-
-@include utilityMixins.create-responsive-utilities('ta', 'text-align', $text-align-utilities);
 
 @mixin text-clamp-utility($line-count) {
   display: -webkit-box;

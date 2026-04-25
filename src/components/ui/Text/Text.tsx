@@ -2,32 +2,22 @@ import type { PropsWithChildren, ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { TypographyVariantProps } from '@/types/style/typography.types';
-import { getTypographyVariantClasses } from '@/utils/style/typography.utils';
-
-import type {
-  FontWeight,
-  TextAlignProp,
-  TextColor,
-  TextElement,
-  TextMaxLineProp,
-} from './Text.types';
 import {
   getFontWeightClasses,
   getTextAlignClasses,
-  getTextMaxLineClasses,
-} from './Text.utils';
+  getTypographyVariantClasses,
+} from '@/utils/style/typography.utils';
+
+import type { TextColor, TextElement, TextStyleProps } from './Text.types';
+import { getTextMaxLineClasses } from './Text.utils';
 
 import css from './Text.module.scss';
 
-type TextProps = PropsWithChildren<{
-  as?: TextElement;
-  color?: TextColor;
-  variant?: TypographyVariantProps;
-  fontWeight?: FontWeight;
-  align?: TextAlignProp;
-  maxLine?: TextMaxLineProp;
-}>;
+type TextProps = TextStyleProps &
+  PropsWithChildren & {
+    as?: TextElement;
+    color?: TextColor;
+  };
 
 export function Text({
   as: Component = 'span',
