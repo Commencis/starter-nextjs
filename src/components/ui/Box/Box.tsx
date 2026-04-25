@@ -1,6 +1,6 @@
-import type { PropsWithChildren, ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
-import type { WithOptionalId } from '@/types/common.types';
+import type { WithOptionalId, WithStrictChildren } from '@/types/common.types';
 
 import type {
   BoxElement,
@@ -9,13 +9,12 @@ import type {
 } from './Box.types';
 import { getBoxClasses } from './Box.utils';
 
-type BoxProps = PropsWithChildren<
+type BoxProps = WithStrictChildren &
   WithOptionalId &
-    BoxStyleProps & {
-      as?: BoxElement;
-      renderRoot?: BoxRenderRootCallback;
-    }
->;
+  BoxStyleProps & {
+    as?: BoxElement;
+    renderRoot?: BoxRenderRootCallback;
+  };
 
 export function Box({
   as: Component = 'div',

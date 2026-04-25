@@ -7,30 +7,27 @@
  * Any reproduction of this material must contain this notice.
  */
 
-import { type PropsWithChildren, type ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { BoxElement, BoxStyleProps } from '@/components/ui/Box/Box.types';
+import type { WithStrictChildren } from '@/types/common.types';
+
+import type { BoxElement } from '@/components/ui/Box/Box.types';
 import { Box } from '@/components/ui/Box/Box';
+
+import type {
+  ContainerAllowedBoxProps,
+  ContainerSize,
+} from './Container.types';
 
 import css from './Container.module.scss';
 
-export type ContainerSize = 'md' | 'lg';
-
-type ContainerProps = PropsWithChildren<{
-  as?: BoxElement;
-  size?: ContainerSize;
-}> &
-  Omit<
-    BoxStyleProps,
-    | 'marginX'
-    | 'marginLeft'
-    | 'marginRight'
-    | 'paddingX'
-    | 'paddingLeft'
-    | 'paddingRight'
-  >;
+type ContainerProps = ContainerAllowedBoxProps &
+  WithStrictChildren & {
+    as?: BoxElement;
+    size?: ContainerSize;
+  };
 
 export function Container({
   as: Component = 'div',
