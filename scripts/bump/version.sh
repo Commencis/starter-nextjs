@@ -20,8 +20,9 @@ if pnpm version "$1" --no-git-tag-version; then
   git commit -m "chore(release): update version to v$new_version"
   git tag "v$new_version"
 
-  echo "Version bumped to $new_version (build $build_number)"
-  echo "Tag created: v$new_version"
+  echo "✅ Version bumped to $new_version (build $build_number)"
+  echo "✅ Tag created: v$new_version"
+  echo
   echo "Please run 'git push origin --follow-tags' or 'git push --tags' manually."
 else
   echo "Error: Version bump failed."
