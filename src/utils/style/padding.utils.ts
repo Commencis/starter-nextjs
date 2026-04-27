@@ -1,7 +1,7 @@
 import {
   type PaddingOption,
   PaddingPropKeys,
-} from '@/types/style/spacer.types';
+} from '@/types/style/spacing.types';
 
 import { responsiveStyleResolver } from './responsive.utils';
 

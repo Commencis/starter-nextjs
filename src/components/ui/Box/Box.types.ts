@@ -22,7 +22,7 @@ import type {
   ResponsiveGapProps,
   ResponsiveMarginProps,
   ResponsivePaddingProps,
-} from '@/types/style/spacer.types';
+} from '@/types/style/spacing.types';
 
 export type BoxElement =
   | 'div'

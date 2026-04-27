@@ -1,4 +1,4 @@
-@use '@/styles/variables/spacers' as spacers;
+@use '@/styles/variables/spacing' as spacing;
 @use '@/styles/variables/borders' as borders;
 @use '@/styles/variables/colors/semantics' as semantics;
 @use '@/styles/variables/typography/weights' as weights;
@@ -29,7 +29,7 @@
   border-radius: borders.$border-radius-sm;
 
   height: 2.25rem;
-  padding: spacers.$spacer-8;
+  padding: spacing.$spacing-8;
 }
 
 .size-md {
@@ -38,7 +38,7 @@
   border-radius: borders.$border-radius-md;
 
   height: 3rem;
-  padding: spacers.$spacer-14 spacers.$spacer-18;
+  padding: spacing.$spacing-14 spacing.$spacing-18;
 }
 
 .size-lg {
@@ -47,7 +47,7 @@
   border-radius: borders.$border-radius-md;
 
   height: 3.5rem;
-  padding: spacers.$spacer-16 spacers.$spacer-20;
+  padding: spacing.$spacing-16 spacing.$spacing-20;
 }
 
 .rounded {

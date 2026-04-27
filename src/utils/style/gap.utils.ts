@@ -1,4 +1,4 @@
-import { type GapOption, GapPropKeys } from '@/types/style/spacer.types';
+import { type GapOption, GapPropKeys } from '@/types/style/spacing.types';
 
 import { responsiveStyleResolver } from './responsive.utils';
 

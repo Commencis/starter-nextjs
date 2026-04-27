@@ -1,10 +1,10 @@
 @use '@/styles/variables/breakpoints' as breakpoints;
-@use '@/styles/variables/spacers' as spacers;
+@use '@/styles/variables/spacing' as spacing;
 
 .size-md {
-  max-width: breakpoints.$max-content-width-md + 2 * spacers.$root-padding-md;
+  max-width: breakpoints.$max-content-width-md + 2 * spacing.$root-padding-md;
 }
 
 .size-lg {
-  max-width: breakpoints.$max-content-width-lg + 2 * spacers.$root-padding-lg;
+  max-width: breakpoints.$max-content-width-lg + 2 * spacing.$root-padding-lg;
 }

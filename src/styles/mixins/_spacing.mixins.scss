@@ -1,9 +1,9 @@
-@use '../variables/spacers' as spacers;
+@use '../variables/spacing' as spacing;
 @use './utility.mixins' as utilityMixins;
 
 @mixin create-responsive-padding-classes() {
 
-  $values: spacers.$padding-values;
+  $values: spacing.$padding-values;
 
   @include utilityMixins.create-responsive-utilities('p', 'padding', $values);
   @include utilityMixins.create-responsive-utilities('py', ('padding-top', 'padding-bottom'), $values);
@@ -16,7 +16,7 @@
 
 @mixin create-responsive-margin-classes() {
 
-  $values: spacers.$margin-values;
+  $values: spacing.$margin-values;
 
   @include utilityMixins.create-responsive-utilities('m', 'margin', $values);
   @include utilityMixins.create-responsive-utilities('my', ('margin-top', 'margin-bottom'), $values);
@@ -29,7 +29,7 @@
 
 @mixin create-responsive-gap-classes() {
 
-  $values: spacers.$gap-values;
+  $values: spacing.$gap-values;
 
   @include utilityMixins.create-responsive-utilities('gap', 'gap', $values);
 }

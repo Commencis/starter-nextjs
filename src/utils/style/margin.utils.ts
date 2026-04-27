@@ -1,4 +1,4 @@
-import { type MarginOption, MarginPropKeys } from '@/types/style/spacer.types';
+import { type MarginOption, MarginPropKeys } from '@/types/style/spacing.types';
 
 import { responsiveStyleResolver } from './responsive.utils';
 
