@@ -1,2 +1,5 @@
-export { Error404 } from './Error404/Error404';
-export { Error500 } from './Error500/Error500';
+export type {
+  ErrorContentProps,
+  ErrorContentStatusCode,
+} from './ErrorContent/ErrorContent';
+export { ErrorContent } from './ErrorContent/ErrorContent';
