@@ -30,7 +30,7 @@
     "generate:vectors": "pnpm run svgr:vectors && eslint --fix src/components/vectors/**/*.{ts,tsx}",
     "svgr:icons": "svgr --config-file ./scripts/svg/icon.svgr.config.cjs src/assets/icons",
     "svgr:vectors": "svgr --config-file ./scripts/svg/vector.svgr.config.cjs src/assets/vectors",
-    "ci:review": "pnpm run lint",
+    "ci:review": "pnpm run typegen && pnpm run lint",
     "changeset": "changeset",
     "changeset:version": "changeset version && pnpm install --no-frozen-lockfile",
     "bump:version": "./scripts/bump/version.sh",
