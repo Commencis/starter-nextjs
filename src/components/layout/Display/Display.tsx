@@ -2,23 +2,23 @@ import type { PropsWithChildren, ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import css from '@/components/layout/ServerDisplay/ServerDisplay.module.scss';
+import css from './Display.module.scss';
 
-export type DisplayProps = PropsWithChildren<{
-  showOnSm?: boolean;
+type DisplayProps = PropsWithChildren<{
+  showOnXs?: boolean;
   showOnMd?: boolean;
   showOnLg?: boolean;
 }>;
 
-export const Display = ({
+export function Display({
   children,
-  showOnSm = false,
+  showOnXs = false,
   showOnMd = false,
   showOnLg = false,
-}: DisplayProps): ReactElement => {
+}: DisplayProps): ReactElement {
   const displayClasses = clsx({
-    [css.smHidden]: !showOnSm,
-    [css.smVisible]: showOnSm,
+    [css.xsHidden]: !showOnXs,
+    [css.xsVisible]: showOnXs,
 
     [css.mdHidden]: !showOnMd,
     [css.mdVisible]: showOnMd,
@@ -28,4 +28,4 @@ export const Display = ({
   });
 
   return <div className={displayClasses}>{children}</div>;
-};
+}

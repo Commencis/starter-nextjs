@@ -2,7 +2,7 @@ import type { ReactElement } from 'react';
 
 import { Box, Button, Text } from '@/components/ui';
 
-export function HomePage(): ReactElement {
+export function Home(): ReactElement {
   return (
     <Box
       display="flex"
@@ -12,10 +12,10 @@ export function HomePage(): ReactElement {
       height="full"
       gap={12}
     >
-      <Text as="h1" variant="body-lg">
+      <Text as="h1" variant="body-2">
         Welcome to the Commencis Starter
       </Text>
-      <Text as="h1" variant="heading-2xl">
+      <Text as="h1" variant="heading-2">
         Next.js Template
       </Text>
 

@@ -8,4 +8,6 @@ $z-index-100: 100;
 $z-index-1000: 1000;
 $z-index-max: 9999;
 
-$z-index-header: $z-index-10;
+$header: $z-index-10;
+$overlay: $z-index-100;
+$modal: $z-index-1000;

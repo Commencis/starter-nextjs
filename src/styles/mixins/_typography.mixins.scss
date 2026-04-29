@@ -1,17 +1,46 @@
+@use 'sass:list';
 @use 'sass:map';
 @use '../variables/typography/variants' as variants;
+@use './media.mixins' as mediaMixins;
 
-@mixin create-text-variant($variant) {
+@mixin create-typography-variant($variant) {
 
-  $styles: map.get(variants.$text-variants, $variant);
+  $values: map.get(variants.$typography-variant-map, $variant);
 
-  @if not $styles {
-    @error 'Variant `#{$variant}` not found in $text-variants map.';
+  @if not $values {
+    @error 'Variant `#{$variant}` not found in $typography-variant-map.';
   }
 
   @else {
-    @each $prop, $value in $styles {
-      #{$prop}: #{$value};
+    font-size: list.nth($values, 1);
+    font-weight: list.nth($values, 4);
+    line-height: list.nth($values, 2);
+    letter-spacing: list.nth($values, 3);
+  }
+}
+
+/**
+ * Emits per-breakpoint classes for every physical typography variant:
+ *   .typ-xs-<variant>, .typ-md-<variant>, .typ-lg-<variant>
+ *
+ * Each class contains ONLY the physical variant values for its breakpoint
+ * (no internal viewport scaling). Viewport scaling is composed on the
+ * consumer side (see `getTypographyVariantClasses` in typography.utils.ts), which
+ * maps a scalar variant through `typographyViewportMap` and emits the
+ * matching per-breakpoint classes.
+ */
+@mixin create-responsive-typography-variant-classes() {
+
+  @each $bp in (xs, md, lg) {
+
+    @include mediaMixins.media-query-up($bp) {
+
+      @each $name, $_ in variants.$typography-variant-map {
+
+        .typ-#{$bp}-#{$name} {
+          @include create-typography-variant($name);
+        }
+      }
     }
   }
 }

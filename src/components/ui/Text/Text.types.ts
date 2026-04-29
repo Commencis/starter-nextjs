@@ -1,15 +1,9 @@
-export type TextVariant =
-  | 'heading-2xl'
-  | 'heading-xl'
-  | 'heading-lg'
-  | 'heading-md'
-  | 'heading-sm'
-  | 'heading-xs'
-  | 'body-lg'
-  | 'body-md'
-  | 'body-sm'
-  | 'body-xs'
-  | 'caption';
+import type { ResponsiveAttribute } from '@/types/style/breakpoint.types';
+import type {
+  ResponsiveFontWeightProps,
+  ResponsiveTextAlignProps,
+  ResponsiveTypographyVariantProps,
+} from '@/types/style/typography.types';
 
 export type TextElement =
   | 'span'
@@ -21,10 +15,30 @@ export type TextElement =
   | 'h5'
   | 'h6';
 
-/**
- * Keep @type TextColor in sync with semantic colors
- * @see @/styles/variables/colors/semantics
- */
-export type TextColor = 'brand' | 'primary' | 'secondary' | 'black' | 'white';
+export type TextStyleProps = ResponsiveTypographyVariantProps &
+  ResponsiveFontWeightProps &
+  ResponsiveTextAlignProps &
+  ResponsiveTextMaxLineProps;
 
-export type TextAlign = 'left' | 'center' | 'right';
+/**
+ * Semantic tokens: keep in sync with @/styles/variables/colors/semantics.
+ * `inherit` uses `color: inherit` (parent / cascade).
+ */
+export type TextColor =
+  | 'brand'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'black'
+  | 'white'
+  | 'inherit';
+
+export type TextMaxLine = 1 | 2 | 3 | 4 | 5 | 6;
+
+export const TextMaxLinePropKeys = ['maxLine'] as const;
+
+export type TextMaxLineOption = (typeof TextMaxLinePropKeys)[number];
+
+export type ResponsiveTextMaxLineProps = Partial<
+  Record<TextMaxLineOption, ResponsiveAttribute<TextMaxLine>>
+>;

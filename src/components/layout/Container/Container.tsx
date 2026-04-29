@@ -2,34 +2,36 @@ import type { ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { BoxProps } from '@/components/ui/Box/Box';
+import type { WithStrictChildren } from '@/types/common.types';
+
+import type { BoxElement } from '@/components/ui/Box/Box.types';
 import { Box } from '@/components/ui/Box/Box';
 
-import styles from './Container.module.scss';
+import type {
+  ContainerAllowedBoxProps,
+  ContainerSize,
+} from './Container.types';
 
-type ContainerProps = Omit<
-  BoxProps,
-  | 'marginX'
-  | 'marginLeft'
-  | 'marginRight'
-  | 'paddingX'
-  | 'paddingLeft'
-  | 'paddingRight'
-  | 'renderRoot'
->;
+import css from './Container.module.scss';
+
+type ContainerProps = WithStrictChildren &
+  ContainerAllowedBoxProps & {
+    as?: BoxElement;
+    size?: ContainerSize;
+  };
 
 export function Container({
   as: Component = 'div',
   children,
+  size = 'lg',
   ...boxProps
 }: ContainerProps): ReactElement {
   return (
     <Box
-      marginY={0}
       marginX="auto"
-      paddingX={{ xs: 16, md: 32, lg: 64 }}
+      paddingX={{ xs: 24, md: 32, lg: 64 }}
       renderRoot={(className, children) => (
-        <Component className={clsx(className, styles.container)}>
+        <Component className={clsx(css[`size-${size}`], className)}>
           {children}
         </Component>
       )}

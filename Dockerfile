@@ -1,4 +1,4 @@
-FROM node:24.14-alpine3.23 AS base
+FROM node:24.15.0-alpine3.23 AS base
 
 # Stage 1: Install Dependencies and Build the Next.js app
 FROM base AS builder
@@ -8,7 +8,7 @@ ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 ENV NEXT_TELEMETRY_DISABLED=1
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
 RUN corepack enable
 RUN corepack install

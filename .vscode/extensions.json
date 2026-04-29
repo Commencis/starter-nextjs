@@ -1,7 +1,15 @@
 {
   "recommendations": [
+    "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint"
+    "stylelint.vscode-stylelint",
+    "usernamehw.errorlens",
+    "naumovs.color-highlight",
+    "cipchk.cssrem",
+    "orta.vscode-jest",
+    "unifiedjs.vscode-mdx",
+    "dgeibi.alias-tool",
+    "ionutvmi.path-autocomplete"
   ]
 }

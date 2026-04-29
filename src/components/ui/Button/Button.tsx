@@ -1,25 +1,21 @@
 'use client';
 
-import type { MouseEvent, PropsWithChildren, ReactElement } from 'react';
+import type { MouseEvent, ReactElement } from 'react';
 
 import clsx from 'clsx';
 
+import { ButtonContent } from './ButtonContent/ButtonContent';
 import type {
   AllowedButtonHTMLAttributes,
-  ButtonSize,
-  ButtonVariant,
+  ButtonContentElements,
+  ButtonStyleProps,
 } from './Button.types';
 
 import css from './Button.module.scss';
 
-type ButtonProps = AllowedButtonHTMLAttributes &
-  PropsWithChildren<{
-    size?: ButtonSize;
-    variant?: ButtonVariant;
-    leadingIcon?: ReactElement;
-    trailingIcon?: ReactElement;
-    isFullWidth?: boolean;
-  }>;
+export type ButtonProps = AllowedButtonHTMLAttributes &
+  ButtonStyleProps &
+  ButtonContentElements;
 
 export function Button({
   type = 'button',
@@ -30,10 +26,12 @@ export function Button({
   trailingIcon,
   children,
   isFullWidth = false,
+  isRounded = false,
   ...rest
 }: ButtonProps): ReactElement {
   const buttonClasses = clsx(css.button, css[variant], css[`size-${size}`], {
     [css.fullWidth]: isFullWidth,
+    [css.rounded]: isRounded,
   });
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
@@ -47,11 +45,13 @@ export function Button({
       onClick={handleClick}
       {...rest}
     >
-      <div className={css.content}>
-        {leadingIcon && <span>{leadingIcon}</span>}
-        {children && <span>{children}</span>}
-        {trailingIcon && <span>{trailingIcon}</span>}
-      </div>
+      <ButtonContent
+        size={size}
+        leadingIcon={leadingIcon}
+        trailingIcon={trailingIcon}
+      >
+        {children}
+      </ButtonContent>
     </button>
   );
 }

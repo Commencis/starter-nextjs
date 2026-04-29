@@ -1,19 +1,22 @@
 import type { NextConfig } from 'next';
 
-import bundleAnalyzer from '@next/bundle-analyzer';
+const noIndexHeader = {
+  key: 'X-Robots-Tag',
+  value: 'noindex, nofollow, noarchive',
+};
 
-const isAnalyzeEnabled = process.env.ANALYZE === 'true';
-
-const baseConfig: NextConfig = {
+const nextConfig: NextConfig = {
   output: 'standalone',
   poweredByHeader: false,
   reactCompiler: true,
+  typedRoutes: true,
+  images: {
+    deviceSizes: [768, 1024, 1280],
+  },
+
+  async headers() {
+    return [{ source: '/api/:path*', headers: [noIndexHeader] }];
+  },
 };
-
-const withBundleAnalyzer = bundleAnalyzer({ enabled: isAnalyzeEnabled });
-
-const nextConfig: NextConfig = isAnalyzeEnabled
-  ? withBundleAnalyzer(baseConfig)
-  : baseConfig;
 
 export default nextConfig;

@@ -17,6 +17,19 @@ const svgrIconConfig = {
     width: '{size}',
     height: '{size}',
   },
+  svgoConfig: {
+    plugins: [
+      {
+        name: 'preset-default',
+        params: { overrides: { removeViewBox: false } },
+      },
+      {
+        name: 'removeAttrs',
+        params: { attrs: '(fill|stroke)' },
+      },
+      'prefixIds',
+    ],
+  },
 };
 
 module.exports = svgrIconConfig;

@@ -3,26 +3,29 @@
 import type { PropsWithChildren, ReactElement } from 'react';
 import { Activity } from 'react';
 
-import { useBreakpointRanges } from '@/hooks/useBreakpointRanges';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
 
 export type ExoticActivityProps = PropsWithChildren<{
   condition?: boolean;
-  showOnSm?: boolean;
+  showOnXs?: boolean;
   showOnMd?: boolean;
   showOnLg?: boolean;
 }>;
 
 export function ExoticActivity({
   condition = true,
-  showOnSm = false,
+  showOnXs = false,
   showOnMd = false,
   showOnLg = false,
   children,
 }: ExoticActivityProps): ReactElement {
-  const { isSm, isMd, isLg } = useBreakpointRanges();
+  const isXs = useBreakpoint({ down: 'md' });
+  const isMd = useBreakpoint({ between: { min: 'md', max: 'lg' } });
+  const isLg = useBreakpoint({ up: 'lg' });
+
   const isVisible =
     condition &&
-    ((showOnSm && isSm) || (showOnMd && isMd) || (showOnLg && isLg));
+    ((showOnXs && isXs) || (showOnMd && isMd) || (showOnLg && isLg));
 
   return (
     <Activity mode={isVisible ? 'visible' : 'hidden'}>{children}</Activity>

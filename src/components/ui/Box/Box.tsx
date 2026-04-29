@@ -9,7 +9,7 @@ import type {
 } from './Box.types';
 import { getBoxClasses } from './Box.utils';
 
-export type BoxProps = PropsWithChildren &
+type BoxProps = PropsWithChildren &
   WithOptionalId &
   BoxStyleProps & {
     as?: BoxElement;

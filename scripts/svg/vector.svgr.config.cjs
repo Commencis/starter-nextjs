@@ -18,11 +18,7 @@ const svgrVectorConfig = {
     plugins: [
       {
         name: 'preset-default',
-        params: {
-          overrides: {
-            removeViewBox: false,
-          },
-        },
+        params: { overrides: { removeViewBox: false } },
       },
       'prefixIds',
     ],

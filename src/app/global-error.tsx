@@ -2,13 +2,13 @@
 
 import type { ReactElement } from 'react';
 
-import { Error500 } from '@/components/shared';
+import { ErrorContent } from '@/components/shared';
 
 export default function GlobalErrorPage(): ReactElement {
   return (
     <html lang="en">
       <body>
-        <Error500 />
+        <ErrorContent statusCode={500} />
       </body>
     </html>
   );

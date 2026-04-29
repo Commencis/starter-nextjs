@@ -1,9 +1,15 @@
 {
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
+
   "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedLocales": {
+    "tr": true
+  },
+
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -13,17 +19,11 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml"
+    "typescriptreact"
   ],
 
   "stylelint.enable": true,
-  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "scss"],
 
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
@@ -36,8 +36,18 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
 
   "typescript.tsdk": "./node_modules/typescript/lib",
 
-  "cSpell.words": ["commencis"]
+  "alias-tool.mappings": {
+    "@": "${folder}/src"
+  },
+
+  "path-autocomplete.pathMappings": {
+    "@": "${folder}/src"
+  }
 }

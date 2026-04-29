@@ -20,3 +20,11 @@
 @mixin create-responsive-height-classes() {
   @include utilityMixins.create-responsive-utilities('h', 'height', layoutVars.$height-values);
 }
+
+@mixin create-responsive-grid-template-columns-classes() {
+  @include utilityMixins.create-responsive-utilities(
+    'gtc',
+    'grid-template-columns',
+    layoutVars.$grid-template-columns-values
+  );
+}

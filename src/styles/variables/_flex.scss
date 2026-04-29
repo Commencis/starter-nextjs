@@ -32,3 +32,18 @@ $flex-align-self-values: (
   center: center,
   stretch: stretch
 );
+
+$flex-basis-values: (
+  auto: auto,
+  0: 0
+);
+
+$flex-grow-values: (
+  0: 0,
+  1: 1
+);
+
+$flex-shrink-values: (
+  0: 0,
+  1: 1
+);

@@ -1,5 +1,10 @@
 import clsx from 'clsx';
 
+import type {
+  UnknownComponentProps,
+  UnknownStyleProps,
+} from '@/types/common.types';
+
 type GetResponsiveClassesOptions<TProps, TPrefixMap> = {
   props: TProps;
   prefixMap: TPrefixMap;
@@ -7,7 +12,7 @@ type GetResponsiveClassesOptions<TProps, TPrefixMap> = {
 };
 
 export function getResponsiveClasses<
-  TProps extends Record<string, unknown>,
+  TProps extends UnknownStyleProps,
   TPrefixMap extends Record<string, string>,
 >({
   props,
@@ -28,11 +33,17 @@ export function getResponsiveClasses<
       if (typeof value === 'object' && value !== null) {
         Object.entries(value).forEach(([bp, bpValue]) => {
           if (bpValue !== undefined) {
-            acc.push(css[`${prefix}-${bp}-${bpValue}`]);
+            const className = css[`${prefix}-${bp}-${bpValue}`];
+            if (className) {
+              acc.push(className);
+            }
           }
         });
       } else {
-        acc.push(css[`${prefix}-${value}`]);
+        const className = css[`${prefix}-${value}`];
+        if (className) {
+          acc.push(className);
+        }
       }
 
       return acc;
@@ -41,4 +52,45 @@ export function getResponsiveClasses<
   );
 
   return clsx(classList);
+}
+
+function isStylePropKey<K extends string>(
+  key: string,
+  allowedKeys: readonly K[]
+): key is K {
+  return allowedKeys.some((k) => k === key);
+}
+
+export function extractStyleProps<K extends string>(
+  props: UnknownComponentProps,
+  keys: readonly K[]
+): Partial<Pick<UnknownComponentProps, K>> {
+  return Object.entries(props).reduce<Partial<Pick<UnknownComponentProps, K>>>(
+    (acc, [key, value]) => {
+      if (isStylePropKey(key, keys)) {
+        acc[key] = value;
+      }
+      return acc;
+    },
+    {}
+  );
+}
+
+type StyleResolverConfig<K extends string> = {
+  keys: readonly K[];
+  prefixMap: Record<K, string>;
+  css: Record<string, string>;
+};
+
+export function responsiveStyleResolver<K extends string>({
+  keys,
+  prefixMap,
+  css,
+}: StyleResolverConfig<K>): (componentProps: UnknownComponentProps) => string {
+  return (componentProps) =>
+    getResponsiveClasses({
+      props: extractStyleProps(componentProps, keys),
+      prefixMap,
+      css,
+    });
 }

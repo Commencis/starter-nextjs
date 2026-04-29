@@ -1,95 +1,44 @@
-/* stylelint-disable selector-class-pattern */
-
 @use '@/styles/variables/colors/semantics' as semantics;
-@use '@/styles/mixins/color.mixins' as colorMixins;
-@use '@/styles/mixins/typography.mixins' as typographyMixins;
 @use '@/styles/mixins/media.mixins' as mediaMixins;
+@use '@/styles/mixins/utility.mixins' as utilityMixins;
 
 $text-color-map:(
   'brand': semantics.$text-brand,
   'primary': semantics.$text-primary,
   'secondary': semantics.$text-secondary,
+  'tertiary': semantics.$text-tertiary,
   'black': semantics.$text-black,
   'white': semantics.$text-white,
+  'inherit': inherit,
 );
 
 /* Text Color Classes */
-@include colorMixins.create-color-classes('text-color', $text-color-map);
+@include utilityMixins.create-utilities('text-color', 'color', $text-color-map);
 
-/* Text Variant Classes */
-.heading-2xl {
-  @include typographyMixins.create-text-variant('heading-2xl');
+@mixin text-clamp-utility($line-count) {
+  display: -webkit-box;
+  overflow: hidden;
 
-  @include mediaMixins.media-query-down(md) {
-    @include typographyMixins.create-text-variant('heading-xl');
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-count;
+}
+
+@mixin create-text-clamp-utilities($prefix: 'text-clamp') {
+  @for $line-count from 1 through 6 {
+    .#{$prefix}-#{$line-count} {
+      @include text-clamp-utility($line-count);
+    }
+  }
+
+  @each $breakpoint in (xs, md, lg) {
+    @include mediaMixins.media-query-up($breakpoint) {
+      @for $line-count from 1 through 6 {
+        .#{$prefix}-#{$breakpoint}-#{$line-count} {
+          @include text-clamp-utility($line-count);
+        }
+      }
+    }
   }
 }
 
-.heading-xl {
-  @include typographyMixins.create-text-variant('heading-xl');
-
-  @include mediaMixins.media-query-down(md) {
-    @include typographyMixins.create-text-variant('heading-lg');
-  }
-}
-
-.heading-lg {
-  @include typographyMixins.create-text-variant('heading-lg');
-
-  @include mediaMixins.media-query-down(md) {
-    @include typographyMixins.create-text-variant('heading-md');
-  }
-}
-
-.heading-md {
-  @include typographyMixins.create-text-variant('heading-md');
-
-  @include mediaMixins.media-query-down(md) {
-    @include typographyMixins.create-text-variant('heading-sm');
-  }
-}
-
-.heading-sm {
-  @include typographyMixins.create-text-variant('heading-sm');
-
-  @include mediaMixins.media-query-down(md) {
-    @include typographyMixins.create-text-variant('heading-xs');
-  }
-}
-
-.heading-xs {
-  @include typographyMixins.create-text-variant('heading-xs');
-}
-
-.body-lg {
-  @include typographyMixins.create-text-variant('body-lg');
-}
-
-.body-md {
-  @include typographyMixins.create-text-variant('body-md');
-}
-
-.body-sm {
-  @include typographyMixins.create-text-variant('body-sm');
-}
-
-.body-xs {
-  @include typographyMixins.create-text-variant('body-xs');
-}
-
-.caption {
-  @include typographyMixins.create-text-variant('caption');
-}
-
-/* Text Alignment Classes */
-.ta-left {
-  text-align: left;
-}
-
-.ta-center {
-  text-align: center;
-}
-
-.ta-right {
-  text-align: right;
-}
+@include create-text-clamp-utilities();

@@ -1,0 +1,21 @@
+@use '../mixins/typography.mixins' as typographyMixins;
+@use '../variables/typography/weights' as weights;
+@use '../mixins/utility.mixins' as utilityMixins;
+
+@include typographyMixins.create-responsive-typography-variant-classes();
+
+/* Responsive font-weight (prefix `wgt`; e.g. `.wgt-regular`, `.wgt-md-bold`) */
+@include utilityMixins.create-responsive-utilities(
+  'wgt',
+  'font-weight',
+  weights.$font-weight-map
+);
+
+/* Responsive text-align */
+$text-align-utilities: (
+  left: left,
+  center: center,
+  right: right,
+);
+
+@include utilityMixins.create-responsive-utilities('ta', 'text-align', $text-align-utilities);
