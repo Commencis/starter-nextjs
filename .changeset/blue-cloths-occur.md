@@ -10,5 +10,6 @@
 - Several updates on Display, Container, Activity components
 - Updated settings & configs
 - Included new hooks `useBreakpoint`, `useMediaQuery` and more.
+- New version & build number bump scripts added.
 - Migrated to Typescript v6
 - All dependencies upgraded
