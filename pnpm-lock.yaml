@@ -30,7 +30,7 @@ importers:
         version: 2.31.0(@types/node@24.12.2)
       '@commencis/commitlint-config':
         specifier: 3.4.0
-        version: 3.4.0(@commitlint/cli@20.5.2)
+        version: 3.4.0(@commitlint/cli@20.5.3)
       '@commencis/eslint-config':
         specifier: 3.6.0
         version: 3.6.0(eslint@9.39.4)(prettier@3.8.3)(typescript@6.0.3)
@@ -42,10 +42,10 @@ importers:
         version: 3.2.0(prettier@3.8.3)
       '@commencis/stylelint-config':
         specifier: 3.4.0
-        version: 3.4.0(postcss-html@1.8.1)(postcss@8.5.12)(stylelint@17.9.1)
+        version: 3.4.0(postcss-html@1.8.1)(postcss@8.5.14)(stylelint@17.11.0)
       '@commitlint/cli':
-        specifier: 20.5.2
-        version: 20.5.2(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+        specifier: 20.5.3
+        version: 20.5.3(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
       '@svgr/cli':
         specifier: 8.1.0
         version: 8.1.0(typescript@6.0.3)
@@ -80,8 +80,8 @@ importers:
         specifier: 1.99.0
         version: 1.99.0
       stylelint:
-        specifier: 17.9.1
-        version: 17.9.1(typescript@6.0.3)
+        specifier: 17.11.0
+        version: 17.11.0(typescript@6.0.3)
       typescript:
         specifier: 6.0.3
         version: 6.0.3
@@ -254,8 +254,8 @@ packages:
     peerDependencies:
       stylelint: '>=17'
 
-  '@commitlint/cli@20.5.2':
-    resolution: {integrity: sha512-IXr5xd3IX8SEG936P8gcpozRplkDeDSwJlt8UvoY1winwIy2udTbQ/cOCgbaaxcjdDqVoS29VUcz/wkwnSozbA==}
+  '@commitlint/cli@20.5.3':
+    resolution: {integrity: sha512-OJdL0EXWD5y9LPa0nr/geOwzaS8BsdaybKkcloB0JgsguGxNv2R+hC2FTPqrAcprg35zF33KOQerY0x8W1aesA==}
     engines: {node: '>=v18'}
     hasBin: true
 
@@ -267,8 +267,8 @@ packages:
     resolution: {integrity: sha512-T/Uh6iJUzyx7j35GmHWdIiGRQB+ouZDk0pwAaYq4SXgB54KZhFdJ0vYmxiW6AMYICTIWuyMxDBl1jK74oFp/Gw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/ensure@20.5.0':
-    resolution: {integrity: sha512-IpHqAUesBeW1EDDdjzJeaOxU9tnogLAyXLRBn03SHlj1SGENn2JGZqSWGkFvBJkJzfXAuCNtsoYzax+ZPS+puw==}
+  '@commitlint/ensure@20.5.3':
+    resolution: {integrity: sha512-4i4AgNvH62owG9MwSiWKrle7HGNpBHHdLnWFIp5fTsHUYe5kRuh15t08L/0pdbbrRk8JKXQxxN4hZQcn+szkrw==}
     engines: {node: '>=v18'}
 
   '@commitlint/execute-rule@20.0.0':
@@ -283,12 +283,12 @@ packages:
     resolution: {integrity: sha512-JWLarAsurHJhPozbuAH6GbP4p/hdOCoqS9zJMfqwswne+/GPs5V0+rrsfOkP68Y8PSLphwtFXV0EzJ+GTXTTGg==}
     engines: {node: '>=v18'}
 
-  '@commitlint/lint@20.5.0':
-    resolution: {integrity: sha512-jiM3hNUdu04jFBf1VgPdjtIPvbuVfDTBAc6L98AWcoLjF5sYqkulBHBzlVWll4rMF1T5zeQFB6r//a+s+BBKlA==}
+  '@commitlint/lint@20.5.3':
+    resolution: {integrity: sha512-M7JbWBNr2gXKaPc4i/KipsuW1gkDHpj35KPjWtKy3Z+2AQw5wu1gBi1LIO0uoaij67CqY4K8PxPZSGens4evCw==}
     engines: {node: '>=v18'}
 
-  '@commitlint/load@20.5.2':
-    resolution: {integrity: sha512-zmr0RGDz7vThxW1I8ohb9yBjnGuH9mqwJpn21hInjGla+IlLOkS9ey0+dD5HlkzFlY0lX2NYdA2lDW6/0rO7Gw==}
+  '@commitlint/load@20.5.3':
+    resolution: {integrity: sha512-1FDZWuKyu98Myb8i7Tp31jPU2rZpOwAdYRyJcy2KoGg7Xk2A+bgHN8smhMaaNSNkmE8fwt53BokywZq8Gv/5XQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/message@20.4.3':
@@ -303,12 +303,12 @@ packages:
     resolution: {integrity: sha512-JDEIJ2+GnWpK8QqwfmW7O42h0aycJEWNqcdkJnyzLD11nf9dW2dWLTVEa8Wtlo4IZFGLPATjR5neA5QlOvIH1w==}
     engines: {node: '>=v18'}
 
-  '@commitlint/resolve-extends@20.5.2':
-    resolution: {integrity: sha512-8EhSCU9eNos/5cI1yg64GW79UH1c64O69AfStCsj4zqy6An/qIphVEXj4/+2M6056T8coz00f+UXFn4WUUP1HQ==}
+  '@commitlint/resolve-extends@20.5.3':
+    resolution: {integrity: sha512-+ogW9v/u9JqpvAgTrLra/YTFo0KkjU6iNblF89pPsj4NebNc+DAWctsludwezI8YnsjBmfHpApSwcXprN/f/ew==}
     engines: {node: '>=v18'}
 
-  '@commitlint/rules@20.5.0':
-    resolution: {integrity: sha512-5NdQXQEdnDPT5pK8O39ZA7HohzPRHEsDGU23cyVCNPQy4WegAbAwrQk3nIu7p2sl3dutPk8RZd91yKTrMTnRkQ==}
+  '@commitlint/rules@20.5.3':
+    resolution: {integrity: sha512-MPlMnb9D3wbszYMp+1hPtuhtPJndRo6I6yfkZVA4+jR8w7Kqp0u2u/Y+gzbaItx5Lltq5rw7FSZQWJMoXUC4NQ==}
     engines: {node: '>=v18'}
 
   '@commitlint/to-lines@20.0.0':
@@ -1460,6 +1460,9 @@ packages:
     resolution: {integrity: sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==}
     engines: {node: '>= 0.4'}
 
+  es-toolkit@1.46.1:
+    resolution: {integrity: sha512-5eNtXOs3tbfxXOj04tjjseeWkRWaoCjdEI+96DgwzZoe6c9juL49pXlzAFTI72aWC9Y8p7168g6XIKjh7k6pyQ==}
+
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
     engines: {node: '>=6'}
@@ -2095,29 +2098,14 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
-  lodash.camelcase@4.3.0:
-    resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
-
-  lodash.kebabcase@4.1.1:
-    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
-
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-
-  lodash.mergewith@4.6.2:
-    resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
-
-  lodash.snakecase@4.1.1:
-    resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
 
   lodash.startcase@4.4.0:
     resolution: {integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==}
 
   lodash.truncate@4.4.2:
     resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
-
-  lodash.upperfirst@4.3.1:
-    resolution: {integrity: sha512-sReKOYJIJf74dhJONhU4e0/shzi1trVbSWDOhKYE5XV2O+H7Sb2Dihwuc7xWxVl+DgFPyTqIN3zMfT9cq5iWDg==}
 
   log-update@6.1.0:
     resolution: {integrity: sha512-9ie8ItPR6tjY5uYJh8K/Zrv/RMZ5VOlOWvtZdEHYSTFKZfIBPQa9tOAEeAWhd+AnIneLJ22w5fjOYtoutpWq5w==}
@@ -2420,8 +2408,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.12:
-    resolution: {integrity: sha512-W62t/Se6rA0Az3DfCL0AqJwXuKwBeYg6nOaIgzP+xZ7N5BFCI7DYi1qs6ygUYT6rvfi6t9k65UMLJC+PHZpDAA==}
+  postcss@8.5.14:
+    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2771,8 +2759,8 @@ packages:
     peerDependencies:
       stylelint: ^16.8.2 || ^17.0.0
 
-  stylelint@17.9.1:
-    resolution: {integrity: sha512-THTmnAPJTrg/JhkTWZlSyrO+HUYMx6ELthIHeMyD2WOKqXIJUFQv2Yxn91bvUrZdbBJaW2dUuQdPST2wcQ6C3g==}
+  stylelint@17.11.0:
+    resolution: {integrity: sha512-/3czzmbF9XdGWvReDF3Ex4R23Ajolo7j8RB2bFNEqk6Ht356nlpVV+G5bG2Qt8AW1ofJzXztBRDnAtd7cgowWA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -3252,11 +3240,11 @@ snapshots:
       human-id: 4.1.3
       prettier: 2.8.8
 
-  '@commencis/commitlint-config@3.4.0(@commitlint/cli@20.5.2)':
+  '@commencis/commitlint-config@3.4.0(@commitlint/cli@20.5.3)':
     dependencies:
       '@commitlint/config-conventional': 20.5.0
     optionalDependencies:
-      '@commitlint/cli': 20.5.2(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+      '@commitlint/cli': 20.5.3(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
 
   '@commencis/eslint-config@3.6.0(eslint@9.39.4)(prettier@3.8.3)(typescript@6.0.3)':
     dependencies:
@@ -3285,25 +3273,25 @@ snapshots:
     dependencies:
       prettier: 3.8.3
 
-  '@commencis/stylelint-config@3.4.0(postcss-html@1.8.1)(postcss@8.5.12)(stylelint@17.9.1)':
+  '@commencis/stylelint-config@3.4.0(postcss-html@1.8.1)(postcss@8.5.14)(stylelint@17.11.0)':
     dependencies:
-      '@stylistic/stylelint-config': 5.0.0(stylelint@17.9.1)
-      postcss-styled-syntax: 0.7.1(postcss@8.5.12)
-      stylelint: 17.9.1(typescript@6.0.3)
-      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.9.1)
-      stylelint-config-prettier-scss: 1.0.0(stylelint@17.9.1)
-      stylelint-config-standard: 40.0.0(stylelint@17.9.1)
-      stylelint-config-standard-scss: 17.0.0(postcss@8.5.12)(stylelint@17.9.1)
-      stylelint-order: 8.1.1(stylelint@17.9.1)
+      '@stylistic/stylelint-config': 5.0.0(stylelint@17.11.0)
+      postcss-styled-syntax: 0.7.1(postcss@8.5.14)
+      stylelint: 17.11.0(typescript@6.0.3)
+      stylelint-config-html: 1.1.0(postcss-html@1.8.1)(stylelint@17.11.0)
+      stylelint-config-prettier-scss: 1.0.0(stylelint@17.11.0)
+      stylelint-config-standard: 40.0.0(stylelint@17.11.0)
+      stylelint-config-standard-scss: 17.0.0(postcss@8.5.14)(stylelint@17.11.0)
+      stylelint-order: 8.1.1(stylelint@17.11.0)
     transitivePeerDependencies:
       - postcss
       - postcss-html
 
-  '@commitlint/cli@20.5.2(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
+  '@commitlint/cli@20.5.3(@types/node@24.12.2)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
     dependencies:
       '@commitlint/format': 20.5.0
-      '@commitlint/lint': 20.5.0
-      '@commitlint/load': 20.5.2(@types/node@24.12.2)(typescript@6.0.3)
+      '@commitlint/lint': 20.5.3
+      '@commitlint/load': 20.5.3(@types/node@24.12.2)(typescript@6.0.3)
       '@commitlint/read': 20.5.0(conventional-commits-parser@6.4.0)
       '@commitlint/types': 20.5.0
       tinyexec: 1.1.2
@@ -3324,14 +3312,10 @@ snapshots:
       '@commitlint/types': 20.5.0
       ajv: 8.20.0
 
-  '@commitlint/ensure@20.5.0':
+  '@commitlint/ensure@20.5.3':
     dependencies:
       '@commitlint/types': 20.5.0
-      lodash.camelcase: 4.3.0
-      lodash.kebabcase: 4.1.1
-      lodash.snakecase: 4.1.1
-      lodash.startcase: 4.4.0
-      lodash.upperfirst: 4.3.1
+      es-toolkit: 1.46.1
 
   '@commitlint/execute-rule@20.0.0': {}
 
@@ -3345,23 +3329,23 @@ snapshots:
       '@commitlint/types': 20.5.0
       semver: 7.7.4
 
-  '@commitlint/lint@20.5.0':
+  '@commitlint/lint@20.5.3':
     dependencies:
       '@commitlint/is-ignored': 20.5.0
       '@commitlint/parse': 20.5.0
-      '@commitlint/rules': 20.5.0
+      '@commitlint/rules': 20.5.3
       '@commitlint/types': 20.5.0
 
-  '@commitlint/load@20.5.2(@types/node@24.12.2)(typescript@6.0.3)':
+  '@commitlint/load@20.5.3(@types/node@24.12.2)(typescript@6.0.3)':
     dependencies:
       '@commitlint/config-validator': 20.5.0
       '@commitlint/execute-rule': 20.0.0
-      '@commitlint/resolve-extends': 20.5.2
+      '@commitlint/resolve-extends': 20.5.3
       '@commitlint/types': 20.5.0
       cosmiconfig: 9.0.1(typescript@6.0.3)
       cosmiconfig-typescript-loader: 6.3.0(@types/node@24.12.2)(cosmiconfig@9.0.1)(typescript@6.0.3)
+      es-toolkit: 1.46.1
       is-plain-obj: 4.1.0
-      lodash.mergewith: 4.6.2
       picocolors: 1.1.1
     transitivePeerDependencies:
       - '@types/node'
@@ -3386,18 +3370,18 @@ snapshots:
       - conventional-commits-filter
       - conventional-commits-parser
 
-  '@commitlint/resolve-extends@20.5.2':
+  '@commitlint/resolve-extends@20.5.3':
     dependencies:
       '@commitlint/config-validator': 20.5.0
       '@commitlint/types': 20.5.0
+      es-toolkit: 1.46.1
       global-directory: 5.0.0
       import-meta-resolve: 4.2.0
-      lodash.mergewith: 4.6.2
       resolve-from: 5.0.0
 
-  '@commitlint/rules@20.5.0':
+  '@commitlint/rules@20.5.3':
     dependencies:
-      '@commitlint/ensure': 20.5.0
+      '@commitlint/ensure': 20.5.3
       '@commitlint/message': 20.4.3
       '@commitlint/to-lines': 20.0.0
       '@commitlint/types': 20.5.0
@@ -3776,21 +3760,21 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@stylistic/stylelint-config@5.0.0(stylelint@17.9.1)':
+  '@stylistic/stylelint-config@5.0.0(stylelint@17.11.0)':
     dependencies:
-      '@stylistic/stylelint-plugin': 5.1.0(stylelint@17.9.1)
-      stylelint: 17.9.1(typescript@6.0.3)
+      '@stylistic/stylelint-plugin': 5.1.0(stylelint@17.11.0)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  '@stylistic/stylelint-plugin@5.1.0(stylelint@17.9.1)':
+  '@stylistic/stylelint-plugin@5.1.0(stylelint@17.11.0)':
     dependencies:
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-tokenizer': 4.0.0
       '@csstools/media-query-list-parser': 5.0.0(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0)
-      postcss: 8.5.12
+      postcss: 8.5.14
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
       style-search: 0.1.0
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.11.0(typescript@6.0.3)
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.29.0)':
     dependencies:
@@ -4554,6 +4538,8 @@ snapshots:
       is-date-object: 1.1.0
       is-symbol: 1.1.1
 
+  es-toolkit@1.46.1: {}
+
   escalade@3.2.0: {}
 
   escape-string-regexp@4.0.0: {}
@@ -5229,21 +5215,11 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash.camelcase@4.3.0: {}
-
-  lodash.kebabcase@4.1.1: {}
-
   lodash.merge@4.6.2: {}
-
-  lodash.mergewith@4.6.2: {}
-
-  lodash.snakecase@4.1.1: {}
 
   lodash.startcase@4.4.0: {}
 
   lodash.truncate@4.4.2: {}
-
-  lodash.upperfirst@4.3.1: {}
 
   log-update@6.1.0:
     dependencies:
@@ -5487,37 +5463,37 @@ snapshots:
     dependencies:
       htmlparser2: 8.0.2
       js-tokens: 9.0.1
-      postcss: 8.5.12
-      postcss-safe-parser: 6.0.0(postcss@8.5.12)
+      postcss: 8.5.14
+      postcss-safe-parser: 6.0.0(postcss@8.5.14)
 
   postcss-media-query-parser@0.2.3: {}
 
   postcss-resolve-nested-selector@0.1.6: {}
 
-  postcss-safe-parser@6.0.0(postcss@8.5.12):
+  postcss-safe-parser@6.0.0(postcss@8.5.14):
     dependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
-  postcss-safe-parser@7.0.1(postcss@8.5.12):
+  postcss-safe-parser@7.0.1(postcss@8.5.14):
     dependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
-  postcss-scss@4.0.9(postcss@8.5.12):
+  postcss-scss@4.0.9(postcss@8.5.14):
     dependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
   postcss-selector-parser@7.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@10.0.0(postcss@8.5.12):
+  postcss-sorting@10.0.0(postcss@8.5.14):
     dependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
-  postcss-styled-syntax@0.7.1(postcss@8.5.12):
+  postcss-styled-syntax@0.7.1(postcss@8.5.14):
     dependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
       typescript: 5.9.3
 
   postcss-value-parser@4.2.0: {}
@@ -5528,7 +5504,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.12:
+  postcss@8.5.14:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -5886,48 +5862,48 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.29.0
 
-  stylelint-config-html@1.1.0(postcss-html@1.8.1)(stylelint@17.9.1):
+  stylelint-config-html@1.1.0(postcss-html@1.8.1)(stylelint@17.11.0):
     dependencies:
       postcss-html: 1.8.1
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  stylelint-config-prettier-scss@1.0.0(stylelint@17.9.1):
+  stylelint-config-prettier-scss@1.0.0(stylelint@17.11.0):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  stylelint-config-recommended-scss@17.0.1(postcss@8.5.12)(stylelint@17.9.1):
+  stylelint-config-recommended-scss@17.0.1(postcss@8.5.14)(stylelint@17.11.0):
     dependencies:
-      postcss-scss: 4.0.9(postcss@8.5.12)
-      stylelint: 17.9.1(typescript@6.0.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.9.1)
-      stylelint-scss: 7.0.0(stylelint@17.9.1)
+      postcss-scss: 4.0.9(postcss@8.5.14)
+      stylelint: 17.11.0(typescript@6.0.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.11.0)
+      stylelint-scss: 7.0.0(stylelint@17.11.0)
     optionalDependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
-  stylelint-config-recommended@18.0.0(stylelint@17.9.1):
+  stylelint-config-recommended@18.0.0(stylelint@17.11.0):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  stylelint-config-standard-scss@17.0.0(postcss@8.5.12)(stylelint@17.9.1):
+  stylelint-config-standard-scss@17.0.0(postcss@8.5.14)(stylelint@17.11.0):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
-      stylelint-config-recommended-scss: 17.0.1(postcss@8.5.12)(stylelint@17.9.1)
-      stylelint-config-standard: 40.0.0(stylelint@17.9.1)
+      stylelint: 17.11.0(typescript@6.0.3)
+      stylelint-config-recommended-scss: 17.0.1(postcss@8.5.14)(stylelint@17.11.0)
+      stylelint-config-standard: 40.0.0(stylelint@17.11.0)
     optionalDependencies:
-      postcss: 8.5.12
+      postcss: 8.5.14
 
-  stylelint-config-standard@40.0.0(stylelint@17.9.1):
+  stylelint-config-standard@40.0.0(stylelint@17.11.0):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.9.1)
+      stylelint: 17.11.0(typescript@6.0.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.11.0)
 
-  stylelint-order@8.1.1(stylelint@17.9.1):
+  stylelint-order@8.1.1(stylelint@17.11.0):
     dependencies:
-      postcss: 8.5.12
-      postcss-sorting: 10.0.0(postcss@8.5.12)
-      stylelint: 17.9.1(typescript@6.0.3)
+      postcss: 8.5.14
+      postcss-sorting: 10.0.0(postcss@8.5.14)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  stylelint-scss@7.0.0(stylelint@17.9.1):
+  stylelint-scss@7.0.0(stylelint@17.11.0):
     dependencies:
       css-tree: 3.2.1
       is-plain-object: 5.0.0
@@ -5937,9 +5913,9 @@ snapshots:
       postcss-resolve-nested-selector: 0.1.6
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.11.0(typescript@6.0.3)
 
-  stylelint@17.9.1(typescript@6.0.3):
+  stylelint@17.11.0(typescript@6.0.3):
     dependencies:
       '@csstools/css-calc': 3.2.0(@csstools/css-parser-algorithms@4.0.0)(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
@@ -5968,8 +5944,8 @@ snapshots:
       micromatch: 4.0.8
       normalize-path: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.5.12
-      postcss-safe-parser: 7.0.1(postcss@8.5.12)
+      postcss: 8.5.14
+      postcss-safe-parser: 7.0.1(postcss@8.5.14)
       postcss-selector-parser: 7.1.1
       postcss-value-parser: 4.2.0
       string-width: 8.2.1
