@@ -16,15 +16,14 @@ Commencis Starter – Next.js provides a streamlined foundation for building mod
 
 #### Node.js
 
-Before you begin, ensure you have `node: >= 24.13` installed on your system.
+Before you begin, ensure you have `node: >= 24.15` installed on your system.
 
 #### pnpm
 
 This project uses `pnpm` as the package manager. You can install it either by activating with `corepack` which is the recommended way:
 
 ```bash
-corepack prepare pnpm@latest --activate
-corepack enable pnpm
+corepack enable
 ```
 
 or install globally on your system with npm.
