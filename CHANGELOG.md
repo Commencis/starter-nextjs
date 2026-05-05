@@ -1,5 +1,11 @@
 # @commencis/starter-nextjs
 
+## 2.1.0
+
+### Minor Changes
+
+- - Optimize docker build steps ([#166](https://github.com/Commencis/starter-nextjs/pull/166))
+
 ## 2.0.0
 
 ### Major Changes
