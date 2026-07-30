@@ -15,10 +15,7 @@ export type HttpHeader = Partial<
 >;
 
 export type RequestBody =
-  | string
-  | Record<string, unknown>
-  | FormData
-  | URLSearchParams;
+  string | Record<string, unknown> | FormData | URLSearchParams;
 
 export type FetchOptions = {
   baseUrl: string;

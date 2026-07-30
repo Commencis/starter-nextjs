@@ -6,14 +6,7 @@ import type {
 } from '@/types/style/typography.types';
 
 export type TextElement =
-  | 'span'
-  | 'p'
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6';
+  'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type TextStyleProps = ResponsiveTypographyVariantProps &
   ResponsiveFontWeightProps &
