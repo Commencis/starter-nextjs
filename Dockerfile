@@ -1,5 +1,5 @@
 # Base stage for shared configurations and Corepack activation
-FROM node:24.15.0-alpine3.23 AS base
+FROM node:24.18.0-alpine3.23 AS base
 
 WORKDIR /app
 
