@@ -1,6 +1,2 @@
 export type Environment =
-  | 'development'
-  | 'test'
-  | 'uat'
-  | 'staging'
-  | 'production';
+  'development' | 'test' | 'uat' | 'staging' | 'production';

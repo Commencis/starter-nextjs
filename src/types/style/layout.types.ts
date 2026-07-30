@@ -4,11 +4,7 @@ import type { ResponsiveAttribute } from './breakpoint.types';
  * Display:
  */
 export type Display =
-  | 'block'
-  | 'inline-block'
-  | 'flex'
-  | 'inline-flex'
-  | 'grid';
+  'block' | 'inline-block' | 'flex' | 'inline-flex' | 'grid';
 
 export const DisplayPropKeys = ['display'] as const;
 

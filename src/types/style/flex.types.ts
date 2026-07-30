@@ -36,10 +36,7 @@ export type ResponsiveFlexWrapProps = Partial<
  * Keep it sync with @scss $flex-justify-content-values in variables/_flex.scss
  */
 export type FlexJustifyContent =
-  | 'flex-start'
-  | 'flex-end'
-  | 'center'
-  | 'space-between';
+  'flex-start' | 'flex-end' | 'center' | 'space-between';
 
 export const FlexJustifyContentPropKeys = ['justifyContent'] as const;
 
@@ -71,11 +68,7 @@ export type ResponsiveFlexAlignItemsProps = Partial<
  * Keep it sync with @scss $flex-align-self-values in variables/_flex.scss
  */
 export type FlexAlignSelf =
-  | 'auto'
-  | 'flex-start'
-  | 'flex-end'
-  | 'center'
-  | 'stretch';
+  'auto' | 'flex-start' | 'flex-end' | 'center' | 'stretch';
 
 export const FlexAlignSelfPropKeys = ['alignSelf'] as const;
 
