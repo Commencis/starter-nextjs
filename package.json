@@ -59,7 +59,7 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "9.39.5",
+    "eslint": "10.9.1",
     "husky": "9.1.7",
     "lint-staged": "17.3.0",
     "prettier": "3.9.6",
