@@ -46,7 +46,7 @@
     "server-only": "0.0.1"
   },
   "devDependencies": {
-    "@changesets/cli": "2.31.1",
+    "@changesets/cli": "3.0.1",
     "@commencis/commitlint-config": "3.4.0",
     "@commencis/eslint-config": "3.7.0",
     "@commencis/lint-staged-config": "3.2.0",
