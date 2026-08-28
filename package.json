@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "clsx": "2.1.1",
-    "next": "16.2.12",
+    "next": "16.3.2",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "server-only": "0.0.1"
@@ -52,18 +52,18 @@
     "@commencis/lint-staged-config": "3.2.0",
     "@commencis/prettier-config": "3.3.0",
     "@commencis/stylelint-config": "3.5.0",
-    "@commitlint/cli": "21.2.1",
+    "@commitlint/cli": "21.2.2",
     "@svgr/cli": "8.1.0",
     "@svitejs/changesets-changelog-github-compact": "1.2.0",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
+    "@types/react-dom": "19.2.5",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "9.39.5",
     "husky": "9.1.7",
     "lint-staged": "17.3.0",
     "prettier": "3.9.6",
-    "sass": "1.102.0",
+    "sass": "1.103.1",
     "stylelint": "17.14.1",
     "typescript": "6.0.3"
   }
