@@ -2,9 +2,9 @@
 @use '@/styles/variables/spacing' as spacing;
 
 .size-md {
-  max-width: breakpoints.$max-content-width-md + 2 * spacing.$root-padding-md;
+  max-width: calc(#{breakpoints.$max-content-width-md} + 2 * #{spacing.$root-padding-md});
 }
 
 .size-lg {
-  max-width: breakpoints.$max-content-width-lg + 2 * spacing.$root-padding-lg;
+  max-width: calc(#{breakpoints.$max-content-width-lg} + 2 * #{spacing.$root-padding-lg});
 }
