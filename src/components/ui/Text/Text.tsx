@@ -9,9 +9,7 @@ import {
 } from '@/utils/style/typography.utils';
 
 import type { TextColor, TextElement, TextStyleProps } from './Text.types';
-import { getTextMaxLineClasses } from './Text.utils';
-
-import css from './Text.module.scss';
+import { getTextColorClasses, getTextMaxLineClasses } from './Text.utils';
 
 type TextProps = TextStyleProps &
   PropsWithChildren & {
@@ -30,7 +28,7 @@ export function Text({
 }: TextProps): ReactElement {
   const textClasses = clsx(
     getTypographyVariantClasses(variant),
-    css[`text-color-${color}`],
+    getTextColorClasses(color),
     getFontWeightClasses({ fontWeight }),
     getTextAlignClasses({ align }),
     getTextMaxLineClasses({ maxLine })

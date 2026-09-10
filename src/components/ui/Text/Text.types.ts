@@ -14,7 +14,8 @@ export type TextStyleProps = ResponsiveTypographyVariantProps &
   ResponsiveTextMaxLineProps;
 
 /**
- * Semantic tokens: keep in sync with @/styles/variables/colors/semantics.
+ * Semantic text colors mapped to foreground utilities in
+ * @/utils/style/colors.utils.ts (`getForegroundColorClasses`).
  * `inherit` uses `color: inherit` (parent / cascade).
  */
 export type TextColor =

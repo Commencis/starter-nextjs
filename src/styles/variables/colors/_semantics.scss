@@ -1,19 +1,81 @@
 @use 'sass:map';
 @use '@/styles/functions/color.funcs' as colorFuncs;
 
-$text-black: colorFuncs.get-primitive('neutral', '950');
-$text-primary: colorFuncs.get-primitive('slate', '900');
-$text-secondary: colorFuncs.get-primitive('slate', '700');
-$text-tertiary: colorFuncs.get-primitive('slate', '500');
-$text-brand: colorFuncs.get-primitive('brand', '800');
-$text-brand-hover: colorFuncs.get-primitive('brand', '700');
-$text-white: colorFuncs.get-primitive('neutral', 'white');
-$text-blue: colorFuncs.get-primitive('brand', '500');
-$text-green: colorFuncs.get-primitive('green', '900');
-$text-purple: colorFuncs.get-primitive('purple', '900');
-$text-red: colorFuncs.get-primitive('red', '900');
-$text-pink: colorFuncs.get-primitive('pink', '900');
+/* Background Colors */
+$bg-primary: colorFuncs.get-primitive('neutral', 'white');
+$bg-secondary: colorFuncs.get-primitive('slate', '200');
+$bg-blue: colorFuncs.get-primitive('blue', '200');
+$bg-secondary-blue: colorFuncs.get-primitive('blue', '100');
+$bg-light: colorFuncs.get-primitive('slate', '100');
+$bg-green: colorFuncs.get-primitive('green', '100');
+$bg-purple: colorFuncs.get-primitive('purple', '100');
+$bg-red: colorFuncs.get-primitive('red', '100');
+$bg-pink: colorFuncs.get-primitive('pink', '100');
+$bg-gray: colorFuncs.get-primitive('neutral', '50');
+$bg-secondary-gray: colorFuncs.get-primitive('slate', '50');
+$bg-light-transparent: colorFuncs.get-primitive('alpha-light', '0');
+$bg-dark-overlay: colorFuncs.get-primitive('alpha-dark', '700');
+$bg-header: colorFuncs.get-primitive('alpha-light', '700');
+$bg-hover-transparent: rgb(colorFuncs.get-primitive('slate', '200'), 0.3);
 
+/**
+ * Background color map.
+ * Keys become the suffix of `.bg-<key>` utility classes in colors.module.scss.
+ * Keep in sync with SemanticBgColor in @/types/style/color.types.ts.
+ */
+$background-color-map: (
+  'primary': $bg-primary,
+  'secondary': $bg-secondary,
+  'blue': $bg-blue,
+  'secondary-blue': $bg-secondary-blue,
+  'light': $bg-light,
+  'green': $bg-green,
+  'purple': $bg-purple,
+  'red': $bg-red,
+  'pink': $bg-pink,
+  'gray': $bg-gray,
+  'secondary-gray': $bg-secondary-gray,
+  'light-transparent': $bg-light-transparent,
+  'dark-overlay': $bg-dark-overlay,
+  'header': $bg-header,
+  'hover-transparent': $bg-hover-transparent,
+);
+
+/* Foreground Colors */
+$fg-black: colorFuncs.get-primitive('neutral', '950');
+$fg-primary: colorFuncs.get-primitive('slate', '900');
+$fg-secondary: colorFuncs.get-primitive('slate', '700');
+$fg-tertiary: colorFuncs.get-primitive('slate', '500');
+$fg-brand: colorFuncs.get-primitive('brand', '800');
+$fg-brand-hover: colorFuncs.get-primitive('brand', '700');
+$fg-white: colorFuncs.get-primitive('neutral', 'white');
+$fg-blue: colorFuncs.get-primitive('brand', '500');
+$fg-green: colorFuncs.get-primitive('green', '900');
+$fg-purple: colorFuncs.get-primitive('purple', '900');
+$fg-red: colorFuncs.get-primitive('red', '900');
+$fg-pink: colorFuncs.get-primitive('pink', '900');
+
+/**
+ * Foreground color map.
+ * Keys become the suffix of `.fg-<key>` utility classes in colors.module.scss.
+ * Keep in sync with SemanticFgColor in @/types/style/color.types.ts.
+ */
+$foreground-color-map: (
+  'brand': $fg-brand,
+  'primary': $fg-primary,
+  'secondary': $fg-secondary,
+  'tertiary': $fg-tertiary,
+  'black': $fg-black,
+  'white': $fg-white,
+  'blue': $fg-blue,
+  'green': $fg-green,
+  'purple': $fg-purple,
+  'red': $fg-red,
+  'pink': $fg-pink,
+  'inherit': inherit,
+);
+
+/* Icon Colors */
 $icon-primary: colorFuncs.get-primitive('slate', '900');
 $icon-brand: colorFuncs.get-primitive('brand', '800');
 $icon-blue: colorFuncs.get-primitive('brand', '500');
@@ -23,31 +85,27 @@ $icon-gray: colorFuncs.get-primitive('slate', '400');
 $icon-white: colorFuncs.get-primitive('neutral', 'white');
 $icon-black: colorFuncs.get-primitive('neutral', 'black');
 
-$background-primary: colorFuncs.get-primitive('neutral', 'white');
-$background-secondary: colorFuncs.get-primitive('slate', '200');
-$background-blue: colorFuncs.get-primitive('blue', '200');
-$background-secondary-blue: colorFuncs.get-primitive('blue', '100');
-$background-light: colorFuncs.get-primitive('slate', '100');
-$background-green: colorFuncs.get-primitive('green', '100');
-$background-purple: colorFuncs.get-primitive('purple', '100');
-$background-red: colorFuncs.get-primitive('red', '100');
-$background-pink: colorFuncs.get-primitive('pink', '100');
-$background-gray: colorFuncs.get-primitive('neutral', '50');
-$background-secondary-gray: colorFuncs.get-primitive('slate', '50');
-$background-light-transparent: colorFuncs.get-primitive('alpha-light', '0');
-$background-dark-overlay: colorFuncs.get-primitive('alpha-dark', '700');
-$background-header: colorFuncs.get-primitive('alpha-light', '700');
-$background-hover-transparent: rgb(colorFuncs.get-primitive('slate', '200'), 0.3);
+/**
+ * Icon color map.
+ * Keys become the suffix of `.ic-color-<key>` utility classes in colors.module.scss.
+ * Keep in sync with IconColor in @/types/svg.types.ts.
+ */
+$icon-color-map: (
+  'primary': $icon-primary,
+  'white': $icon-white,
+  'brand': $icon-brand,
+  'blue': $icon-blue,
+  'green': $icon-green,
+  'red': $icon-red,
+);
 
-$border-brand: colorFuncs.get-primitive('brand', '600');
-$border-primary: colorFuncs.get-primitive('slate', '300');
-$border-secondary: colorFuncs.get-primitive('slate', '200');
-$border-tertiary: colorFuncs.get-primitive('neutral', '100');
+/* Stroke Colors */
+$stroke-brand: colorFuncs.get-primitive('brand', '600');
+$stroke-primary: colorFuncs.get-primitive('slate', '300');
+$stroke-secondary: colorFuncs.get-primitive('slate', '200');
+$stroke-tertiary: colorFuncs.get-primitive('neutral', '100');
 
-$shadow-primary: colorFuncs.get-primitive('alpha-dark', '600');
-
-$shadow-black: colorFuncs.get-primitive('neutral', 'black');
-
+/* Button Colors */
 /* stylelint-disable function-name-case */
 $button-primary-background: linear-gradient(
   135deg,

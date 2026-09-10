@@ -1,0 +1,23 @@
+@use '../variables/colors/semantics' as semantics;
+@use '../mixins/utility.mixins' as utilityMixins;
+
+/* Foreground color utilities (e.g. `.fg-primary`, `.fg-brand`) */
+@include utilityMixins.create-utilities(
+  'fg',
+  'color',
+  semantics.$foreground-color-map
+);
+
+/* Background color utilities (e.g. `.bg-primary`, `.bg-gray`) */
+@include utilityMixins.create-utilities(
+  'bg',
+  'background-color',
+  semantics.$background-color-map
+);
+
+/* Icon color utilities (e.g. `.ic-color-primary`, `.ic-color-brand`) */
+@include utilityMixins.create-utilities(
+  'ic-color',
+  'color',
+  semantics.$icon-color-map
+);

@@ -1,19 +1,4 @@
-@use '@/styles/variables/colors/semantics' as semantics;
 @use '@/styles/mixins/media.mixins' as mediaMixins;
-@use '@/styles/mixins/utility.mixins' as utilityMixins;
-
-$text-color-map:(
-  'brand': semantics.$text-brand,
-  'primary': semantics.$text-primary,
-  'secondary': semantics.$text-secondary,
-  'tertiary': semantics.$text-tertiary,
-  'black': semantics.$text-black,
-  'white': semantics.$text-white,
-  'inherit': inherit,
-);
-
-/* Text Color Classes */
-@include utilityMixins.create-utilities('text-color', 'color', $text-color-map);
 
 @mixin text-clamp-utility($line-count) {
   display: -webkit-box;

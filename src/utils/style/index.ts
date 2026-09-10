@@ -1,4 +1,9 @@
 export {
+  getBackgroundColorClasses,
+  getForegroundColorClasses,
+  getIconColorClasses,
+} from './colors.utils';
+export {
   getFlexAlignItemsClasses,
   getFlexAlignSelfClasses,
   getFlexBasisClasses,
