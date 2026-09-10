@@ -29,10 +29,8 @@
     "lint:fix": "pnpm run \"/^lint:fix:.*/\"",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
-    "generate:icons": "pnpm run svgr:icons && eslint --fix src/components/icons/*.{ts,tsx}",
-    "generate:vectors": "pnpm run svgr:vectors && eslint --fix src/components/vectors/**/*.{ts,tsx}",
-    "svgr:icons": "svgr --config-file ./scripts/svg/icon.svgr.config.cjs src/assets/icons",
-    "svgr:vectors": "svgr --config-file ./scripts/svg/vector.svgr.config.cjs src/assets/vectors",
+    "generate:icons": "tsx scripts/svg/generateSvg.ts icons",
+    "generate:vectors": "tsx scripts/svg/generateSvg.ts vectors",
     "ci:review": "pnpm run typegen && pnpm run lint",
     "changeset": "changeset",
     "changeset:version": "changeset version && pnpm install --no-frozen-lockfile",
@@ -72,6 +70,7 @@
     "sass": "1.103.1",
     "storybook": "10.5.10",
     "stylelint": "17.14.1",
+    "tsx": "4.23.12",
     "typescript": "6.0.3"
   }
 }
