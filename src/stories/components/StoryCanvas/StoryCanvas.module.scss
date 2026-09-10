@@ -1,0 +1,17 @@
+@use '@/styles/variables/colors/semantics' as semantics;
+
+.canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: semantics.$background-gray;
+
+  width: 100%;
+  padding: 2.5rem;
+
+  flex-direction: column;
+}
+
+.minHeightFull {
+  min-height: 100vh;
+}

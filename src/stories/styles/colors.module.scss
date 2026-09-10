@@ -1,0 +1,13 @@
+@use 'sass:string';
+@use '@/styles/variables/colors/primitives' as colors;
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:export {
+  @each $group, $values in colors.$primitives {
+    @each $key, $value in $values {
+
+      $var-name: string.unquote('$#{$group}#{$key}');
+      #{$var-name}: #{$value};
+    }
+  }
+}
