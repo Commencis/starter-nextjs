@@ -2,6 +2,7 @@ export {
   getBackgroundColorClasses,
   getForegroundColorClasses,
   getIconColorClasses,
+  getStrokeColorClasses,
 } from './colors.utils';
 export {
   getFlexAlignItemsClasses,

@@ -1,0 +1,13 @@
+.horizontal {
+  height: 1px;
+  width: auto;
+
+  flex: 1 1 0;
+}
+
+.vertical {
+  width: 1px;
+  height: stretch;
+
+  flex: 0 0 auto;
+}

@@ -1,6 +1,7 @@
 import type {
   SemanticBgColor,
   SemanticFgColor,
+  SemanticStrokeColor,
 } from '@/types/style/color.types';
 import type { IconColor } from '@/types/svg.types';
 
@@ -16,4 +17,8 @@ export function getBackgroundColorClasses(color: SemanticBgColor): string {
 
 export function getIconColorClasses(color: IconColor): string {
   return css[`ic-color-${color}`];
+}
+
+export function getStrokeColorClasses(color: SemanticStrokeColor): string {
+  return css[`stroke-${color}`];
 }

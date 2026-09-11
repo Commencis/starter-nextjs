@@ -105,6 +105,18 @@ $stroke-primary: colorFuncs.get-primitive('slate', '300');
 $stroke-secondary: colorFuncs.get-primitive('slate', '200');
 $stroke-tertiary: colorFuncs.get-primitive('neutral', '100');
 
+/**
+ * Stroke color map.
+ * Keys become the suffix of `.stroke-<key>` utility classes in colors.module.scss.
+ * Keep in sync with SemanticStrokeColor in @/types/style/color.types.ts.
+ */
+$stroke-color-map: (
+  'brand': $stroke-brand,
+  'primary': $stroke-primary,
+  'secondary': $stroke-secondary,
+  'tertiary': $stroke-tertiary,
+);
+
 /* Button Colors */
 /* stylelint-disable function-name-case */
 $button-primary-background: linear-gradient(

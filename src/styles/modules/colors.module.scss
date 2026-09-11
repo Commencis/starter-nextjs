@@ -21,3 +21,10 @@
   'color',
   semantics.$icon-color-map
 );
+
+/* Stroke color utilities (e.g. `.stroke-primary`, `.stroke-brand`) */
+@include utilityMixins.create-utilities(
+  'stroke',
+  'background-color',
+  semantics.$stroke-color-map
+);
