@@ -1,10 +1,12 @@
+@use '@/styles/mixins/utility.mixins' as utilityMixins;
 @use '@/styles/variables/breakpoints' as breakpoints;
 @use '@/styles/variables/spacing' as spacing;
 
-.size-md {
-  max-width: breakpoints.$max-content-width-md + 2 * spacing.$root-padding-md;
-}
+// Should be in sync with sizeToPaddingMap in Container.config.ts
+$size-values: (
+  md: breakpoints.$max-content-width-md + 2 * spacing.$root-padding-md,
+  lg: breakpoints.$max-content-width-lg + 2 * spacing.$root-padding-lg,
+  full: none,
+);
 
-.size-lg {
-  max-width: breakpoints.$max-content-width-lg + 2 * spacing.$root-padding-lg;
-}
+@include utilityMixins.create-responsive-utilities('size', 'max-width', $size-values);
