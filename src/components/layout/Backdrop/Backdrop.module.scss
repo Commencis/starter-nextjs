@@ -1,0 +1,12 @@
+@use '@/styles/variables/colors/semantics' as semantics;
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background-color: semantics.$bg-dark-overlay;
+
+  &:is(button) {
+    cursor: pointer;
+  }
+}
