@@ -55,9 +55,9 @@
 }
 
 .primary {
-  border: 1px solid semantics.$stroke-brand;
+  border: 1px solid semantics.$button-primary-border;
 
-  color: semantics.$fg-white;
+  color: semantics.$button-primary-text;
   background: semantics.$button-primary-background;
 
   font-weight: weights.$font-weight-regular;
@@ -67,7 +67,7 @@
   }
 
   &:visited {
-    color: semantics.$fg-white;
+    color: semantics.$button-primary-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
@@ -78,10 +78,9 @@
 }
 
 .secondary {
-  border: 1px solid semantics.$stroke-primary;
-  box-shadow: inset 0 -2px 4px 0 rgb(27, 35, 85, 0.07);
+  border: 1px solid semantics.$button-secondary-border;
 
-  color: semantics.$fg-primary;
+  color: semantics.$button-secondary-text;
   background: semantics.$button-secondary-background;
 
   font-weight: weights.$font-weight-regular;
@@ -91,7 +90,7 @@
   }
 
   &:visited {
-    color: semantics.$fg-primary;
+    color: semantics.$button-secondary-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
@@ -102,35 +101,35 @@
 }
 
 .tertiary {
-  color: semantics.$fg-brand;
+  color: semantics.$button-tertiary-text;
 
   font-weight: weights.$font-weight-bold;
 
   &:visited {
-    color: semantics.$fg-brand;
+    color: semantics.$button-tertiary-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
     &:hover {
-      background-color: semantics.$bg-light;
+      background-color: semantics.$button-tertiary-background-hover;
     }
   }
 }
 
 .link {
-  color: semantics.$fg-brand;
+  color: semantics.$button-link-text;
   padding-right: 0;
   padding-left: 0;
 
   font-weight: weights.$font-weight-bold;
 
   &:visited {
-    color: semantics.$fg-brand;
+    color: semantics.$button-link-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
     &:hover {
-      color: semantics.$fg-brand-hover;
+      color: semantics.$button-link-text-hover;
     }
   }
 }

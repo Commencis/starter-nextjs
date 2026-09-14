@@ -11,11 +11,6 @@ export type SemanticFgColor =
   | 'fg-tertiary'
   | 'fg-black'
   | 'fg-white'
-  | 'fg-blue'
-  | 'fg-green'
-  | 'fg-purple'
-  | 'fg-red'
-  | 'fg-pink'
   | 'fg-inherit';
 
 /**
@@ -27,19 +22,10 @@ export type SemanticFgColor =
 export type SemanticBgColor =
   | 'bg-primary'
   | 'bg-secondary'
-  | 'bg-blue'
-  | 'bg-secondary-blue'
+  | 'bg-brand'
   | 'bg-light'
-  | 'bg-green'
-  | 'bg-purple'
-  | 'bg-red'
-  | 'bg-pink'
   | 'bg-gray'
-  | 'bg-secondary-gray'
-  | 'bg-light-transparent'
-  | 'bg-dark-overlay'
-  | 'bg-header'
-  | 'bg-hover-transparent';
+  | 'bg-dark-overlay';
 
 /**
  * Keep in sync with $stroke-color-map keys in
