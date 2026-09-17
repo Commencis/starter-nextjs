@@ -1,0 +1,21 @@
+.picture {
+  border-radius: inherit;
+
+  width: 100%;
+}
+
+.image {
+  border-radius: inherit;
+
+  width: 100%;
+}
+
+.fill {
+  object-fit: cover;
+
+  height: 100%;
+}
+
+.auto {
+  height: auto;
+}

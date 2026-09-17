@@ -10,3 +10,9 @@ export const BREAKPOINTS: Record<Breakpoint, number> = {
   md: 768,
   lg: 1024,
 };
+
+export const IMAGE_SRC_BREAKPOINTS = [
+  'xs',
+  'md',
+  'lg',
+] as const satisfies Breakpoint[];

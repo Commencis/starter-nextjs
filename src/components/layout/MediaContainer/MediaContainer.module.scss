@@ -1,0 +1,21 @@
+.root {
+  --mc-ratio: 1;
+
+  max-width: 100%;
+  overflow: hidden;
+
+  & > :where(*:not(style)) {
+    border-radius: inherit;
+
+    aspect-ratio: var(--mc-ratio);
+    width: 100%;
+  }
+
+  & > :where(img, video),
+  & > :where(picture) > :where(img) {
+    object-fit: cover;
+
+    height: 100%;
+    width: 100%;
+  }
+}
