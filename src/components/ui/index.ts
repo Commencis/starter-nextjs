@@ -1,3 +1,4 @@
+export { AdaptiveLink } from './AdaptiveLink/AdaptiveLink';
 export { Anchor } from './Anchor/Anchor';
 export { Box } from './Box/Box';
 export { Button } from './Button/Button';
