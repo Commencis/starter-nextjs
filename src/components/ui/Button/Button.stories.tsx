@@ -1,3 +1,5 @@
+import type { ReactElement } from 'react';
+
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
 import { ChevronRightIcon } from '@/components/icons';
@@ -18,17 +20,18 @@ const meta: Meta<typeof Button> = {
       options: ['sm', 'md', 'lg'],
       description: 'Button size',
     },
-    isFullWidth: {
-      control: 'boolean',
-      description: 'Whether the button fills its container',
-    },
-    isRounded: {
-      control: 'boolean',
-      description: 'Whether the button has fully rounded corners',
+    width: {
+      control: 'select',
+      options: ['auto', 'full', 'fit-content'],
+      description: 'Button width',
     },
     disabled: {
       control: 'boolean',
       description: 'Whether the button is disabled',
+    },
+    label: {
+      control: 'text',
+      description: 'Button label text',
     },
   },
 };
@@ -39,7 +42,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: 'Button',
+    label: 'Button',
     variant: 'primary',
     size: 'md',
   },
@@ -50,21 +53,33 @@ export const Variants: Story = {
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
       {(['primary', 'secondary', 'tertiary', 'link'] as const).map(
         (variant) => (
-          <Button key={variant} {...args} variant={variant}>
-            {variant}
-          </Button>
+          <Button key={variant} {...args} variant={variant} label={variant} />
         )
       )}
     </div>
   ),
   args: {
-    children: 'Button',
+    label: 'Button',
   },
 };
 
 export const WithIcon: Story = {
   args: {
-    children: 'Continue',
+    label: 'Continue',
     trailingIcon: <ChevronRightIcon color="white" />,
   },
+};
+
+export const FullWidth: Story = {
+  args: {
+    label: 'Full width button',
+    width: 'full',
+  },
+  decorators: [
+    (Story): ReactElement => (
+      <div style={{ width: '320px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };

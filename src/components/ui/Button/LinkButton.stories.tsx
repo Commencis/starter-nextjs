@@ -1,3 +1,5 @@
+import type { ReactElement } from 'react';
+
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
 import { ChevronRightIcon } from '@/components/icons';
@@ -18,13 +20,18 @@ const meta: Meta<typeof LinkButton> = {
       options: ['sm', 'md', 'lg'],
       description: 'Link button size',
     },
-    isFullWidth: {
-      control: 'boolean',
-      description: 'Whether the link fills its container',
+    width: {
+      control: 'select',
+      options: ['auto', 'full', 'fit-content'],
+      description: 'Link button width',
     },
-    isRounded: {
+    disabled: {
       control: 'boolean',
-      description: 'Whether the link has fully rounded corners',
+      description: 'Whether the link button is disabled',
+    },
+    label: {
+      control: 'text',
+      description: 'Link button label text',
     },
   },
 };
@@ -35,7 +42,7 @@ type Story = StoryObj<typeof LinkButton>;
 
 export const Default: Story = {
   args: {
-    children: 'Go to home',
+    label: 'Go to home',
     href: '/',
     variant: 'primary',
     size: 'md',
@@ -44,9 +51,33 @@ export const Default: Story = {
 
 export const External: Story = {
   args: {
-    children: 'Visit Commencis',
+    label: 'Visit Commencis',
     href: 'https://www.commencis.com',
     trailingIcon: <ChevronRightIcon />,
     variant: 'secondary',
   },
+};
+
+export const Disabled: Story = {
+  args: {
+    label: 'Disabled link',
+    href: '/',
+    variant: 'primary',
+    disabled: true,
+  },
+};
+
+export const FullWidth: Story = {
+  args: {
+    label: 'Full width link',
+    href: '/',
+    width: 'full',
+  },
+  decorators: [
+    (Story): ReactElement => (
+      <div style={{ width: '320px' }}>
+        <Story />
+      </div>
+    ),
+  ],
 };

@@ -54,9 +54,7 @@ export function ErrorContent({ statusCode }: ErrorContentProps): ReactElement {
         </Text>
       </Box>
 
-      <LinkButton href="/" variant="primary" size="md">
-        Go to homepage
-      </LinkButton>
+      <LinkButton href="/" variant="primary" size="md" label="Go to homepage" />
     </Container>
   );
 }

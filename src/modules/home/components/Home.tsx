@@ -19,9 +19,7 @@ export function Home(): ReactElement {
       <Text as="h1" variant="heading-2">
         Next.js Template
       </Text>
-      <Button variant="primary" size="md">
-        Start Building
-      </Button>
+      <Button variant="primary" size="md" label="Start Building" />
     </Container>
   );
 }

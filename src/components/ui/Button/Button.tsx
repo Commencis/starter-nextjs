@@ -2,16 +2,13 @@
 
 import type { MouseEvent, ReactElement } from 'react';
 
-import clsx from 'clsx';
-
 import { ButtonContent } from './ButtonContent/ButtonContent';
 import type {
   AllowedButtonHTMLAttributes,
   ButtonContentElements,
   ButtonStyleProps,
 } from './Button.types';
-
-import css from './Button.module.scss';
+import { getCommonButtonClasses } from './Button.utils';
 
 export type ButtonProps = AllowedButtonHTMLAttributes &
   ButtonStyleProps &
@@ -21,17 +18,19 @@ export function Button({
   type = 'button',
   variant = 'primary',
   size = 'md',
-  onClick,
+  width = 'fit-content',
+  disabled,
   leadingIcon,
   trailingIcon,
-  children,
-  isFullWidth = false,
-  isRounded = false,
+  label,
+  onClick,
   ...rest
 }: ButtonProps): ReactElement {
-  const buttonClasses = clsx(css.button, css[variant], css[`size-${size}`], {
-    [css.fullWidth]: isFullWidth,
-    [css.rounded]: isRounded,
+  const buttonClasses = getCommonButtonClasses({
+    variant,
+    size,
+    width,
+    disabled,
   });
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>): void => {
@@ -43,15 +42,15 @@ export function Button({
       className={buttonClasses}
       type={type}
       onClick={handleClick}
+      disabled={disabled}
       {...rest}
     >
       <ButtonContent
         size={size}
         leadingIcon={leadingIcon}
         trailingIcon={trailingIcon}
-      >
-        {children}
-      </ButtonContent>
+        label={label}
+      />
     </button>
   );
 }

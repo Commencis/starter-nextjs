@@ -1,4 +1,5 @@
 @use '@/styles/variables/spacing' as spacing;
+@use '@/styles/mixins/media.mixins' as mediaMixins;
 
 .content {
   display: inline-flex;
@@ -13,7 +14,7 @@
   }
 }
 
-.size-sm {
+@mixin size-sm {
   gap: spacing.$spacing-8;
 
   svg {
@@ -22,7 +23,7 @@
   }
 }
 
-.size-md {
+@mixin size-md {
   gap: spacing.$spacing-8;
 
   svg {
@@ -31,11 +32,39 @@
   }
 }
 
-.size-lg {
+@mixin size-lg {
   gap: spacing.$spacing-12;
 
   svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+}
+
+.size-sm {
+  @include size-sm;
+}
+
+.size-md {
+  @include size-md;
+}
+
+.size-lg {
+  @include size-lg;
+}
+
+@each $breakpoint in (xs, md, lg) {
+  @include mediaMixins.media-query-up($breakpoint) {
+    .size-#{$breakpoint}-sm {
+      @include size-sm;
+    }
+
+    .size-#{$breakpoint}-md {
+      @include size-md;
+    }
+
+    .size-#{$breakpoint}-lg {
+      @include size-lg;
+    }
   }
 }

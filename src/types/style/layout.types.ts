@@ -40,7 +40,7 @@ export type OverflowProps = Partial<Record<OverflowOption, Overflow>>;
  * Width:
  */
 
-export type Width = 'auto' | 'full';
+export type Width = 'auto' | 'full' | 'fit-content';
 
 export const WidthPropKeys = ['width'] as const;
 

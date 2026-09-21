@@ -1,5 +1,5 @@
 @use '@/styles/variables/spacing' as spacing;
-@use '@/styles/variables/borders' as borders;
+@use '@/styles/variables/radius' as radius;
 @use '@/styles/variables/colors/semantics' as semantics;
 @use '@/styles/variables/typography/weights' as weights;
 @use '@/styles/mixins/typography.mixins' as typographyMixins;
@@ -12,57 +12,96 @@
   align-items: center;
   justify-content: center;
   border: none;
-
-  width: fit-content;
+  text-align: center;
   text-decoration: none;
 
-  transition: filter 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition:
+    filter 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 
   &:disabled {
     cursor: not-allowed;
   }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
 }
 
-.size-sm {
+@mixin size-sm {
   @include typographyMixins.create-typography-variant('label-3');
 
-  border-radius: borders.$border-radius-sm;
+  border-radius: radius.$radius-8;
 
   height: 2.25rem;
   padding: spacing.$spacing-8;
 }
 
-.size-md {
+@mixin size-md {
   @include typographyMixins.create-typography-variant('label-2');
 
-  border-radius: borders.$border-radius-md;
+  border-radius: radius.$radius-16;
 
   height: 3rem;
   padding: spacing.$spacing-14 spacing.$spacing-18;
 }
 
-.size-lg {
+@mixin size-lg {
   @include typographyMixins.create-typography-variant('label-1');
 
-  border-radius: borders.$border-radius-md;
+  border-radius: radius.$radius-16;
 
   height: 3.5rem;
   padding: spacing.$spacing-16 spacing.$spacing-20;
 }
 
-.rounded {
-  border-radius: borders.$border-radius-full;
+.size-sm {
+  @include size-sm;
+}
+
+.size-md {
+  @include size-md;
+}
+
+.size-lg {
+  @include size-lg;
+}
+
+@each $breakpoint in (xs, md, lg) {
+  @include mediaMixins.media-query-up($breakpoint) {
+    .size-#{$breakpoint}-sm {
+      @include size-sm;
+    }
+
+    .size-#{$breakpoint}-md {
+      @include size-md;
+    }
+
+    .size-#{$breakpoint}-lg {
+      @include size-lg;
+    }
+  }
 }
 
 .primary {
-  border: 1px solid semantics.$button-primary-border;
+  border: 1px solid semantics.$stroke-brand;
 
   color: semantics.$button-primary-text;
   background: semantics.$button-primary-background;
 
   font-weight: weights.$font-weight-regular;
 
-  &:active {
+  &:disabled,
+  &.disabled {
+    border-color: semantics.$stroke-secondary;
+
+    color: semantics.$fg-tertiary;
+    background: semantics.$bg-gray;
+  }
+
+  &:active:not(:disabled, .disabled) {
     filter: brightness(0.8);
   }
 
@@ -71,21 +110,29 @@
   }
 
   @include mediaMixins.media-query-up(lg) {
-    &:hover {
+    &:hover:not(:disabled, .disabled) {
       filter: brightness(0.9);
     }
   }
 }
 
 .secondary {
-  border: 1px solid semantics.$button-secondary-border;
+  border: 2px solid semantics.$stroke-brand;
 
   color: semantics.$button-secondary-text;
   background: semantics.$button-secondary-background;
 
   font-weight: weights.$font-weight-regular;
 
-  &:active {
+  &:disabled,
+  &.disabled {
+    border-color: semantics.$stroke-secondary;
+
+    color: semantics.$fg-tertiary;
+    background: semantics.$bg-gray;
+  }
+
+  &:active:not(:disabled, .disabled) {
     filter: brightness(0.9);
   }
 
@@ -94,7 +141,8 @@
   }
 
   @include mediaMixins.media-query-up(lg) {
-    &:hover {
+    &:hover:not(:disabled, .disabled) {
+      border-color: semantics.$stroke-brand;
       filter: brightness(0.95);
     }
   }
@@ -105,12 +153,17 @@
 
   font-weight: weights.$font-weight-bold;
 
+  &:disabled,
+  &.disabled {
+    color: semantics.$fg-tertiary;
+  }
+
   &:visited {
     color: semantics.$button-tertiary-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
-    &:hover {
+    &:hover:not(:disabled, .disabled) {
       background-color: semantics.$button-tertiary-background-hover;
     }
   }
@@ -123,18 +176,18 @@
 
   font-weight: weights.$font-weight-bold;
 
+  &:disabled,
+  &.disabled {
+    color: semantics.$fg-tertiary;
+  }
+
   &:visited {
     color: semantics.$button-link-text;
   }
 
   @include mediaMixins.media-query-up(lg) {
-    &:hover {
+    &:hover:not(:disabled, .disabled) {
       color: semantics.$button-link-text-hover;
     }
   }
-}
-
-.fullWidth {
-  width: 100%;
-  text-align: center;
 }

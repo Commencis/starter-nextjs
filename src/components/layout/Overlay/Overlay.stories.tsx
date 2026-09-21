@@ -26,7 +26,7 @@ function InteractiveOverlay(): ReactElement {
 
   return (
     <div style={{ minHeight: '100vh', padding: '32px' }}>
-      <Button onClick={() => setIsOpen(true)}>Open overlay</Button>
+      <Button label="Open overlay" onClick={() => setIsOpen(true)} />
       <Overlay
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -65,7 +65,7 @@ function InteractiveOverlay(): ReactElement {
               <p key={index}>Scrollable content item {index + 1}</p>
             ))}
           </div>
-          <Button onClick={() => setIsOpen(false)}>Close overlay</Button>
+          <Button label="Close overlay" onClick={() => setIsOpen(false)} />
         </div>
       </Overlay>
     </div>
