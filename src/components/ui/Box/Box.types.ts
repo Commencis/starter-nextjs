@@ -11,13 +11,14 @@ import type {
   ResponsiveFlexWrapProps,
 } from '@/types/style/flex.types';
 import type {
-  DisplayProps,
   OverflowProps,
   PositionProps,
+  ResponsiveDisplayProps,
   ResponsiveGridTemplateColumnsProps,
   ResponsiveHeightProps,
   ResponsiveWidthProps,
 } from '@/types/style/layout.types';
+import type { ResponsiveBorderRadiusProps } from '@/types/style/radius.types';
 import type {
   ResponsiveGapProps,
   ResponsiveMarginProps,
@@ -35,11 +36,26 @@ export type BoxElement =
   | 'article'
   | 'header'
   | 'footer'
-  | 'nav';
+  | 'nav'
+  | 'caption'
+  | 'table'
+  | 'thead'
+  | 'tbody'
+  | 'tr'
+  | 'th'
+  | 'td';
 
-export type BoxStyleProps = DisplayProps &
-  PositionProps &
+/**
+ * Semantic tokens: keep in sync with @/styles/variables/colors/_semantics.scss
+ * $background-color-map keys.
+ */
+export type BoxBgColor =
+  'primary' | 'secondary' | 'brand' | 'light' | 'gray' | 'dark-overlay';
+
+export type BoxStyleProps = PositionProps &
   OverflowProps &
+  ResponsiveDisplayProps &
+  ResponsiveBorderRadiusProps &
   ResponsivePaddingProps &
   ResponsiveMarginProps &
   ResponsiveWidthProps &
@@ -53,9 +69,15 @@ export type BoxStyleProps = DisplayProps &
   ResponsiveFlexAlignSelfProps &
   ResponsiveFlexBasisProps &
   ResponsiveFlexGrowProps &
-  ResponsiveFlexShrinkProps;
+  ResponsiveFlexShrinkProps & {
+    bgColor?: BoxBgColor;
+  };
 
 export type BoxRenderRootCallback = (
   className: string,
   children: ReactNode
 ) => ReactElement;
+
+export type BoxRenderProps =
+  | { as?: BoxElement; renderRoot?: never }
+  | { as?: never; renderRoot?: BoxRenderRootCallback };

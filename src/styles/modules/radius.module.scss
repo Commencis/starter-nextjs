@@ -1,0 +1,3 @@
+@use '../mixins/radius.mixins' as radiusMixins;
+
+@include radiusMixins.create-responsive-border-radius-classes();

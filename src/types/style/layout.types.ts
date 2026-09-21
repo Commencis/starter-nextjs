@@ -10,7 +10,9 @@ export const DisplayPropKeys = ['display'] as const;
 
 export type DisplayOption = (typeof DisplayPropKeys)[number];
 
-export type DisplayProps = Partial<Record<DisplayOption, Display>>;
+export type ResponsiveDisplayProps = Partial<
+  Record<DisplayOption, ResponsiveAttribute<Display>>
+>;
 
 /**
  * Position:

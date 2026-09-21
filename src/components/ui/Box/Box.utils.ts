@@ -1,6 +1,9 @@
 import clsx from 'clsx';
 
+import type { UnknownComponentProps } from '@/types/common.types';
+import type { SemanticBgColor } from '@/types/style/color.types';
 import {
+  getBorderRadiusClasses,
   getDisplayClasses,
   getFlexAlignItemsClasses,
   getFlexAlignSelfClasses,
@@ -18,55 +21,75 @@ import {
   getPaddingClasses,
   getPositionClasses,
   getWidthClasses,
+  hasDisplayCondition,
 } from '@/utils/style';
+import { getBackgroundColorClasses } from '@/utils/style/colors.utils';
 
-import type { BoxStyleProps } from './Box.types';
+import type { BoxBgColor } from './Box.types';
 
-function getFlexClasses(styleProps: BoxStyleProps): string {
-  const { display } = styleProps;
-  const isFlex = display === 'flex' || display === 'inline-flex';
+const boxBgColorMap: Record<BoxBgColor, SemanticBgColor> = {
+  primary: 'bg-primary',
+  secondary: 'bg-secondary',
+  brand: 'bg-brand',
+  light: 'bg-light',
+  gray: 'bg-gray',
+  'dark-overlay': 'bg-dark-overlay',
+};
+
+export function getBoxBgColorClasses(bgColor?: BoxBgColor): string {
+  if (!bgColor || !boxBgColorMap[bgColor]) {
+    return '';
+  }
+
+  return getBackgroundColorClasses(boxBgColorMap[bgColor]);
+}
+
+function getFlexClasses(props: UnknownComponentProps): string {
+  const isFlex = hasDisplayCondition(props, 'flex', 'inline-flex');
   const flexItemClasses = clsx(
-    getFlexAlignSelfClasses(styleProps),
-    getFlexBasisClasses(styleProps),
-    getFlexGrowClasses(styleProps),
-    getFlexShrinkClasses(styleProps)
+    getFlexAlignSelfClasses(props),
+    getFlexBasisClasses(props),
+    getFlexGrowClasses(props),
+    getFlexShrinkClasses(props)
   );
+
   return isFlex
     ? clsx(
-        getGapClasses(styleProps),
-        getFlexDirectionClasses(styleProps),
-        getFlexWrapClasses(styleProps),
-        getFlexJustifyContentClasses(styleProps),
-        getFlexAlignItemsClasses(styleProps),
+        getGapClasses(props),
+        getFlexDirectionClasses(props),
+        getFlexWrapClasses(props),
+        getFlexJustifyContentClasses(props),
+        getFlexAlignItemsClasses(props),
         flexItemClasses
       )
     : flexItemClasses;
 }
 
-function getGridClasses(styleProps: BoxStyleProps): string {
-  const { display } = styleProps;
-  const isGrid = display === 'grid';
+function getGridClasses(props: UnknownComponentProps): string {
+  const isGrid = hasDisplayCondition(props, 'grid');
 
   return isGrid
     ? clsx(
-        getGapClasses(styleProps),
-        getFlexJustifyContentClasses(styleProps),
-        getFlexAlignItemsClasses(styleProps),
-        getGridTemplateColumnsClasses(styleProps)
+        getGapClasses(props),
+        getFlexJustifyContentClasses(props),
+        getFlexAlignItemsClasses(props),
+        getGridTemplateColumnsClasses(props)
       )
     : '';
 }
 
-export function getBoxClasses(styleProps: BoxStyleProps): string {
+export function getBoxClasses(props: UnknownComponentProps): string {
   return clsx(
-    getPaddingClasses(styleProps),
-    getMarginClasses(styleProps),
-    getDisplayClasses(styleProps),
-    getPositionClasses(styleProps),
-    getOverflowClasses(styleProps),
-    getWidthClasses(styleProps),
-    getHeightClasses(styleProps),
-    getFlexClasses(styleProps),
-    getGridClasses(styleProps)
+    getPaddingClasses(props),
+    getMarginClasses(props),
+    getDisplayClasses(props),
+    getPositionClasses(props),
+    getOverflowClasses(props),
+    getWidthClasses(props),
+    getHeightClasses(props),
+    getFlexClasses(props),
+    getGridClasses(props),
+    getBorderRadiusClasses(props),
+    getBoxBgColorClasses(props.bgColor as BoxBgColor | undefined)
   );
 }

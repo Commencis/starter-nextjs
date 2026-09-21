@@ -1,4 +1,6 @@
+import type { UnknownComponentProps } from '@/types/common.types';
 import type {
+  Display,
   DisplayOption,
   GridTemplateColumnsOption,
   HeightOption,
@@ -32,6 +34,36 @@ export const getDisplayClasses = responsiveStyleResolver({
   prefixMap: displayPrefixMap,
   css,
 });
+
+function isMatchingDisplayValue(
+  value: unknown,
+  conditions: Display[]
+): boolean {
+  return typeof value === 'string' && conditions.includes(value as Display);
+}
+
+export function hasDisplayCondition(
+  props: UnknownComponentProps,
+  ...conditions: Display[]
+): boolean {
+  const { display } = props;
+
+  if (display === undefined) {
+    return false;
+  }
+
+  if (typeof display === 'string') {
+    return isMatchingDisplayValue(display, conditions);
+  }
+
+  if (typeof display === 'object' && display !== null) {
+    return Object.values(display).some((value) =>
+      isMatchingDisplayValue(value, conditions)
+    );
+  }
+
+  return false;
+}
 
 /**
  * Position Utilities
