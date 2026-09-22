@@ -58,6 +58,7 @@
     "@storybook/addon-a11y": "10.5.10",
     "@storybook/addon-docs": "10.5.10",
     "@storybook/nextjs-vite": "10.5.10",
+    "storybook": "10.5.10",
     "@svgr/cli": "8.1.0",
     "@svitejs/changesets-changelog-github-compact": "1.2.0",
     "@types/node": "24.13.4",
@@ -70,6 +71,7 @@
     "prettier": "3.9.6",
     "sass": "1.104.0",
     "stylelint": "17.15.0",
+    "tsx": "4.23.12",
     "typescript": "6.0.3"
   }
 }

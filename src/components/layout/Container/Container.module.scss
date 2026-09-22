@@ -4,8 +4,8 @@
 
 // Should be in sync with sizeToPaddingMap in Container.config.ts
 $size-values: (
-  md: breakpoints.$max-content-width-md + 2 * spacing.$root-padding-md,
-  lg: breakpoints.$max-content-width-lg + 2 * spacing.$root-padding-lg,
+  md: calc(#{breakpoints.$max-content-width-md} + 2 * #{spacing.$root-padding-md}),
+  lg: calc(#{breakpoints.$max-content-width-lg} + 2 * #{spacing.$root-padding-lg}),
   full: none,
 );
 
