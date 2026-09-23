@@ -7,7 +7,7 @@ This directory contains scripts for automated creation and management of SVG-bas
 ## Structure Overview
 
 ```
-scripts/svg/            --> Scripts for SVG management
+scripts/svg/            --> Scripts for SVG management (orchestrated by generateSvg.ts)
 src/assets/icons/       --> Raw SVG asset directory for Icon Library
 src/assets/vectors/     --> Raw SVG asset directory for Brand or large-scale visual vectors, illustrations, logos
 ```
@@ -31,6 +31,8 @@ Each asset type has its designated folder and management approach:
    pnpm generate:icons
    ```
 
+   Runs clean → SVGR → ESLint → Iconography story (`IconContainer` is preserved). Config: `generateSvg.ts`. Generated icons keep the `size` prop.
+
 ### Vector Generation
 
 1. Add your SVG file under an appropriate subfolder inside `/src/assets/vectors/`.
@@ -40,6 +42,8 @@ Each asset type has its designated folder and management approach:
    ```
    pnpm generate:vectors
    ```
+
+   Runs clean → SVGR → ESLint (including nested folders such as `logos/` and `illustrations/`). Config: `generateSvg.ts`.
 
 ---
 

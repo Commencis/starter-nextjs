@@ -1,4 +1,5 @@
 import type { ResponsiveAttribute } from '@/types/style/breakpoint.types';
+import type { ResponsiveMarginProps } from '@/types/style/spacing.types';
 import type {
   ResponsiveFontWeightProps,
   ResponsiveTextAlignProps,
@@ -8,13 +9,22 @@ import type {
 export type TextElement =
   'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
+type TextMarginProps = Pick<
+  ResponsiveMarginProps,
+  'marginTop' | 'marginBottom'
+>;
+
 export type TextStyleProps = ResponsiveTypographyVariantProps &
   ResponsiveFontWeightProps &
   ResponsiveTextAlignProps &
-  ResponsiveTextMaxLineProps;
+  ResponsiveTextMaxLineProps &
+  TextMarginProps & {
+    color?: TextColor;
+  };
 
 /**
- * Semantic tokens: keep in sync with @/styles/variables/colors/semantics.
+ * Semantic text colors mapped to foreground utilities in
+ * @/utils/style/colors.utils.ts (`getForegroundColorClasses`).
  * `inherit` uses `color: inherit` (parent / cascade).
  */
 export type TextColor =

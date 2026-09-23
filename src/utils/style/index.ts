@@ -1,4 +1,10 @@
 export {
+  getBackgroundColorClasses,
+  getForegroundColorClasses,
+  getIconColorClasses,
+  getStrokeColorClasses,
+} from './colors.utils';
+export {
   getFlexAlignItemsClasses,
   getFlexAlignSelfClasses,
   getFlexBasisClasses,
@@ -16,9 +22,11 @@ export {
   getOverflowClasses,
   getPositionClasses,
   getWidthClasses,
+  hasDisplayCondition,
 } from './layout.utils';
 export { getMarginClasses } from './margin.utils';
 export { getPaddingClasses } from './padding.utils';
+export { getBorderRadiusClasses } from './radius.utils';
 export { getResponsiveClasses } from './responsive.utils';
 export {
   DEFAULT_TYPOGRAPHY_VARIANT,

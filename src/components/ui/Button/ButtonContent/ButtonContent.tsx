@@ -2,24 +2,32 @@ import type { ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { ButtonContentElements, ButtonSize } from '../Button.types';
+import { Text } from '@/components/ui/Text/Text';
+
+import type {
+  ButtonContentElements,
+  ResponsiveButtonSize,
+} from '../Button.types';
+import { getButtonSizeClasses } from '../Button.utils';
 
 import css from './ButtonContent.module.scss';
 
 export type ButtonContentProps = ButtonContentElements & {
-  size: ButtonSize;
+  size: ResponsiveButtonSize;
 };
 
 export function ButtonContent({
   size,
   leadingIcon,
   trailingIcon,
-  children,
+  label,
 }: ButtonContentProps): ReactElement {
   return (
-    <div className={clsx(css.content, css[`size-${size}`])}>
+    <div className={clsx(css.content, getButtonSizeClasses(size, css))}>
       {leadingIcon}
-      {children}
+      <Text variant="label-2" fontWeight="semi-bold" color="inherit">
+        {label}
+      </Text>
       {trailingIcon}
     </div>
   );

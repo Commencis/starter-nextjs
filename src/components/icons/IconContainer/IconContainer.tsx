@@ -3,6 +3,7 @@ import type { ReactElement } from 'react';
 import clsx from 'clsx';
 
 import type { IconStyleProps } from '@/types/svg.types';
+import { getIconColorClasses } from '@/utils/style/colors.utils';
 
 import css from './IconContainer.module.scss';
 
@@ -15,7 +16,7 @@ export function IconContainer({
   color = 'primary',
 }: IconContainerProps): ReactElement {
   return (
-    <span className={clsx(css.container, css[`ic-color-${color}`])}>
+    <span className={clsx(css.container, getIconColorClasses(color))}>
       {children}
     </span>
   );

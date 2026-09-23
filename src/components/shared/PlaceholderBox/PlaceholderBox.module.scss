@@ -1,0 +1,17 @@
+@use '@/styles/functions/color.funcs' as colorFuncs;
+@use '@/styles/variables/radius' as radius;
+
+.outerBox {
+  background-color: colorFuncs.get-primitive('green', '100');
+}
+
+.innerBox {
+  border: 1.5px solid colorFuncs.get-primitive('red', '400');
+  border-radius: radius.$radius-8;
+
+  color: colorFuncs.get-primitive('red', '600');
+  background-color: colorFuncs.get-primitive('red', '50');
+
+  height: var(--inner-height);
+  width: var(--inner-width);
+}

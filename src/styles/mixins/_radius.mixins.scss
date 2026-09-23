@@ -1,0 +1,13 @@
+@use '../variables/radius' as radius;
+@use './utility.mixins' as utilityMixins;
+
+@mixin create-responsive-border-radius-classes() {
+
+  $values: radius.$radius-values;
+
+  @include utilityMixins.create-responsive-utilities(
+    'rounded',
+    'border-radius',
+    $values
+  );
+}

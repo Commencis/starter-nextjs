@@ -1,10 +1,11 @@
 import type { ReactElement } from 'react';
 
-import { Box, Button, Text } from '@/components/ui';
+import { Container } from '@/components/layout';
+import { Button, Text } from '@/components/ui';
 
 export function Home(): ReactElement {
   return (
-    <Box
+    <Container
       display="flex"
       direction="column"
       alignItems="center"
@@ -18,10 +19,7 @@ export function Home(): ReactElement {
       <Text as="h1" variant="heading-2">
         Next.js Template
       </Text>
-
-      <Button variant="primary" size="md">
-        Start Building
-      </Button>
-    </Box>
+      <Button variant="primary" size="md" label="Start Building" />
+    </Container>
   );
 }

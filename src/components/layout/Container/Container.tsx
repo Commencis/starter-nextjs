@@ -2,36 +2,45 @@ import type { ReactElement } from 'react';
 
 import clsx from 'clsx';
 
-import type { WithStrictChildren } from '@/types/common.types';
+import type { WithOptionalId, WithStrictChildren } from '@/types/common.types';
 
 import type { BoxElement } from '@/components/ui/Box/Box.types';
 import { Box } from '@/components/ui/Box/Box';
 
 import type {
   ContainerAllowedBoxProps,
-  ContainerSize,
+  ResponsiveContainerSize,
 } from './Container.types';
+import {
+  defaultContainerSize,
+  getContainerSizeClasses,
+  getSizePadding,
+} from './Container.utils';
 
-import css from './Container.module.scss';
-
-type ContainerProps = WithStrictChildren &
+export type ContainerProps = WithStrictChildren &
+  WithOptionalId &
   ContainerAllowedBoxProps & {
     as?: BoxElement;
-    size?: ContainerSize;
+    size?: ResponsiveContainerSize;
   };
 
 export function Container({
+  id,
   as: Component = 'div',
   children,
-  size = 'lg',
+  size = defaultContainerSize,
   ...boxProps
 }: ContainerProps): ReactElement {
   return (
     <Box
+      width="full"
       marginX="auto"
-      paddingX={{ xs: 24, md: 32, lg: 64 }}
+      paddingX={getSizePadding(size)}
       renderRoot={(className, children) => (
-        <Component className={clsx(css[`size-${size}`], className)}>
+        <Component
+          id={id}
+          className={clsx(getContainerSizeClasses(size), className)}
+        >
           {children}
         </Component>
       )}

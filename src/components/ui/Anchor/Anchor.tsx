@@ -16,13 +16,14 @@ type AnchorProps = PropsWithChildren<
 >;
 
 export function Anchor({
+  className,
   target = '_blank',
   rel = 'noopener',
   children,
   ...rest
 }: AnchorProps): ReactElement {
   return (
-    <a target={target} rel={rel} {...rest}>
+    <a className={className} target={target} rel={rel} {...rest}>
       {children}
     </a>
   );

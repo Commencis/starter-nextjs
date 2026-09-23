@@ -1,25 +1,17 @@
-import type { ElementType, ReactElement } from 'react';
-import type { Route } from 'next';
-import type { LinkProps } from 'next/link';
-import Link from 'next/link';
+import type { MouseEvent, ReactElement } from 'react';
 
-import clsx from 'clsx';
+import type { LinkRef } from '@/types/common/link.types';
 
-import { isLocalURL } from '@/utils/url.utils';
-
-import { Anchor } from '../Anchor/Anchor';
+import { AdaptiveLink } from '@/components/ui/AdaptiveLink/AdaptiveLink';
 
 import { ButtonContent } from './ButtonContent/ButtonContent';
 import type { ButtonContentElements, ButtonStyleProps } from './Button.types';
+import { getCommonButtonClasses } from './Button.utils';
 
-import css from './Button.module.scss';
-
-type AllowedLinkProps = Omit<LinkProps<Route>, 'href'>;
-
-export type LinkButtonProps = AllowedLinkProps &
+export type LinkButtonProps = LinkRef &
   ButtonStyleProps &
   ButtonContentElements & {
-    href: string;
+    disabled?: boolean;
   };
 
 export function LinkButton({
@@ -28,36 +20,45 @@ export function LinkButton({
   rel,
   variant = 'primary',
   size = 'md',
+  width = 'fit-content',
   leadingIcon,
   trailingIcon,
-  children,
-  isFullWidth = false,
-  isRounded = false,
+  label,
+  disabled,
   ...rest
 }: LinkButtonProps): ReactElement {
-  const isExternal = !isLocalURL(href);
-  const Component: ElementType = isExternal ? Anchor : Link;
-  const linkProps = isExternal ? { href } : { href: href as Route, ...rest };
-
-  const buttonClasses = clsx(css.button, css[variant], css[`size-${size}`], {
-    [css.fullWidth]: isFullWidth,
-    [css.rounded]: isRounded,
+  const buttonClasses = getCommonButtonClasses({
+    variant,
+    size,
+    width,
+    disabled,
   });
 
+  const disabledProps = disabled
+    ? {
+        'aria-disabled': true,
+        href: '#',
+        tabIndex: -1,
+        onClick: (event: MouseEvent<HTMLAnchorElement>): void =>
+          event.preventDefault(),
+      }
+    : {};
+
   return (
-    <Component
+    <AdaptiveLink
       className={buttonClasses}
       target={target}
       rel={rel}
-      {...linkProps}
+      href={href}
+      {...rest}
+      {...disabledProps}
     >
       <ButtonContent
         size={size}
         leadingIcon={leadingIcon}
         trailingIcon={trailingIcon}
-      >
-        {children}
-      </ButtonContent>
-    </Component>
+        label={label}
+      />
+    </AdaptiveLink>
   );
 }

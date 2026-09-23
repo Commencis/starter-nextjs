@@ -10,7 +10,9 @@ export const DisplayPropKeys = ['display'] as const;
 
 export type DisplayOption = (typeof DisplayPropKeys)[number];
 
-export type DisplayProps = Partial<Record<DisplayOption, Display>>;
+export type ResponsiveDisplayProps = Partial<
+  Record<DisplayOption, ResponsiveAttribute<Display>>
+>;
 
 /**
  * Position:
@@ -38,7 +40,7 @@ export type OverflowProps = Partial<Record<OverflowOption, Overflow>>;
  * Width:
  */
 
-export type Width = 'auto' | 'full';
+export type Width = 'auto' | 'full' | 'fit-content';
 
 export const WidthPropKeys = ['width'] as const;
 

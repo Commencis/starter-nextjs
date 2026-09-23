@@ -1,0 +1,27 @@
+@use '@/styles/variables/z-index' as zIndex;
+
+.overlay {
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  inset: 0;
+  z-index: zIndex.$overlay;
+
+  transition: opacity 0.3s ease;
+
+  &.open {
+    pointer-events: auto;
+
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    transition: none;
+  }
+}
