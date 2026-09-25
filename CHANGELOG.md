@@ -1,5 +1,12 @@
 # @commencis/starter-nextjs
 
+## 2.1.1
+
+### Patch Changes
+
+- - Improve browser font size selection support ([#171](https://github.com/Commencis/starter-nextjs/pull/171))
+  - Add font family variable
+
 ## 2.1.0
 
 ### Minor Changes
