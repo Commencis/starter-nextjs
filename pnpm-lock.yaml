@@ -171,8 +171,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       next:
-        specifier: 16.3.5
-        version: 16.3.5(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.104.1)
+        specifier: 16.3.6
+        version: 16.3.6(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.105.0)
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -194,13 +194,13 @@ importers:
         version: 4.0.0(@commitlint/cli@21.2.3)
       '@commencis/eslint-config':
         specifier: 3.7.0
-        version: 3.7.0(eslint@9.39.5)(prettier@3.9.8)(supports-color@10.2.2)(typescript@6.0.3)
+        version: 3.7.0(eslint@9.39.5)(prettier@3.9.9)(supports-color@10.2.2)(typescript@6.0.3)
       '@commencis/lint-staged-config':
         specifier: 3.2.0
         version: 3.2.0(lint-staged@17.5.1)
       '@commencis/prettier-config':
         specifier: 3.3.0
-        version: 3.3.0(prettier@3.9.8)
+        version: 3.3.0(prettier@3.9.9)
       '@commencis/stylelint-config':
         specifier: 3.5.0
         version: 3.5.0(postcss-html@1.8.1)(postcss@8.5.28)(stylelint@17.15.0)
@@ -215,7 +215,7 @@ importers:
         version: 10.6.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(storybook@10.6.0)
       '@storybook/nextjs-vite':
         specifier: 10.6.0
-        version: 10.6.0(@babel/core@7.29.0)(@types/react-dom@19.3.0)(@types/react@19.3.0)(next@16.3.5)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
+        version: 10.6.0(@babel/core@7.29.0)(@types/react-dom@19.3.0)(@types/react@19.3.0)(next@16.3.6)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
       '@svgr/cli':
         specifier: 8.1.0
         version: 8.1.0(supports-color@10.2.2)(typescript@6.0.3)
@@ -244,14 +244,14 @@ importers:
         specifier: 17.5.1
         version: 17.5.1
       prettier:
-        specifier: 3.9.8
-        version: 3.9.8
+        specifier: 3.9.9
+        version: 3.9.9
       sass:
-        specifier: 1.104.1
-        version: 1.104.1
+        specifier: 1.105.0
+        version: 1.105.0
       storybook:
         specifier: 10.6.0
-        version: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+        version: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       stylelint:
         specifier: 17.15.0
         version: 17.15.0(supports-color@10.2.2)(typescript@6.0.3)
@@ -1036,60 +1036,60 @@ packages:
       '@emnapi/core': ^1.7.1 || ^2.0.0-alpha.4
       '@emnapi/runtime': ^1.7.1 || ^2.0.0-alpha.4
 
-  '@next/env@16.3.5':
-    resolution: {integrity: sha512-NWEXVDMqoEo0ktmU6u0sE2Vg0LOcsD7NnOTJNo3/fEaTfsg+F1bMIxuDmQbda4e3yTIQwVdUREF2yIuMOusKtg==}
+  '@next/env@16.3.6':
+    resolution: {integrity: sha512-x9Vblze1EbtltQYnNH38xCPWU3TVfBd1eXqA3+w9+BTpedkkdNpAaltXlGQ/nsc1+E0mVTNrtcbX3GoO09zeLQ==}
 
   '@next/eslint-plugin-next@16.2.10':
     resolution: {integrity: sha512-Gs8D2m21VnJeFo9qvYIIqJH94frWerWYu41BprU1pLtRVF7PCQNLiFZZ3fG+iPuj3K83Cwv/rt+msLOy8Qgu3Q==}
 
-  '@next/swc-darwin-arm64@16.3.5':
-    resolution: {integrity: sha512-pMmGgETfKvElucLHtVaeiMRbp2zUbvKx7b1yGko0liBz3cw1mKSggWN/Rp/wPz8z+E1O82u3r4L1Co+ZS5hokQ==}
+  '@next/swc-darwin-arm64@16.3.6':
+    resolution: {integrity: sha512-E/7GEqaUkt8mk/T8v9lAnrhzR06kdq1ZBkC12F8tAMkdIadwNp3H1KqHynDHrpcTlGCUdq/qu6vUL2aYVyYBdw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@next/swc-darwin-x64@16.3.5':
-    resolution: {integrity: sha512-76VaGYvf6HPa5/w12yLkE3dXTn9AfdEviI79oEL3aZoAmRLc9rWitjWqyjViVysK/ht/y9YKzFkBrUdi/wGkow==}
+  '@next/swc-darwin-x64@16.3.6':
+    resolution: {integrity: sha512-yBE893/nDWTlaiBD1p+qgt7NUen4U5R6FXyH0s67Npq1S3E0cVSef1WIXC2xBRgQvwAvJq6DnS6Y6PrY0cy4Ew==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@next/swc-linux-arm64-gnu@16.3.5':
-    resolution: {integrity: sha512-zKDELJ5jSQMHeO/hmXUQsAzagX4bQD4OiMi3pQ5FbUj+yK506oLVHnKA2YXMlbg1EHHqJYtyePOgByIDXD1lqw==}
+  '@next/swc-linux-arm64-gnu@16.3.6':
+    resolution: {integrity: sha512-KJDpjBqBPYlvkivmyrp+Qys6k/7ksbqGQvRVc6ZEGfR+cjQxx+nUkJaWmNZJsmoOrqYNbaXByF8wa0lBwDhB3Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@next/swc-linux-arm64-musl@16.3.5':
-    resolution: {integrity: sha512-7Vql0pgzCoHagv6+FNOZoqmJqA52c6zeVbhtS/47qFozO1MSx4ms7x7GHiciY8R5CDsSMKMQjJEryoJLcsBIbA==}
+  '@next/swc-linux-arm64-musl@16.3.6':
+    resolution: {integrity: sha512-mqNg2K+hvWskSRb/QM+Ix412DvBsuSF0XV+frTSw5vmoucNnIlynFwKYew8D01bfATErMOM7Bujrf0BA5DRKFA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@next/swc-linux-x64-gnu@16.3.5':
-    resolution: {integrity: sha512-NH/xzehyHEFWE2nlcZon7TB/0+H4shfWCi7S1zka815XCOhJDYZhoeJtOYy0dh0WVRWACVXSyGNFFytoMxUhRg==}
+  '@next/swc-linux-x64-gnu@16.3.6':
+    resolution: {integrity: sha512-nFncBNGAYouRHjRVaITs9beZRfhX4ssVwpnvPIAbkZVH6LtGoAVlH4bJ8Cnf9SOo9bsXgPFer/GdHtEE3JNOkw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@next/swc-linux-x64-musl@16.3.5':
-    resolution: {integrity: sha512-lV4+EhWMfS8jcC+EH2nn/Cm5cn6XsgbE07bU9tMH8fCo0tNAqhyzi1b5wQ/Tn6NGFTvKDY65w3ZH95EjwBRAnQ==}
+  '@next/swc-linux-x64-musl@16.3.6':
+    resolution: {integrity: sha512-5Mf3cHDGR/Iz0ng2Bj3zUR3p5QS9YK3Hn2QiAfavFmyF48zwThAjpFoiTKNIcOHLYS4zEk+gzyJ/9deQ2ZB8yQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@next/swc-win32-arm64-msvc@16.3.5':
-    resolution: {integrity: sha512-/wKzAREX2RF++MhicjDbg8tGn2AiBIM0+EFeTFKoUEUbW5D6amCJehd5Z5G1H5/gxNdgnwoXMcHz24H/c2tGkQ==}
+  '@next/swc-win32-arm64-msvc@16.3.6':
+    resolution: {integrity: sha512-0jkJy0C2kbrJWTk4YLa3xk80pVBpx8FCHJym7CnUfDAXe/FWv5qT7SQJbR0KuemyxaEDlEx5WT4VQJoTW+/9Qw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@next/swc-win32-x64-msvc@16.3.5':
-    resolution: {integrity: sha512-LNdCHzgLFc+UeqMS84LzXPaeBRKyqDN9OMyFAr1OrB0XrNw78IRrEVtZvvA7245W/HsaoeVOQX9jPjPk8jojwA==}
+  '@next/swc-win32-x64-msvc@16.3.6':
+    resolution: {integrity: sha512-/YXjI1e5OXcZ7YpxRwgP/1jAV/SBKTzeVKqN2mk7mLpcICsyn3Gl5+dIfDTJp70M0ccMhyMMRso4v6mPDCGepg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -3209,8 +3209,8 @@ packages:
     engines: {node: '>= 4.4.x'}
     hasBin: true
 
-  next@16.3.5:
-    resolution: {integrity: sha512-MdtsTgzyfCPRLC6uJ1mN8ao7lyJ4BB0U6Inhnx3gta1UcCIdHK3yxLG0E8OWQteWD8/Q0qb8A5o7wJaL8M9y2w==}
+  next@16.3.6:
+    resolution: {integrity: sha512-L+otWM/aQbYTx98aZhgEoMb4bZAXx1YVW4UMA/vuCyCoWG5HJyZUili8QAkqzrcC+5///tsz3s0M+SlyB5bLMw==}
     engines: {node: '>=20.9.0'}
     hasBin: true
     peerDependencies:
@@ -3436,8 +3436,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.9.8:
-    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -3589,8 +3589,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.104.1:
-    resolution: {integrity: sha512-yDA+1aIG3EHgN4V/BvuhCvu61FF6hEd4e+9DxikUm9U0CAGuvdIZ/UYy7qbOxjhbbWQraoyLlMuzdRGOSV5Bmw==}
+  sass@1.105.0:
+    resolution: {integrity: sha512-4EjSuRTyG8M4yRXXY1PT9OUV5zz23xBxJkbIAprohKHqf6HOU4MCpE3U3vAC+iO1gxobBjESNbcj8rYAQZWnyA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -4433,14 +4433,14 @@ snapshots:
     optionalDependencies:
       '@commitlint/cli': 21.2.3(@types/node@24.13.6)(conventional-commits-parser@7.1.1)(typescript@6.0.3)
 
-  '@commencis/eslint-config@3.7.0(eslint@9.39.5)(prettier@3.9.8)(supports-color@10.2.2)(typescript@6.0.3)':
+  '@commencis/eslint-config@3.7.0(eslint@9.39.5)(prettier@3.9.9)(supports-color@10.2.2)(typescript@6.0.3)':
     dependencies:
       '@next/eslint-plugin-next': 16.2.10
       '@typescript-eslint/utils': 8.63.0(eslint@9.39.5)(supports-color@10.2.2)(typescript@6.0.3)
       eslint: 9.39.5(jiti@2.6.1)(supports-color@10.2.2)
       eslint-config-prettier: 10.1.8(eslint@9.39.5)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.5)
-      eslint-plugin-prettier: 5.5.6(eslint-config-prettier@10.1.8)(eslint@9.39.5)(prettier@3.9.8)
+      eslint-plugin-prettier: 5.5.6(eslint-config-prettier@10.1.8)(eslint@9.39.5)(prettier@3.9.9)
       eslint-plugin-react: 7.37.5(eslint@9.39.5)
       eslint-plugin-react-hooks: 7.1.1(eslint@9.39.5)(supports-color@10.2.2)
       eslint-plugin-simple-import-sort: 13.0.0(eslint@9.39.5)
@@ -4456,9 +4456,9 @@ snapshots:
     optionalDependencies:
       lint-staged: 17.5.1
 
-  '@commencis/prettier-config@3.3.0(prettier@3.9.8)':
+  '@commencis/prettier-config@3.3.0(prettier@3.9.9)':
     dependencies:
-      prettier: 3.9.8
+      prettier: 3.9.9
 
   '@commencis/stylelint-config@3.5.0(postcss-html@1.8.1)(postcss@8.5.28)(stylelint@17.15.0)':
     dependencies:
@@ -4914,7 +4914,7 @@ snapshots:
     dependencies:
       glob: 13.0.6
       react-docgen-typescript: 2.4.0(typescript@6.0.3)
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
     optionalDependencies:
       typescript: 6.0.3
 
@@ -4980,34 +4980,34 @@ snapshots:
       '@tybys/wasm-util': 0.10.3
     optional: true
 
-  '@next/env@16.3.5': {}
+  '@next/env@16.3.6': {}
 
   '@next/eslint-plugin-next@16.2.10':
     dependencies:
       fast-glob: 3.3.1
 
-  '@next/swc-darwin-arm64@16.3.5':
+  '@next/swc-darwin-arm64@16.3.6':
     optional: true
 
-  '@next/swc-darwin-x64@16.3.5':
+  '@next/swc-darwin-x64@16.3.6':
     optional: true
 
-  '@next/swc-linux-arm64-gnu@16.3.5':
+  '@next/swc-linux-arm64-gnu@16.3.6':
     optional: true
 
-  '@next/swc-linux-arm64-musl@16.3.5':
+  '@next/swc-linux-arm64-musl@16.3.6':
     optional: true
 
-  '@next/swc-linux-x64-gnu@16.3.5':
+  '@next/swc-linux-x64-gnu@16.3.6':
     optional: true
 
-  '@next/swc-linux-x64-musl@16.3.5':
+  '@next/swc-linux-x64-musl@16.3.6':
     optional: true
 
-  '@next/swc-win32-arm64-msvc@16.3.5':
+  '@next/swc-win32-arm64-msvc@16.3.6':
     optional: true
 
-  '@next/swc-win32-x64-msvc@16.3.5':
+  '@next/swc-win32-x64-msvc@16.3.6':
     optional: true
 
   '@nodelib/fs.scandir@2.1.5':
@@ -5281,7 +5281,7 @@ snapshots:
     dependencies:
       '@storybook/global': 5.0.0
       axe-core: 4.11.4
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
 
   '@storybook/addon-docs@10.6.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(storybook@10.6.0)':
     dependencies:
@@ -5290,7 +5290,7 @@ snapshots:
       '@storybook/react-dom-shim': 10.6.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       ts-dedent: 2.3.0
       unplugin: 2.3.11
     optionalDependencies:
@@ -5300,9 +5300,9 @@ snapshots:
 
   '@storybook/builder-vite@10.6.0(storybook@10.6.0)(vite@8.2.2)':
     dependencies:
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       ts-dedent: 2.3.0
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
 
   '@storybook/global@5.0.0': {}
 
@@ -5310,18 +5310,18 @@ snapshots:
     dependencies:
       react: 19.3.0
 
-  '@storybook/nextjs-vite@10.6.0(@babel/core@7.29.0)(@types/react-dom@19.3.0)(@types/react@19.3.0)(next@16.3.5)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)':
+  '@storybook/nextjs-vite@10.6.0(@babel/core@7.29.0)(@types/react-dom@19.3.0)(@types/react@19.3.0)(next@16.3.6)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)':
     dependencies:
       '@storybook/builder-vite': 10.6.0(storybook@10.6.0)(vite@8.2.2)
       '@storybook/react': 10.6.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)
       '@storybook/react-vite': 10.6.0(@types/react-dom@19.3.0)(@types/react@19.3.0)(react-dom@19.3.0)(react@19.3.0)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
-      next: 16.3.5(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.104.1)
+      next: 16.3.6(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.105.0)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       styled-jsx: 5.1.6(@babel/core@7.29.0)(react@19.3.0)
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
-      vite-plugin-storybook-nextjs: 10.6.0(next@16.3.5)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
+      vite-plugin-storybook-nextjs: 10.6.0(next@16.3.6)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
     optionalDependencies:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
@@ -5336,7 +5336,7 @@ snapshots:
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
     optionalDependencies:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
@@ -5353,9 +5353,9 @@ snapshots:
       react-docgen: 8.0.4(supports-color@10.2.2)
       react-dom: 19.3.0(react@19.3.0)
       resolve: 1.22.12
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       tsconfig-paths: 4.2.0
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
     optionalDependencies:
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -5372,7 +5372,7 @@ snapshots:
       react-docgen: 8.0.4(supports-color@10.2.2)
       react-docgen-typescript: 2.4.0(typescript@6.0.3)
       react-dom: 19.3.0(react@19.3.0)
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
     optionalDependencies:
       '@types/react': 19.3.0
       '@types/react-dom': 19.3.0(@types/react@19.3.0)
@@ -6318,10 +6318,10 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.5.6(eslint-config-prettier@10.1.8)(eslint@9.39.5)(prettier@3.9.8):
+  eslint-plugin-prettier@5.5.6(eslint-config-prettier@10.1.8)(eslint@9.39.5)(prettier@3.9.9):
     dependencies:
       eslint: 9.39.5(jiti@2.6.1)(supports-color@10.2.2)
-      prettier: 3.9.8
+      prettier: 3.9.9
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.13
     optionalDependencies:
@@ -7074,9 +7074,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  next@16.3.5(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.104.1):
+  next@16.3.6(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.105.0):
     dependencies:
-      '@next/env': 16.3.5
+      '@next/env': 16.3.6
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.10.27
       caniuse-lite: 1.0.30001791
@@ -7085,16 +7085,16 @@ snapshots:
       react-dom: 19.3.0(react@19.3.0)
       styled-jsx: 5.1.6(@babel/core@7.29.0)(react@19.3.0)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 16.3.5
-      '@next/swc-darwin-x64': 16.3.5
-      '@next/swc-linux-arm64-gnu': 16.3.5
-      '@next/swc-linux-arm64-musl': 16.3.5
-      '@next/swc-linux-x64-gnu': 16.3.5
-      '@next/swc-linux-x64-musl': 16.3.5
-      '@next/swc-win32-arm64-msvc': 16.3.5
-      '@next/swc-win32-x64-msvc': 16.3.5
+      '@next/swc-darwin-arm64': 16.3.6
+      '@next/swc-darwin-x64': 16.3.6
+      '@next/swc-linux-arm64-gnu': 16.3.6
+      '@next/swc-linux-arm64-musl': 16.3.6
+      '@next/swc-linux-x64-gnu': 16.3.6
+      '@next/swc-linux-x64-musl': 16.3.6
+      '@next/swc-win32-arm64-msvc': 16.3.6
+      '@next/swc-win32-x64-msvc': 16.3.6
       babel-plugin-react-compiler: 1.0.0
-      sass: 1.104.1
+      sass: 1.105.0
       sharp: 0.35.4(@types/node@24.13.6)
     transitivePeerDependencies:
       - '@babel/core'
@@ -7342,7 +7342,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.9.8: {}
+  prettier@3.9.9: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -7536,7 +7536,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.104.1:
+  sass@1.105.0:
     dependencies:
       chokidar: 5.0.0
       immutable: 5.1.5
@@ -7672,7 +7672,7 @@ snapshots:
       es-errors: 1.3.0
       internal-slot: 1.1.0
 
-  storybook@10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0):
+  storybook@10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.1.0(react@19.3.0)
@@ -7693,7 +7693,7 @@ snapshots:
       ws: 8.21.3
     optionalDependencies:
       '@types/react': 19.3.0
-      prettier: 3.9.8
+      prettier: 3.9.9
     transitivePeerDependencies:
       - bufferutil
       - react
@@ -8076,19 +8076,19 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vite-plugin-storybook-nextjs@10.6.0(next@16.3.5)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2):
+  vite-plugin-storybook-nextjs@10.6.0(next@16.3.6)(storybook@10.6.0)(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2):
     dependencies:
-      '@next/env': 16.3.5
+      '@next/env': 16.3.6
       '@rollup/pluginutils': 5.4.0
       magic-string: 0.30.21
       module-alias: 2.3.4
-      next: 16.3.5(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.104.1)
+      next: 16.3.6(@babel/core@7.29.0)(@types/node@24.13.6)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0)(react@19.3.0)(sass@1.105.0)
       pathe: 2.0.3
       probe-image-size: 7.4.0(supports-color@10.2.2)
       semver: 7.8.5
-      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.8)(react@19.3.0)
+      storybook: 10.6.0(@types/react@19.3.0)(prettier@3.9.9)(react@19.3.0)
       ts-dedent: 2.3.0
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
       vite-tsconfig-paths: 5.1.4(supports-color@10.2.2)(typescript@6.0.3)(vite@8.2.2)
     transitivePeerDependencies:
       - rollup
@@ -8101,12 +8101,12 @@ snapshots:
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@6.0.3)
     optionalDependencies:
-      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0)
+      vite: 8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.104.1)(tsx@4.23.15)(yaml@2.9.0):
+  vite@8.2.2(@types/node@24.13.6)(esbuild@0.28.2)(jiti@2.6.1)(sass@1.105.0)(tsx@4.23.15)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
@@ -8118,7 +8118,7 @@ snapshots:
       esbuild: 0.28.2
       fsevents: 2.3.3
       jiti: 2.6.1
-      sass: 1.104.1
+      sass: 1.105.0
       tsx: 4.23.15
       yaml: 2.9.0
 
