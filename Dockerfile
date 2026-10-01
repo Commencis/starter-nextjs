@@ -1,5 +1,5 @@
 # Base stage for shared configurations and Corepack activation
-FROM node:24.21.0-alpine3.23 AS base
+FROM node:24.21.0-alpine3.24 AS base
 
 WORKDIR /app
 
@@ -23,7 +23,7 @@ RUN pnpm fetch
 COPY . .
 
 # Install all dependencies (including devDeps) from the local store (offline)
-RUN pnpm install -r --offline
+RUN pnpm install -r --offline --frozen-lockfile
 
 # Build the Next.js application (generates the .next/standalone folder)
 RUN pnpm build
@@ -35,14 +35,15 @@ FROM base AS runner
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Best practice: Run as a non-privileged user for security
-# USER node
 
 # Only copy the necessary files from the builder stage
 # standalone mode includes the minimal node_modules required for production
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder --chown=node:node /app/public ./public
+COPY --from=builder --chown=node:node /app/.next/standalone ./
+COPY --from=builder --chown=node:node /app/.next/static ./.next/static
+
+# Run as the built-in non-privileged 'node' user
+USER node
 
 EXPOSE 3000
 
