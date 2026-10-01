@@ -31,12 +31,9 @@ RUN pnpm build
 # --- Stage 2: Runner ---
 FROM base AS runner
 
-RUN apk update && apk upgrade --no-cache
-
 # Set environment to production
 ENV NODE_ENV=production
 ENV PORT=3000
-
 
 # Only copy the necessary files from the builder stage
 # standalone mode includes the minimal node_modules required for production
