@@ -5,10 +5,17 @@
 # Dependencies and Build Artifacts
 .next
 node_modules
+next-env.d.ts
 
 # Docker
 Dockerfile
 .dockerignore
+
+# CI and Tooling
+.github
+.husky
+.vscode
+.changeset
 
 # Environment Variables
 .env
