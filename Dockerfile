@@ -23,13 +23,15 @@ RUN pnpm fetch
 COPY . .
 
 # Install all dependencies (including devDeps) from the local store (offline)
-RUN pnpm install -r --offline --frozen-lockfile
+RUN pnpm install --offline --frozen-lockfile
 
 # Build the Next.js application (generates the .next/standalone folder)
 RUN pnpm build
 
 # --- Stage 2: Runner ---
 FROM base AS runner
+
+RUN apk update && apk upgrade --no-cache
 
 # Set environment to production
 ENV NODE_ENV=production
