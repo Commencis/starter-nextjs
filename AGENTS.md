@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Commencis Next.js starter. pnpm 11, Node >=24.21. Run `pnpm ci:review` before finishing.
+Commencis Next.js starter. Node version is in `.nvmrc`; pnpm version is the `packageManager` field in `package.json`. Run `pnpm ci:review` before finishing.
 
 Read the matching doc before working in that area:
 
