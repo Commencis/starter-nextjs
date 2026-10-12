@@ -1,11 +1,13 @@
 import type { NextConfig } from 'next';
 
+import { validateEnvironment } from './scripts/env/validateEnvironment';
+
 const noIndexHeader = {
   key: 'X-Robots-Tag',
   value: 'noindex, nofollow, noarchive',
 };
 
-const nextConfig: NextConfig = {
+const appConfig: NextConfig = {
   output: 'standalone',
   poweredByHeader: false,
   reactCompiler: true,
@@ -19,4 +21,8 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default function nextConfig(): NextConfig {
+  validateEnvironment();
+
+  return appConfig;
+}

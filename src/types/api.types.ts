@@ -5,7 +5,6 @@ export const enum HttpStatusCode {
 
 export const enum InternalApiPath {
   Health = '/api/health',
-  Version = '/api/version',
 }
 
 export const enum ApiPath {

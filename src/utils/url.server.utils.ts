@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { trimTrailingSlash } from '@/utils/url.utils';
+import { getServerConfig } from '@/lib/config/getServerConfig';
 
 export type HeaderGetter = {
   get(name: string): string | null;
@@ -15,7 +16,8 @@ export type HeadersLoader = () => Promise<HeaderGetter>;
 export async function resolveBaseUrl(
   getHeaders: HeadersLoader
 ): Promise<string> {
-  const baseUrlFromEnv = process.env.BASE_URL;
+  const { baseUrl: baseUrlFromEnv } = getServerConfig();
+
   if (baseUrlFromEnv) {
     return trimTrailingSlash(baseUrlFromEnv);
   }
