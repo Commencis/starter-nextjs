@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactCompiler: true,
   typedRoutes: true,
+  agentRules: false,
   images: {
     deviceSizes: [768, 1024, 1280],
   },
