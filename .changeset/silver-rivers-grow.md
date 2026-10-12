@@ -12,4 +12,5 @@
 - Replaced SVG generation with new icon and vector scripts
 - Added environment validation, public and server config, and a health endpoint
 - Improved font variables and browser font-size selection
+- Added agent guidelines in `AGENTS.md`, `CLAUDE.md`, and area docs
 - Upgraded Node.js, pnpm, Next.js, React, and related dependencies
