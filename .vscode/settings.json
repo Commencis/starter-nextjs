@@ -32,6 +32,7 @@
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
 
+  "json.schemaDownload.enable": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -41,7 +42,7 @@
     "editor.formatOnSave": true
   },
 
-  "typescript.tsdk": "./node_modules/typescript/lib",
+  "js/ts.tsdk.path": "./node_modules/typescript/lib",
 
   "alias-tool.mappings": {
     "@": "${folder}/src"
