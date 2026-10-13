@@ -1,5 +1,21 @@
 # @commencis/starter-nextjs
 
+## 3.0.0
+
+### Major Changes
+
+- ## Introducing Starter-NextJS v3.0.0 _[`#208`](https://github.com/Commencis/starter-nextjs/pull/208) [`3b0351e`](https://github.com/commencis/starter-nextjs/commit/3b0351ed757780b2cbebad4e857096ed07f59128) [@keremsirin](https://github.com/keremsirin)_
+  - Added Storybook for component documentation and stories
+  - Added Backdrop, Overlay, Divider, and responsive Container sizing
+  - Added ResponsiveImage, MediaContainer, and PlaceholderBox
+  - Added AdaptiveLink, and extended Button, Text, and Box
+  - Added semantic color and radius tokens with shared style utilities
+  - Replaced SVG generation with new icon and vector scripts
+  - Added environment validation, public and server config, and a health endpoint
+  - Improved font variables and browser font-size selection
+  - Added agent guidelines in `AGENTS.md`, `CLAUDE.md`, and area docs
+  - Upgraded Node.js, pnpm, Next.js, React, and related dependencies
+
 ## 2.1.0
 
 ### Minor Changes
