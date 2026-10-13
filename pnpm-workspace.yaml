@@ -7,3 +7,5 @@ allowBuilds:
   '@parcel/watcher': true
   'esbuild': true
   sharp: true
+minimumReleaseAgeExclude:
+  - '@commencis/*'
