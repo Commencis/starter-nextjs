@@ -6,9 +6,6 @@ import { StoryCanvas } from '@/stories/components/StoryCanvas/StoryCanvas';
 
 const preview: Preview = {
   parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
     layout: 'fullscreen',
     options: {
       storySort: {
