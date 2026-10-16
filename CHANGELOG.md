@@ -1,5 +1,11 @@
 # @commencis/starter-nextjs
 
+## 3.1.0
+
+### Minor Changes
+
+- Fix: storybook nextjs app router issues _[`#209`](https://github.com/Commencis/starter-nextjs/pull/209) [`1f6003b`](https://github.com/commencis/starter-nextjs/commit/1f6003b2502d12261d89a1ff409c6b7eadbc8306) [@ymehmetcan](https://github.com/ymehmetcan)_
+
 ## 3.0.0
 
 ### Major Changes
