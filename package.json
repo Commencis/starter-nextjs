@@ -71,7 +71,7 @@
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
     "sass": "1.106.1",
-    "storybook": "10.6.1",
+    "storybook": "10.6.2",
     "stylelint": "17.16.0",
     "tsx": "4.23.15",
     "typescript": "6.0.3"
