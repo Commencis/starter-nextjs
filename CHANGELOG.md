@@ -1,5 +1,11 @@
 # @commencis/starter-nextjs
 
+## 3.2.0
+
+### Minor Changes
+
+- Chore: update dependencies _[`#228`](https://github.com/Commencis/starter-nextjs/pull/228) [`e709854`](https://github.com/commencis/starter-nextjs/commit/e7098546fe7961dfde39d10ea5fa96342654c148) [@renovate](https://github.com/apps/renovate)_
+
 ## 3.1.0
 
 ### Minor Changes
