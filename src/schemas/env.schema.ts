@@ -7,7 +7,11 @@ import { z } from 'zod';
  */
 
 export const envVariablesSchema = z.object({
+  NEXT_PUBLIC_APP_ENV: z
+    .enum(['development', 'test', 'uat', 'staging', 'production'])
+    .optional(),
   NEXT_PUBLIC_BASE_API_URL: z.url().optional(),
+
   BASE_URL: z.url().optional(),
   ENVIRONMENT_ID: z.string().min(1).optional(),
 });
