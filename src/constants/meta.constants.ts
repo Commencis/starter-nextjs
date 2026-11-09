@@ -5,7 +5,6 @@ export const BASE_PAGE_METADATA: PageMetadata = {
   shortName: 'Starter',
   description: 'Commencis Next.js starter.',
   themeColor: '#ffffff',
-  backgroundColor: '#ffffff',
 } as const;
 
 export const ROBOTS_DISALLOWED_PATHS: string[] = ['/api/'];

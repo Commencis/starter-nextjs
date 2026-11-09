@@ -3,5 +3,4 @@ export type PageMetadata = {
   shortName: string;
   description: string;
   themeColor: string;
-  backgroundColor: string;
 };
