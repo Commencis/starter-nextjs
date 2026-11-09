@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { SEO_METADATA } from '@/constants/seo.constants';
+import { BASE_PAGE_METADATA } from '@/constants/meta.constants';
 import { getServerConfig } from '@/lib/config/getServerConfig';
 
 type PageMetadataParams = {
@@ -9,8 +9,8 @@ type PageMetadataParams = {
 };
 
 export function buildPageMetadata({
-  title = SEO_METADATA.name,
-  description = SEO_METADATA.description,
+  title = BASE_PAGE_METADATA.name,
+  description = BASE_PAGE_METADATA.description,
 }: PageMetadataParams = {}): Metadata {
   const baseUrl = getServerConfig().baseUrl;
 

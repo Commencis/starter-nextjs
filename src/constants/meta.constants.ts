@@ -1,6 +1,6 @@
-import type { SeoMetadata } from '@/types/seo.types';
+import type { PageMetadata } from '@/types/meta.types';
 
-export const SEO_METADATA: SeoMetadata = {
+export const BASE_PAGE_METADATA: PageMetadata = {
   name: 'Commencis Starter Next.js',
   shortName: 'Starter',
   description: 'Commencis Next.js starter.',

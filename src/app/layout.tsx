@@ -2,7 +2,7 @@ import type { PropsWithChildren, ReactElement } from 'react';
 import type { Metadata, Viewport } from 'next';
 
 import { FontRoboto } from '@/lib/fonts';
-import { buildPageMetadata, buildPageViewport } from '@/lib/seo/metadata/';
+import { buildPageMetadata, buildPageViewport } from '@/lib/metadata';
 
 import { MainLayout } from '@/layouts';
 

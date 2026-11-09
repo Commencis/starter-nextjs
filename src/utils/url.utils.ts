@@ -6,6 +6,14 @@ export function trimTrailingSlash(stringToTrim: string): string {
   return stringToTrim.replace(/\/+$/, '');
 }
 
+export function constructUrl(base: string, path: string): URL | null {
+  try {
+    return new URL(path, base);
+  } catch {
+    return null;
+  }
+}
+
 function isAbsoluteUrl(url: string): boolean {
   return ABSOLUTE_URL_REGEX.test(url);
 }
