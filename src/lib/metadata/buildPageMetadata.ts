@@ -12,7 +12,7 @@ export function buildPageMetadata({
   title = BASE_PAGE_METADATA.name,
   description = BASE_PAGE_METADATA.description,
 }: PageMetadataParams = {}): Metadata {
-  const baseUrl = getServerConfig().baseUrl;
+  const baseUrl = getServerConfig().siteUrl;
 
   return {
     title: {
@@ -31,6 +31,6 @@ export function buildPageMetadata({
       title,
       description,
     },
-    metadataBase: baseUrl ? new URL(baseUrl) : undefined,
+    metadataBase: new URL(baseUrl),
   };
 }

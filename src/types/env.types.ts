@@ -1,2 +1,7 @@
-export type Environment =
-  'development' | 'test' | 'uat' | 'staging' | 'production';
+export enum Environment {
+  Development = 'development',
+  Test = 'test',
+  Uat = 'uat',
+  Staging = 'staging',
+  Production = 'production',
+}

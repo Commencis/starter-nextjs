@@ -11,15 +11,15 @@ export type HeadersLoader = () => Promise<HeaderGetter>;
 
 /**
  * Absolute site origin for sitemaps, redirects, etc.
- * Uses `BASE_URL` when set (canonical). Otherwise `await getHeaders()` — pass
+ * Uses `SITE_URL` when set (canonical). Otherwise `await getHeaders()` — pass
  */
 export async function resolveBaseUrl(
   getHeaders?: HeadersLoader
 ): Promise<string> {
-  const { baseUrl: baseUrlFromEnv } = getServerConfig();
+  const { siteUrl: siteUrlFromEnv } = getServerConfig();
 
-  if (baseUrlFromEnv) {
-    return trimTrailingSlash(baseUrlFromEnv);
+  if (siteUrlFromEnv) {
+    return trimTrailingSlash(siteUrlFromEnv);
   }
 
   const headerList = await getHeaders?.();
