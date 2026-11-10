@@ -5,7 +5,7 @@ import packageJson from '../../../../package.json';
 
 export type HealthResponse = {
   status: 'ok';
-  environmentId: string;
+  environment: string;
   version: string;
   buildNumber: number;
   timestamp: string;
@@ -14,9 +14,9 @@ export type HealthResponse = {
 export function GET(): Response {
   const body: HealthResponse = {
     status: 'ok',
-    environmentId: getServerConfig().environmentId,
     version: packageJson.version,
     buildNumber: packageJson.buildNumber,
+    environment: getServerConfig().environment,
     timestamp: new Date().toISOString(),
   };
 
