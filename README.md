@@ -51,4 +51,4 @@ We welcome contributions to improve this project. Feel free to open issues or pu
 
 This project is licensed under the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0) - see the [LICENSE](./LICENSE) file for details.
 
-© [Commencis](https://www.commencis.com/), 2025. All rights reserved.
+© [Commencis](https://www.commencis.com/), 2026. All rights reserved.
