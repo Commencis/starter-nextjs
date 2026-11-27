@@ -1,5 +1,11 @@
 # @commencis/starter-nextjs
 
+## 3.3.0
+
+### Minor Changes
+
+- Feat: add root metadata, viewport, robots, sitemap _[`#230`](https://github.com/Commencis/starter-nextjs/pull/230) [`ff1fe46`](https://github.com/commencis/starter-nextjs/commit/ff1fe467c144212a38b4a3f09176327c88b1b58f) [@baturtulek](https://github.com/baturtulek)_
+
 ## 3.2.0
 
 ### Minor Changes
